@@ -1,0 +1,302 @@
+@use "../utils/_global.scss";
+@use "../utils/themeColor";
+@use "../components/header";
+@use "../components/overlaping_list";
+@use "../components/swiper";
+@use "../components/product_card";
+@use "../utils/bottom_outlined";
+@use "../utils/size";
+@use "../components/news_card";
+@use "../components/image_overlay";
+@use "../components/project_card";
+@use "../components/footer";
+@use "../components/messenger";
+@use "../components/logo";
+@use "../components/seo_text";
+
+.container {
+  main {
+    margin-top: 0;
+  }
+}
+
+.lead-background {
+  background-color: themeColor.$secondary;
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  .poly-1 {
+    transform: rotate(-75deg);
+    transform-origin: center;
+    position: absolute;
+    width: 2438.45px;
+    top: -1100px;
+    left: -1150px;
+  }
+  .poly-2 {
+    transform: rotate(15deg);
+    transform-origin: center;
+    position: absolute;
+    height: 713.47px;
+    top: -300px;
+    left: 648px;
+    width: 2438.45px;
+  }
+}
+
+.lead-section {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  .action {
+    margin-top: 120px;
+    margin-bottom: size.$main_margin;
+    .title {
+      margin-top: 20px;
+    }
+    .text {
+      margin-top: 30px;
+      margin-bottom: 75px;
+    }
+    .action-button {
+      display: flex;
+      align-items: baseline;
+      .guarantee {
+        margin-left: 60px;
+        display: flex;
+        align-items: baseline;
+      }
+      .guarantee::before {
+        content: "";
+        display: block;
+        width: 16px;
+        height: 16px;
+        position: relative;
+        border-radius: 50%;
+        left: -10px;
+        background-color: themeColor.$primary;
+      }
+    }
+  }
+  .image {
+    margin-top: 80px;
+    .image-wrapper {
+      width: 558px;
+      height: 480px;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+.equipment-supply {
+  position: relative;
+  background-color: themeColor.$secondary;
+  .list-wrapper {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+      li {
+        padding-top: 25px;
+        padding-bottom: 25px;
+      }
+      .active {
+        border-top: 2px solid themeColor.$primary;
+      }
+    }
+  }
+}
+
+.equipment-supply-bg {
+  background-color: themeColor.$secondary;
+  width: 100%;
+  height: 100%;
+}
+
+.for-who {
+  margin-top: size.$main_margin;
+  .overlaping-list {
+    margin-top: 40px;
+  }
+}
+
+.popular-product {
+  margin-top: size.$main_margin;
+}
+
+.need-consultation {
+  margin-top: 115px;
+  .header {
+    display: flex;
+    margin: 0;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .input-request {
+    background-color: themeColor.$secondary;
+    display: grid;
+    gap: 20px;
+    margin-top: 40px;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 40px;
+  }
+  .accept-personal-info {
+    margin-top: 20px;
+    opacity: 0.35;
+    span {
+      text-decoration: underline;
+    }
+  }
+}
+.company-summary-bg {
+  background-color: themeColor.$primary;
+}
+.company-info {
+  margin-top: size.$main_margin;
+  background-color: themeColor.$primary;
+  .company-summary {
+    color: themeColor.$white;
+    margin-top: size.$main_margin;
+    margin-bottom: size.$main_margin;
+
+    .summary-content {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 60px;
+      .summary-image {
+        .summary-numbers {
+          display: grid;
+          gap: 40px;
+          grid-template-columns: repeat(3, 1fr);
+          margin-top: 20px;
+        }
+        .image-wrapper {
+          height: 420px;
+          overflow: hidden;
+          img {
+            transform: translatey(-110px);
+          }
+        }
+      }
+      .summary-description {
+        .description {
+          margin-bottom: 20px;
+        }
+
+        .company-video {
+          display: flex;
+          align-items: center;
+          p {
+            margin-left: 30px;
+            font-weight: 500;
+          }
+          .play-video {
+            position: relative;
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            cursor: pointer;
+            overflow: hidden;
+            .play-icon-wrapper {
+              position: relative;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              img {
+                width: 35px;
+              }
+            }
+            .video-bg {
+              position: absolute;
+              top: 0;
+              z-index: -1;
+              height: 100%;
+              img {
+                height: 100%;
+                transform: scale(2);
+                object-fit: contain;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.customer-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: size.$main_margin;
+  margin-bottom: size.$main_margin;
+  .card:last-child{
+    border-right: 1px solid themeColor.$secondary;
+  }
+  .card {
+    border: 1px solid themeColor.$secondary;
+    border-right: none;
+    padding: 30px;
+    height: 500px;
+    .customer-info-description {
+      margin-top: 110px;
+      display: none;
+    }
+    p {
+      color: themeColor.$white;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      h1 {
+        font-size: 38px;
+        color: themeColor.$white;
+      }
+      img {
+        width: 50px;
+      }
+    }
+  }
+  .card:hover {
+    background-color: themeColor.$primary;
+  }
+  .card:hover .customer-info-description {
+    display: block;
+  }
+}
+
+.customer-info-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: linear-gradient(
+      0deg,
+      rgba(1, 18, 41, 0.45),
+      rgba(1, 18, 41, 0.45)
+    ),
+    url("../images/gallery_main.webp");
+  background-position: 50%;
+}
+
+.latest-news {
+  display: grid;
+  margin-top: size.$main_margin;
+  gap: 140px;
+  grid-template-columns: 1fr 3fr;
+  .action-header {
+    button {
+      margin-top: 40px;
+      width: 100%;
+    }
+  }
+  .news {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 40px;
+  }
+}
+
+.completed-projects {
+  margin-top: size.$main_margin;
+}
+

@@ -1,0 +1,22 @@
+@use "../utils/themeColor";
+
+
+.swiper-header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+
+.swiper-button-next::after{
+    display: none;
+}
+
+.swiper-button-prev::after{
+    display: none;
+}
+
+.swiper-nav{
+    display: flex;
+    gap: 20px;
+}

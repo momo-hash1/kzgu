@@ -1,0 +1,219 @@
+@use "../components/container";
+@use "../components/header";
+@use "../utils/_global.scss";
+@use "../utils/themeColor";
+@use "../utils/size";
+@use "../components/footer";
+@use "../components/messenger";
+@use "../components/logo";
+@use "../components/breadcrumb.scss";
+@use "../utils/text";
+@use "../components/two_section_header";
+@use "../components/accordion";
+@use "../components/input";
+@use "../components/range_slider";
+@use "../components/badge";
+@use "../components/paginator";
+
+.generators-header {
+  .quick-power-select {
+    padding: 20px;
+    border: 1px solid #e1e8fb;
+
+    p {
+      font-weight: 500;
+    }
+    ul {
+      margin-top: 10px;
+      display: flex;
+      gap: 15px;
+      li {
+        color: themeColor.$primary;
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.generators-list {
+  display: grid;
+  grid-template-columns: 25% calc(75% - 80px);
+  gap: 80px;
+  .filters {
+    h3 {
+      font-size: 22px;
+    }
+    .accordion {
+      margin-top: 15px;
+    }
+    .brand-list-checkbox {
+      ul {
+        li:first-child {
+          margin-top: 0;
+        }
+        li {
+          display: flex;
+          align-items: center;
+          .brand {
+            margin-left: 6px;
+            font-size: 14px;
+          }
+          margin-top: 12px;
+        }
+      }
+      .show-more {
+        margin-top: 15px;
+        color: themeColor.$primary;
+        a {
+          text-decoration: none;
+          line-height: 25px;
+        }
+      }
+    }
+    .sort-action-btns {
+      margin-top: 45px;
+      button {
+        width: 100%;
+      }
+    }
+    .clear-filter-wrapper {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-top: 15px;
+    }
+    .clear-filter {
+      cursor: pointer;
+    }
+  }
+  .list {
+    .distribute-items {
+      display: grid;
+      grid-template-columns: 2fr repeat(4, 1fr) 2fr;
+    }
+    .list-header {
+      background-color: themeColor.$primary;
+      color: themeColor.$white;
+      .list-header-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        padding-bottom: 15px;
+        padding-top: 15px;
+        p {
+          cursor: pointer;
+          font-size: 14px;
+        }
+        p:hover {
+          opacity: 0.5;
+        }
+        p::after {
+          content: "";
+          display: block;
+          background-image: url("../images/icons/polygon_51.svg");
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: 8px;
+          height: 4px;
+          position: absolute;
+          right: 4px;
+          top: 50%;
+        }
+      }
+    }
+    .list-items {
+      background-color: themeColor.$secondary;
+      margin-top: 4px;
+    }
+    .item {
+      padding-bottom: 15px;
+      padding-top: 15px;
+      margin-top: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .list-items:hover {
+      background-color: #e6ecf3;
+    }
+    .item:first-child {
+      padding-left: 15px;
+    }
+    .item:last-child {
+      padding-right: 15px;
+    }
+    .title-with-image {
+      display: flex;
+      div {
+        width: 58px;
+        display: flex;
+        align-items: center;
+      }
+      p {
+        font-size: 14px;
+        margin-left: 20px;
+        font-weight: 600;
+      }
+    }
+    .stock-and-price {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      .badge {
+        p{
+          font-size: 14px;
+        }
+      }
+      .to-price {
+        color: themeColor.$primary;
+        a {
+          text-decoration: none;
+          font-weight: 600;
+        }
+      }
+    }
+    .header{
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  .view-switch{
+    display: flex;
+
+  }
+  .list-view{
+    height: 16px;
+    width: 16px;
+    opacity: .35;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-left: 10px;
+    div{
+      height: 100%;
+      background-color: #092E47;;
+    }
+  }
+  .card-view{
+    opacity: .35;
+    height: 16px;
+    width: 16px;
+    div{
+      background-color: #092E47;;
+    }
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2px;
+    row-gap: 2px;
+  }
+  .view-active{
+    div{
+      background-color: themeColor.$primary;
+    }
+    opacity: 1;
+  }
+}

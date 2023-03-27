@@ -1,0 +1,41 @@
+@use "../utils/size";
+@use "./two_section_header";
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+  position: relative;
+  .content{
+    width: 1400px;
+  } 
+  main{
+    margin-top: 40px;
+  }
+}
+
+.section-margin{
+  margin-top: size.$main_margin;
+}
+
+.container-html-bg{
+  overflow: hidden;
+  position: relative;
+  .content-wrapper{
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  .content{
+    width: 1400px;
+    z-index: 1;
+    position: relative;
+  }
+  .background{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+  }
+}

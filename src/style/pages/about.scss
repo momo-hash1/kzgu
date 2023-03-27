@@ -1,0 +1,262 @@
+@use "../components/container";
+@use "../components/header";
+@use "../utils/_global.scss";
+@use "../utils/themeColor";
+@use "../utils/size";
+@use "../components/footer";
+@use "../components/messenger";
+@use "../components/logo";
+@use "../components/breadcrumb.scss";
+@use "../utils/text";
+@use "../components/divider";
+@use "../components/two_section_header";
+@use "../components/swiper";
+
+.company-summary-large {
+  .watch-video {
+    height: 580px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        0deg,
+        rgba(9, 46, 71, 0.35),
+        rgba(9, 46, 71, 0.35)
+      ),
+      url("/images/video_thumbnail.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    img {
+      width: 40px;
+    }
+    .play-button {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid themeColor.$white;
+    }
+    .play-button-wrapper {
+      height: 120px;
+      overflow: hidden;
+    }
+    .video-info {
+      .duration {
+        display: flex;
+        justify-content: center;
+        font-size: 16px;
+        color: themeColor.$white;
+      }
+    }
+  }
+  .company-summary-bottom {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 90px;
+    margin-top: 40px;
+  }
+  .company-numbers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    p {
+      margin-top: 5px;
+    }
+  }
+  p {
+    font-weight: 500;
+  }
+  h3 {
+    color: themeColor.$primary;
+    font-weight: 500;
+    font-size: 48px;
+  }
+
+  .company-about-text{
+    p{
+      line-height: 25px;
+
+    }
+  }
+}
+
+.hide-overflow-1{
+  width: 100%;
+  height: 100px;
+}
+.quality-ensures-container {
+  background-color: themeColor.$primary;
+  display: block;
+  position: relative;
+  margin-top: 100px;
+  .quality-ensures {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    margin-top: 50px;
+    margin-bottom: 50px; 
+    position: relative;
+    p {
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 30px;
+      color: themeColor.$white;
+    }
+    img{
+      width: 537px;
+      height: 350px;
+      position: absolute;
+      transform: translateX(-100%) translateY(-50%);
+      left: 100%;
+      top: 40px;
+    }
+    div{
+      position: relative;
+    } 
+  }
+  .circle-around-image{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    overflow: hidden;
+    width: 100%;
+    div{
+      position: relative;
+      z-index: 1;
+      left: calc(50% + 150px);
+      background-color: #0959C7;
+      transform: translateY(-25%) ;
+      width: 630px;
+      height: 630px;
+      border-radius: 50%;
+    }
+  }
+  .content-wrapper{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+  }
+
+}
+
+.certs-list{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4px;
+  .cert-item{
+    .cert-image{
+      background-color: themeColor.$secondary;
+      position: relative;
+      height: 370px;
+      .image-overlay{
+        padding: 30px;
+        position: relative;
+
+        height: 100%;
+      }
+      .zoom-overlay{
+        background-color: rgba(15, 100, 218, .65);
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 300ms ease;
+        img{
+          width: 27px;
+        }
+      }
+    }
+    .cert-title{
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+      color: themeColor.$text-color-contrast;
+      p{
+        line-height: 25px;
+        font-weight: 500;
+      }
+    }
+  }
+  .cert-item:hover  .zoom-overlay{
+    opacity: 1;
+  }
+}
+
+
+.partner-review{
+  .reviews{
+    width: 900px;
+  }
+  .two-section-header{
+    margin-top: 60px;
+    .partner{
+      .name{
+        font-weight: 600;
+        color: themeColor.$text-color-contrast;
+      }
+      .role{
+        @include text.textMuted();
+        line-height: 25px;
+      }
+    }
+  }
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-top: 30px;  
+  gap: 110px;
+  .review-main{
+    display: flex;
+    gap: 20px;
+  }
+  .quotation{
+    img{
+      width: 30px;
+    }
+  }
+  .partner-review-text{
+  width: 900px;
+
+    p{
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }
+}
+
+.swiper-slide{
+  padding: 0;
+}
+
+.gallery-main{
+  height: 690px;
+}
+
+.swiper-gallery-thumbs{
+  margin-top: 4px;
+  
+}
+
+.gallery-thumbs{
+  height: 85px;
+  position: relative;
+}
+
+.thumb-overlay{
+  transition: opacity 300ms ease;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(0deg, rgba(15, 100, 218, 0.72), rgba(15, 100, 218, 0.72));  
+  opacity: 0;
+}
+
+.gallery-thumbs:hover .thumb-overlay{
+  opacity: 1;
+}

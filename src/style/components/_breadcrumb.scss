@@ -1,0 +1,31 @@
+@use "../utils/themeColor";
+@use "../utils/text";
+
+.breadcrumb {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+  margin-bottom: 35px;
+  .breadcrumb-item {
+    position: relative;
+    a{
+        text-decoration: none;
+    }
+  }
+  .breadcrumb-item::after {
+    background-color: themeColor.$text-color-contrast;
+    opacity: 50%;
+    z-index: 1;
+    content: "";
+    width: 15px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: calc(100% + 8.5px);
+    display: block;
+  }
+  .breadcrumb-item:last-child::after{
+    display: none;
+  }
+}

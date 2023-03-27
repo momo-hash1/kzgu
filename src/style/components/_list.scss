@@ -1,0 +1,35 @@
+@use "../utils/themeColor";
+
+.background-list{
+    li::nth-child(odd){
+        background-color: #E5E9EF;
+    }
+    li{
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 20px 15px 20px;
+        background-color: themeColor.$secondary;
+        p{
+            font-size: 14px;
+        }
+    }
+}
+.dotted-list{
+    li{
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+    }
+    li::after{
+        margin-top: 0;
+    }
+    li::before{
+        content: "";    
+        margin-right: 5px;
+        display: block;
+        border-radius: 50%;
+        width: 5px;
+        height: 5px;
+        background-color: themeColor.$primary;
+    }
+}

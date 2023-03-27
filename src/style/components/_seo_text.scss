@@ -1,0 +1,17 @@
+@use "../utils/size";
+@use "../utils/themeColor";
+
+.seo-text {
+    margin-top: size.$main_margin;
+    p {
+      margin-top: 40px;
+    }
+    .seo-link {
+      margin-top: 20px;
+      color: themeColor.$primary;
+      a{
+        text-decoration: none;
+      }
+    }
+  }
+  

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>catalog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../src/style/pages/catalog.scss" />
+  </head>
+  <body>
+    <section class="container">
+      <div class="content">
+        <div class="breadcrumb text-muted">
+          <div class="breadcrumb-item">
+            <a href="">Главная</a>
+          </div>
+          <div class="breadcrumb-item">
+            <a href="">Каталог продукции</a>
+          </div>
+          <div class="breadcrumb-item">
+            <a href="">Дизельные генераторы</a>
+          </div>
+        </div>
+        <div class="two-section-header">
+          <h2>Дизельные генераторы</h2>
+        </div>
+        <main class="generators-header">
+          <div class="quick-power-select">
+            <p>Быстрый подбор по мощности:</p>
+            <ul>
+              <li><a href="">9,2 кВа</a></li>
+              <li><a href="">8,8 кВ</a>а</li>
+            </ul>
+          </div>
+        </main>
+      </div>
+    </section>
+    <section class="container">
+      <div class="content">
+        <main class="generators-list">
+          <div class="filters">
+            <h3>Фильтры</h3>
+            <div class="accordion">
+              <div class="accordion-item accordion-active">
+                <div class="accordion-header">
+                  <div>
+                    <p class="title">Максимальная мощность, кВа</p>
+                    <img src="images/icons/left_arrow.svg" />
+                  </div>
+                </div>
+                <div class="accordion-body">
+                  <div class="range-with-inputs">
+                    <div id="range-slider">
+                      <div id="slider"></div>
+                    </div>
+                    <div class="range-slider-bottom">
+                      <input type="text" />
+                      <div class="line">
+                        <div></div>
+                      </div>
+                      <input type="text" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <div class="accordion-header">
+                  <div>
+                    <p class="title">Номинальная мощность, кВа</p>
+                    <img src="images/icons/left_arrow.svg" />
+                  </div>
+                </div>
+                <div class="accordion-body">
+                  <div class="range-with-inputs">
+                    <div id="range-slider">
+                      <div id="slider"></div>
+                    </div>
+                    <div class="range-slider-bottom">
+                      <input type="text" />
+                      <div class="line">
+                        <div></div>
+                      </div>
+                      <input type="text" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item accordion-active">
+                <div class="accordion-header">
+                  <div>
+                    <p class="title">Двигатель/бренд</p>
+                    <img src="images/icons/left_arrow.svg" />
+                  </div>
+                </div>
+                <div class="accordion-body">
+                  <div class="brand-list-checkbox">
+                    <ul>
+                      <li>
+                        <div class="checkbox"></div>
+                        <p class="brand">Doosan</p>
+                      </li>
+                      <li>
+                        <div class="checkbox"></div>
+                        <p class="brand">Doosan</p>
+                      </li>
+                    </ul>
+                    <div class="show-more"><a href="">Показать все</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <div class="accordion-header">
+                  <div>
+                    <p class="title">Количество фаз</p>
+                    <img src="images/icons/left_arrow.svg" />
+                  </div>
+                </div>
+                <div class="accordion-body"></div>
+              </div>
+              <div class="accordion-item">
+                <div class="accordion-header">
+                  <div>
+                    <p class="title">Объем бака, л</p>
+                    <img src="images/icons/left_arrow.svg" />
+                  </div>
+                </div>
+                <div class="accordion-body"></div>
+              </div>
+            </div>
+            <div class="sort-action-btns">
+              <button>Применить</button>
+              <div class="clear-filter-wrapper">
+                <div class="clear-filter text-muted">
+                  <p>Сбросить фильтр</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="list">
+            <div class="header">
+              <p>Показано 256 позиций из 520</p>
+              <div class="view-switch">
+                <div class="card-view">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <div class="list-view view-active">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+            <div class="list-header distribute-items">
+              <div class="list-header-item">
+                <p>Двигатель</p>
+              </div>
+              <div class="list-header-item">
+                <p>Макс<br />мощность</p>
+              </div>
+              <div class="list-header-item">
+                <p>
+                  Номин. <br />
+                  мощность
+                </p>
+              </div>
+              <div class="list-header-item">
+                <p>
+                  Кол-во <br />
+                  фаз
+                </p>
+              </div>
+              <div class="list-header-item">
+                <p>
+                  Объем <br />
+                  бака
+                </p>
+              </div>
+              <div class="list-header-item">
+                <p>Наличие</p>
+              </div>
+            </div>
+            <div class="distribute-items list-items">
+              <div class="item">
+                <div class="title-with-image">
+                  <div><img src="images/lead_section_img.png" alt="" /></div>
+                  <p>Еuropower EPS 300 DXE DC</p>
+                </div>
+              </div>
+              <div class="item">
+                <p>9,2 кВа</p>
+              </div>
+              <div class="item">
+                <p>7,4 кВа</p>
+              </div>
+              <div class="item"><p>четыре</p></div>
+              <div class="item">
+                <p>150 л</p>
+              </div>
+              <div class="item">
+                <div class="stock-and-price">
+                  <div class="badge stock-order">
+                    <p>в наличии</p>
+                  </div>
+                  <div class="to-price">
+                    <a href="">Узнать цену</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="paginator-wrapper">
+              <div class="paginator">
+                <div><img src="images/icons/left_arrow.svg" /></div>
+                <div><p>1</p></div>
+                <div><p>2</p></div>
+                <div><p>3</p></div>
+                <div><p>4</p></div>
+                <div><img src="images/icons/right_arrow.svg" /></div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </section>
+
+    <script src="../src/catalog.js"></script>
+  </body>
+</html>

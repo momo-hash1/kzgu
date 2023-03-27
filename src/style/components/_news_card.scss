@@ -1,0 +1,27 @@
+@use "../utils/themeColor";
+
+
+.news-card:hover .image-overlay{
+    background-color: 
+    rgba(15, 100, 218, 0.4);
+}
+.news-card{
+    .image-overlay{
+        height: 230px;
+        .badge{
+            p{
+                font-size: 14px;
+            }
+        }
+    }
+    .short-news{
+        margin-top: 15px;
+    }
+    .news-link{
+        margin-top: 10px;
+        color: themeColor.$primary;
+        a{
+            text-decoration: none;
+        }
+    }
+}

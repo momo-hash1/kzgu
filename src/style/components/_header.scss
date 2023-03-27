@@ -1,0 +1,59 @@
+@use "../utils/_global.scss";
+@use "./container";
+@use "./button";
+@use "./input";
+@use "./divider";
+@use "../utils/themeColor";
+@use "./logo";
+@use "./phone_number";
+
+.header {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+
+  .address {
+    display: flex;
+    align-items: center;
+    img {
+      width: 13px;
+      margin-right: 10px;
+    }
+    p {
+      font-weight: 500;
+    }
+  }
+}
+
+.header-bottom {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  .links {
+    ul {
+      display: flex;
+
+      li {
+        list-style-type: none;
+        margin-right: 40px;
+        white-space: nowrap;
+        font-weight: 500;
+        cursor: pointer;
+        p, a{
+          font-weight: 500;
+          text-decoration: none;
+        }
+      }
+      li:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  .contacts {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

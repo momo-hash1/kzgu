@@ -1,0 +1,52 @@
+@use "../utils/themeColor";
+
+#range-slider {
+    .noUi-target {
+      border: none;
+      box-shadow: none;
+      background-color: #E1E8FB;
+      height: 2px;
+    }
+  .noUi-connect {
+    background-color: themeColor.$primary;
+  }
+  .noUi-handle {
+    box-shadow: none;
+  }
+
+  .noUi-handle::before,
+  .noUi-handle::after {
+    display: none;
+  }
+  .noUi-handle {
+    background-color: themeColor.$primary;
+    box-shadow: none;
+    height: 20px;
+    width: 8px;
+    border: none;
+    border-radius: 2px;
+    top: -10px;
+    right: -4px; /* half the width */
+  }
+}
+
+.range-with-inputs{
+    #range-slider{
+        margin-top: 25px;
+    }
+    .range-slider-bottom{
+        display: flex;
+        margin-top: 30px;
+        gap: 10px;
+        .line{
+            display: flex;
+            align-items: center;
+            div{
+                width: 15px;
+                height: 1px;
+                background-color: #D7DEF1;
+            }
+
+        }
+    }
+}

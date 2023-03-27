@@ -1,0 +1,49 @@
+@use "../utils/themeColor";
+
+@mixin divide() {
+  background-color: $divider-color;
+  width: 100%;
+  height: 1px;
+  display: block;
+}
+
+$divider-color: #e1e8fb;
+.divider {
+  @include divide();
+}
+
+.divider-up {
+  position: relative;
+}
+
+.divider-up::before{
+  @include divide();
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  height: 2px;
+}
+
+.divider::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+}
+
+.vertical-divider {
+  height: 100%;
+
+  margin-right: 20px;
+  margin-left: 20px;
+  div {
+    background-color: $divider-color;
+    width: 1px;
+    height: 100%;
+  }
+}
+
+.divider-border {
+  border-top: 1px solid $divider-color;
+}

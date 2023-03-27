@@ -1,0 +1,18 @@
+@use "../utils/themeColor";
+
+.badge-wrapper {
+    display: flex;
+  }
+  .badge {
+    border-radius: 15px;
+    background-color: #fff;
+    padding: 5px 15px 5px 15px;
+    font-size: 14px;
+  }
+  .stock-available {
+    color: #44da0f;
+  }
+  .stock-order {
+    color: themeColor.$text-color-contrast;
+  }
+  
