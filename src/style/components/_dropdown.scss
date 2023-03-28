@@ -1,0 +1,41 @@
+@use "../utils/themeColor";
+
+.dropdowns-wrapper {
+  position: absolute;
+  top: 0;
+  z-index: 3;
+}
+
+@mixin dropdown-template($active-color: #d9e0eb, $bg-color: #e6ebf2) {
+  position: absolute;
+  max-width: 390px;
+  width: 390px;
+  ul {
+    li {
+      background-color: $bg-color;
+      p {
+        padding: 15px 20px 15px 20px;
+
+        cursor: pointer;
+      }
+    }
+    li:active {
+      padding: 8px 4px 8px 4px;
+      p {
+        background-color: $active-color;
+      }
+    }
+  }
+}
+
+.dropdown-first {
+  @include dropdown-template();
+}
+
+.dropdown-second {
+  @include dropdown-template(#cfd8e7, #d9e1eb);
+}
+
+.dropdown-third {
+  @include dropdown-template(#bfcddd, #cfd8e7);
+}
