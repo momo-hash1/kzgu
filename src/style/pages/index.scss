@@ -182,7 +182,12 @@
           display: grid;
           gap: 40px;
           grid-template-columns: repeat(3, 1fr);
-          margin-top: 20px;
+          margin-top: 20px; 
+          div{
+            font-size: 48px;
+            font-weight: 500;
+          }
+
         }
         .image-wrapper {
           height: 420px;
@@ -194,7 +199,7 @@
       }
       .summary-description {
         .description {
-          margin-bottom: 20px;
+          margin-bottom: 30px;
         }
 
         .company-video {
@@ -234,6 +239,9 @@
             }
           }
         }
+      }
+      .bottom-outlined{
+        padding-bottom: 25px;
       }
     }
   }
