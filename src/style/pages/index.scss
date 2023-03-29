@@ -252,14 +252,15 @@
   grid-template-columns: repeat(3, 1fr);
   margin-top: size.$main_margin;
   margin-bottom: size.$main_margin;
-  .card:last-child{
+  .card-wrapper:last-child{
     border-right: 1px solid themeColor.$secondary;
   }
   .card {
-    border: 1px solid themeColor.$secondary;
-    border-right: none;
-    padding: 30px;
-    height: 500px;
+    width: calc(100% - 60px);
+    height: calc(100% - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     .customer-info-description {
       margin-top: 110px;
       display: none;
@@ -270,20 +271,42 @@
     .header {
       display: flex;
       justify-content: space-between;
-      h1 {
+      margin: 0;
+      div {
         font-size: 38px;
         color: themeColor.$white;
-      }
-      img {
-        width: 50px;
+        font-weight: 600;
       }
     }
+    .star {
+      width: 50px;
+      height: 50px;
+    }
+    .truck{
+      width: 70px;
+      height: 40px;
+    }
+    .license{
+      width: 34px;
+      height: 64px;
+    }
   }
-  .card:hover {
+  .card-wrapper:hover {
     background-color: themeColor.$primary;
+    border-color: themeColor.$primary;
   }
-  .card:hover .customer-info-description {
+  .card-wrapper:hover .customer-info-description {
     display: block;
+  }
+
+  .card-wrapper{
+    border: 1px solid themeColor.$secondary;
+    border-right: none;
+  
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
