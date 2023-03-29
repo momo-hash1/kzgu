@@ -1,7 +1,7 @@
 const register_dropdowns = () => {
   const dropdowns = {};
   document.querySelectorAll(".dropdown").forEach((x) => {
-    dropdowns[x.dataset.name] = { element: x, onMouse: false };
+    dropdowns[x.dataset.name] = { element: x, onMouse: false};
   });
   return dropdowns;
 };
@@ -15,6 +15,7 @@ const initDropdowns = () => {
     dropdowns: register_dropdowns(),
     initiators: register_dropdown_initiators(),
     cascade: [],
+    opened_dropdowns: 0,
     begin_pos: null,
     init() {
       this.initiators.forEach((initiator) => {
@@ -27,6 +28,7 @@ const initDropdowns = () => {
           this.cascade.push(to);
           this.begin_pos = initiator.getBoundingClientRect().left;
           this.handleOpen();
+          this.opened_dropdowns += 1
           initiator.classList.add("dropdown-active");
         });
 
@@ -40,20 +42,14 @@ const initDropdowns = () => {
         .forEach((initiator) => {
           initiator.addEventListener("mouseenter", (e) => {
             const to = e.target.dataset.to;
+            if(this.cascade.includes(to)) return
             this.cascade.push(to);
             this.handleOpen();
-          });
-          initiator.addEventListener("mouseleave", (e) => {
-            const to = e.target.dataset.to;
-            console.log("leave", to);
-            console.log(this.onDropdown(to));
-            if(!this.onDropdown(to)){
-              this.handleOpen();
-              this.cascade.pop()
-            }
-          });
-        });
 
+          });
+          // TODO: multiple cascade initiators in dropdown
+        });
+      // determine dropdown in over mouse or not
       Object.keys(this.dropdowns).forEach((x) => {
         const dropdown = this.dropdowns[x];
 
@@ -65,6 +61,8 @@ const initDropdowns = () => {
           this.dropdowns[x].onMouse = false;
         });
       });
+
+      // hide all dropdowns when mouse clicked not in dropdown
       document.addEventListener("click", () => {
         if (this.onAnyDropdown()) return;
         this.handleClose();
