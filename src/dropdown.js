@@ -42,15 +42,15 @@ const initDropdowns = () => {
             const to = e.target.dataset.to;
             this.cascade.push(to);
             this.handleOpen();
-            
           });
           initiator.addEventListener("mouseleave", (e) => {
             const to = e.target.dataset.to;
-            // console.log(this.onDropdown(to));
-            // if(!this.onDropdown(to)){
-            //   this.handleOpen();
-            //   this.cascade.pop()
-            // }
+            console.log("leave", to);
+            console.log(this.onDropdown(to));
+            if(!this.onDropdown(to)){
+              this.handleOpen();
+              this.cascade.pop()
+            }
           });
         });
 

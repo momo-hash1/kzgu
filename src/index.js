@@ -24,3 +24,9 @@ projectPrevBtn.addEventListener("click", () => projectsSwiper.slidePrev());
 
 const dropdowns = initDropdowns();
 dropdowns.init();
+
+
+document.querySelector("#expand-seo").addEventListener("click", (e) => {
+  document.querySelector("#seo-text-paragraph").classList.toggle("show")
+  console.log(document.querySelector("#seo-text-paragraph").classList);
+})
