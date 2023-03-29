@@ -138,7 +138,7 @@
     display: flex;
     margin: 0;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
   }
   .input-request {
     background-color: themeColor.$secondary;
@@ -153,6 +153,11 @@
     opacity: 0.35;
     span {
       text-decoration: underline;
+    }
+  }
+  .two-section-header{
+    p{
+      font-size: 22px;
     }
   }
 }
