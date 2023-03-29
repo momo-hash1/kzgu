@@ -12,13 +12,17 @@
             flex-direction: column;
             color: themeColor.$white;
             justify-content: space-between;
-            h1{
+            div{
                 font-size: 22px;
+                font-weight: 600;
+                line-height: 30px;
             }
             div{
                 display: none;
                 button{
-                    margin-top: 45px;
+                    margin-top: 30px;
+                    padding-left: 60px;
+                    padding-right: 60px;
                 }
                 p{
                     line-height: 25px;
