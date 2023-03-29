@@ -48,23 +48,30 @@
 .lead-section {
   display: grid;
   grid-template-columns: 60% 40%;
+  height: 600px;
   .action {
-    margin-top: 120px;
-    margin-bottom: size.$main_margin;
-    .title {
-      margin-top: 20px;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     .text {
       margin-top: 30px;
-      margin-bottom: 75px;
     }
     .action-button {
       display: flex;
       align-items: baseline;
+      margin-top: 60px;
+      div{
+        width: 250px;
+        button{
+          width: 100%;
+        }
+      }
       .guarantee {
-        margin-left: 60px;
+        margin-left: 70px;
         display: flex;
         align-items: baseline;
+        font-weight: 600;
+
       }
       .guarantee::before {
         content: "";
@@ -79,12 +86,12 @@
     }
   }
   .image {
-    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
     .image-wrapper {
-      width: 558px;
-      height: 480px;
-      display: flex;
-      align-items: center;
+      width: 500px;
+      height: 450px;
     }
   }
 }
@@ -102,6 +109,7 @@
       }
       .active {
         border-top: 2px solid themeColor.$primary;
+        color: themeColor.$primary;
       }
     }
   }

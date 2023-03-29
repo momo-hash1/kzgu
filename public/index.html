@@ -25,23 +25,27 @@
               <div class="logo">
                 <img src="images/logo.png" alt="" />
               </div>
-              <form action="">
-                <div class="input-with-icon">
-                  <input
-                    type="text"
-                    placeholder="Поиск по продукции и разделам"
-                  />
-                  <div>
-                    <img src="images/icons/search.svg" alt="" />
+              <div class="header-top-main">
+                <form action="">
+                  <div class="input-with-icon">
+                    <input
+                      type="text"
+                      placeholder="Поиск по продукции и разделам"
+                    />
+                    <div>
+                      <img src="images/icons/gray/ri_search-line.svg" alt="" > </svg>
+                    </div>
+                  </div>
+                </form>
+                <div class="header-top-info">
+                  <div class="address">
+                    <img src="images/icons/address.svg" alt="" />
+                    <p>Казань, ул. Мазита Гафури, д. 50</p>
+                  </div>
+                  <div class="leave-request">
+                    <button class="button">Оставить заявку</button>
                   </div>
                 </div>
-              </form>
-              <div class="address">
-                <img src="images/icons/address.svg" alt="" />
-                <p>Казань, ул. Мазита Гафури, д. 50</p>
-              </div>
-              <div class="leave-request">
-                <button class="button">Оставить заявку</button>
               </div>
             </div>
           </main>
@@ -49,32 +53,36 @@
       </div>
       <div class="divider"></div>
       <div class="container">
-        <div class="content">
+        <div class="content header-nav">
           <main>
             <div class="header header-bottom divider-bottom-up">
               <div class="links">
                 <nav>
                   <ul>
-                    <li>
-                      <a href="catalog.html">Каталог продукции</a>
+                    <li class="dropdown-initiator" data-to="catalog">
+                      <a href="catalog.html" >Каталог продукции</a>
                     </li>
-                    <li><a href="about.html">О компании</a></li>
-                    <li><a href="">Новости</a></li>
-                    <li><a href="">Реализованные проекты</a></li>
-                    <li><a href="">Контакты и доставка</a></li>
-                    <li><a href="">У вас тендер?</a></li>
+                    <li class="dropdown-initiator"><a href="about.html">О компании</a></li>
+                    <li class=""><a href="">Новости</a></li>
+                    <li class=""><a href="">Реализованные проекты</a></li>
+                    <li class=""><a href="">Контакты и доставка</a></li>
+                    <li class=""><a href="">У вас тендер?</a></li>
                   </ul>
                 </nav>
               </div>
               <div class="contacts">
                 <div class="messenger">
-                  <img src="images/icons/whatsup.svg" alt="" />
-                  <img src="images/icons/telegram.svg" alt="" />
+                  <a href="https://web.whatsapp.com/">
+                    <div class="whatsapp"></div>
+                  </a>
+                  <a href="https://web.telegram.org">
+                    <div class="telegram"></div>
+                  </a>
                 </div>
                 <div class="vertical-divider">
                   <div></div>
                 </div>
-                <p class="phone-number">8 (800) 700 - 42 - 67</p>
+                <p class="phone-number"><a href="tel:8(800)700-42-67">8 (800) 700 - 42 - 67</a></p>
               </div>
             </div>
           </main>
@@ -151,7 +159,8 @@
               <li class="overlaping-list-item">
                 <div class="wrapper">
                   <div class="label">
-                    <img src="images/icons/noun-builder-3762824 1.svg" alt="" />
+                    <div class="builder-blue blue"></div>
+                    <div class="builder-white white"></div>
                     <p>Строительные</p>
                     <p>компании</p>
                   </div>
@@ -168,7 +177,8 @@
               <li class="overlaping-list-item">
                 <div class="wrapper">
                   <div class="label">
-                    <img src="images/icons/ph_factory.svg" alt="" />
+                    <div class="factory-blue blue"></div>
+                    <div class="factory-white white"></div>
                     <p>Промышленные</p>
                     <p>предприятия</p>
                   </div>
@@ -185,10 +195,8 @@
               <li class="overlaping-list-item">
                 <div class="wrapper">
                   <div class="label">
-                    <img
-                      src="images/icons/noun-hospital-sign-3361499 1.svg"
-                      alt=""
-                    />
+                    <div class="hospital-blue blue"></div>
+                    <div class="hospital-white white"></div>
                     <p>Медицинские</p>
                     <p>учреждения</p>
                   </div>
@@ -205,7 +213,8 @@
               <li class="overlaping-list-item">
                 <div class="wrapper">
                   <div class="label">
-                    <img src="images/icons/noun-hotel-1815753 1.svg" alt="" />
+                    <div class="hotel-blue blue"></div>
+                    <div class="hotel-white white"></div>
                     <p>Администрации</p>
                     <p>городов</p>
                   </div>
@@ -846,24 +855,24 @@
     <div class="dropdowns-wrapper">
       <div class="dropdown dropdown-first" data-name="catalog">
         <ul>
-          <li data-to="supply-catalog" class="dropdown-initiator">
+          <li  >
             <p>Каталог оборудования</p>
           </li>
-          <li><p>Каталог запчастей</p></li>
+          <li class="dropdown-initiator" data-to="supply_catalog"><p>Каталог запчастей</p></li>
           <li><p>Аренда оборудования</p></li>
         </ul>
       </div>
-      <div class="dropdown dropdown-second" data-name="supply-catalog">
+      <div class="dropdown dropdown-second" data-name="supply_catalog">
         <ul>
           <li><p>Дизельные генераторы</p></li>
-          <li class="dropdown-initiator" data-to="box-for-supply">
+          <li class="dropdown-initiator-cascade" data-to="box_for_supply">
             <p>Блок-контейнер под оборудование</p>
           </li>
           <li><p>Блок-контейнер под металлоконструкции</p></li>
           <li><p>Дополнительное оборудование</p></li>
         </ul>
       </div>
-      <div class="dropdown dropdown-third" data-name="box-for-supply">
+      <!-- <div class="dropdown dropdown-third" data-name="box_for_supply">
         <ul>
           <li>
             <p>Блок-контейнер медицинский</p>
@@ -884,9 +893,10 @@
             <p>Блок-контейнеры под аппаратные</p>
           </li>
         </ul>
-      </div>
+      </div> -->
     </div>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="../src/dropdown.js"></script>
   <script src="../src/index.js"></script>
 </html>

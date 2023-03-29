@@ -6,6 +6,7 @@
 @use "../utils/themeColor";
 @use "./logo";
 @use "./phone_number";
+@use "../components/icons";
 
 .header {
   margin-top: 20px;
@@ -27,6 +28,23 @@
       font-weight: 500;
     }
   }
+
+  .leave-request {
+    width: 250px;
+    button {
+      width: 100%;
+    }
+  }
+  .header-top-main{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 80px;
+  }
+  .header-top-info{
+    gap: 40px;
+    display: flex;
+  }
 }
 
 .header-bottom {
@@ -42,7 +60,8 @@
         white-space: nowrap;
         font-weight: 500;
         cursor: pointer;
-        p, a{
+        p,
+        a {
           font-weight: 500;
           text-decoration: none;
         }
