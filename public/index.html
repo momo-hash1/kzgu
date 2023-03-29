@@ -20,10 +20,10 @@
     <header>
       <div class="container">
         <div class="content">
-          <main>
+          <div class="main">
             <div class="header header-top">
               <div class="logo">
-                <img src="images/logo.png" alt="" />
+                <a href="/"><img src="images/logo.png" alt="" /></a>
               </div>
               <div class="header-top-main">
                 <form action="">
@@ -48,13 +48,13 @@
                 </div>
               </div>
             </div>
-          </main>
+          </div>
         </div>
       </div>
       <div class="divider"></div>
       <div class="container">
         <div class="content header-nav">
-          <main>
+          <div class="main">
             <div class="header header-bottom divider-bottom-up">
               <div class="links">
                 <nav>
@@ -62,7 +62,7 @@
                     <li class="dropdown-initiator" data-to="catalog">
                       <a href="catalog.html" >Каталог продукции</a>
                     </li>
-                    <li class="dropdown-initiator"><a href="about.html">О компании</a></li>
+                    <li class="dropdown-initiator" data-to="about"><a href="about.html">О компании</a></li>
                     <li class=""><a href="">Новости</a></li>
                     <li class=""><a href="">Реализованные проекты</a></li>
                     <li class=""><a href="">Контакты и доставка</a></li>
@@ -85,7 +85,7 @@
                 <p class="phone-number"><a href="tel:8(800)700-42-67">8 (800) 700 - 42 - 67</a></p>
               </div>
             </div>
-          </main>
+          </div>
         </div>
       </div>
       <div class="divider"></div>
@@ -228,7 +228,7 @@
               </li>
             </div>
           </ul>
-        </main>
+        </div>
       </div>
     </section>
     <section>
@@ -397,7 +397,7 @@
     </section>
     <section class="container need-consultation">
       <div class="content">
-        <main>
+        <div class="main">
           <div class="two-section-header header">
             <h1>
               Нужна консультация <br />
@@ -437,12 +437,12 @@
             Нажимая кнопку «Отправить заявку», вы соглашаетесь с обработкой
             <span><a href="#">Персональных данных</a></span>
           </p>
-        </main>
+        </div>
       </div>
     </section>
     <section class="container company-info">
       <div class="content">
-        <main>
+        <div class="main">
           <div class="company-summary">
             <h1>
               Специалисты КЗГУ проектируют оборудование, объединяющее<br />
@@ -496,12 +496,12 @@
               </div>
             </div>
           </div>
-        </main>
+        </div>
       </div>
     </section>
     <section class="container customer-info-bg">
       <div class="content">
-        <main>
+        <div class="main">
           <div class="customer-info">
             <div class="card">
               <div class="header">
@@ -567,12 +567,12 @@
               </div>
             </div>
           </div>
-        </main>
+        </div>
       </div>
     </section>
     <section class="container">
       <div class="content">
-        <main>
+        <div class="main">
           <div class="latest-news">
             <div class="action-header">
               <h1>
@@ -668,7 +668,7 @@
               </div>
             </div>
           </div>
-        </main>
+        </div>
       </div>
     </section>
     <section>
@@ -781,10 +781,14 @@
       <div class="content">
         <div class="footer-grid">
           <div class="footer-item logo-item">
-            <img src="images/logo.png" alt="" class="logo" />
+            <a href="/"><img src="images/logo.png" alt="" class="logo" /></a>
             <div class="messenger">
-              <img src="images/icons/whatsup.svg" alt="" />
-              <img src="images/icons/telegram.svg" alt="" />
+              <a href="https://web.whatsapp.com/">
+                <div class="whatsapp"></div>
+              </a>
+              <a href="https://web.telegram.org">
+                <div class="telegram"></div>
+              </a>
             </div>
             <div class="logo-bottom-text">
               <div class="text-muted">
@@ -797,7 +801,7 @@
             </div>
           </div>
           <div class="footer-item">
-            <h1 class="footer-header footer-text-item">Каталог продукции</h1>
+            <div class="footer-header footer-text-item">Каталог продукции</div>
             <div class="text-muted footer-text-item">
               <a href="">Дизельные генераторы</a>
             </div>
@@ -812,7 +816,7 @@
             </div>
           </div>
           <div class="footer-item">
-            <h1 class="footer-header footer-text-item">О компании</h1>
+            <div class="footer-header footer-text-item">О компании</div>
             <div class="text-muted footer-text-item">
               <a href="">Отзывы</a>
             </div>
@@ -835,13 +839,13 @@
             </div>
           </div>
           <div class="footer-item company-work-info">
-            <p class="phone-number">8 (800) 700 - 42 - 67</p>
+            <p class="phone-number"><a href="tel:8800700426">8 (800) 700 - 42 - 67</a></p>
             <div>
               <p class="text-muted footer-text-item">
                 Казань, ул. Мазита Гафури, д. 50
               </p>
               <p class="text-muted footer-text-item">
-                ikuznetsov@kzgu-generacia.ru
+                <a href="mailto:ikuznetsov@kzgu-generacia.ru">ikuznetsov@kzgu-generacia.ru</a>
               </p>
               <p class="text-muted footer-text-item">
                 Время работы: Будние: 9:00-18:00
@@ -858,7 +862,7 @@
           <li  >
             <p>Каталог оборудования</p>
           </li>
-          <li class="dropdown-initiator" data-to="supply_catalog"><p>Каталог запчастей</p></li>
+          <li class="dropdown-initiator-cascade" data-to="supply_catalog"><p>Каталог запчастей</p></li>
           <li><p>Аренда оборудования</p></li>
         </ul>
       </div>
@@ -872,7 +876,7 @@
           <li><p>Дополнительное оборудование</p></li>
         </ul>
       </div>
-      <!-- <div class="dropdown dropdown-third" data-name="box_for_supply">
+      <div class="dropdown dropdown-third" data-name="box_for_supply">
         <ul>
           <li>
             <p>Блок-контейнер медицинский</p>
@@ -893,7 +897,14 @@
             <p>Блок-контейнеры под аппаратные</p>
           </li>
         </ul>
-      </div> -->
+      </div>
+      <div class="dropdown-first dropdown" data-name="about">
+        <ul>
+          <li>
+            <p>Сертификаты</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>

@@ -40,3 +40,7 @@
 .dropdown-third {
   @include dropdown-template(#bfcddd, #cfd8e7);
 }
+
+.dropdown-active{
+  color: #245BA7;
+}
