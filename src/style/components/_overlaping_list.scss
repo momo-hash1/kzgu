@@ -1,21 +1,37 @@
 @use "../utils/themeColor";
 
 .overlaping-list {
-  display: grid;
+  display: flex;
   overflow: hidden;
-  grid-template-columns: repeat(4, 1fr);
+
   
   .list-item-wrapper {
     display: flex;
     justify-content: center;
+    position: relative;
+    width: 380px;
+  }
+  
+  .list-item-wrapper:nth-child(2){
+    left: -40px;
+    z-index: 2;
+  }
+  .list-item-wrapper:nth-child(3){
+    left: -80px;
+    z-index: 3;
+  }
+  .list-item-wrapper:nth-child(4){
+    left: -120px;
+    z-index: 4;
   }
   .overlaping-list-item {
     border-radius: 50%;
     border: 1px solid #e1e8fb;
-    width: 300px;
-    height: 300px;
+    width: 380px;
+    height: 380px;
     overflow: hidden;
     position: relative;
+    background-color: themeColor.$white;
     cursor: pointer;
     .wrapper {
       display: flex;
@@ -76,6 +92,8 @@
     }
   }
   .overlaping-list-item:hover{
+    background-color: transparent;
+
     .position-label{
       color: themeColor.$white;
       opacity: 1;
