@@ -64,6 +64,7 @@ const initDropdowns = () => {
 
       // hide all dropdowns when mouse clicked not in dropdown
       document.addEventListener("click", () => {
+        if(this.parent_initiator === null) return 
         if (this.onAnyDropdown()) return;
         this.handleClose();
         this.cascade = [];
