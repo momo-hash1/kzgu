@@ -39,7 +39,7 @@
 
 .generators-list {
   display: grid;
-  grid-template-columns: 25% calc(75% - 80px);
+  grid-template-columns: 335px 985px;
   gap: 80px;
   .filters {
     h3 {
@@ -59,6 +59,7 @@
           .brand {
             margin-left: 6px;
             font-size: 14px;
+            cursor: pointer;
           }
           margin-top: 12px;
         }
@@ -91,21 +92,27 @@
   .list {
     .distribute-items {
       display: grid;
-      grid-template-columns: 2fr repeat(4, 1fr) 2fr;
+      gap: 29px;
+      grid-template-columns: 33% repeat(2, 8%) repeat(2, 6%) 25%;
     }
     .list-header {
       background-color: themeColor.$primary;
       color: themeColor.$white;
+      .list-header-item:first-child{
+        justify-content: center;
+
+      }
       .list-header-item {
         display: flex;
-        justify-content: center;
         align-items: center;
         position: relative;
-        padding-bottom: 15px;
-        padding-top: 15px;
+        padding-bottom: 10px;
+        padding-top: 10px;
         p {
           cursor: pointer;
           font-size: 14px;
+          position: relative;
+          line-height: 20px;
         }
         p:hover {
           opacity: 0.5;
@@ -119,7 +126,7 @@
           width: 8px;
           height: 4px;
           position: absolute;
-          right: 4px;
+          left: calc(100% + 4px);
           top: 50%;
         }
       }
@@ -134,10 +141,15 @@
       margin-top: 4px;
       display: flex;
       align-items: center;
-      justify-content: center;
+
     }
     .list-items:hover {
       background-color: #e6ecf3;
+      .title-with-image{
+        a{
+          color: themeColor.$primary
+        }
+      }
     }
     .item:first-child {
       padding-left: 15px;
@@ -147,15 +159,25 @@
     }
     .title-with-image {
       display: flex;
+      align-items: center;
+      gap: 15px;
       div {
-        width: 58px;
+        width: 70px;
+        height: 50px;
+        display: flex;
+        overflow: hidden;
+        img{
+          object-fit: cover;
+        
+        }
         display: flex;
         align-items: center;
       }
-      p {
+      a {
         font-size: 14px;
-        margin-left: 20px;
+        
         font-weight: 600;
+        text-decoration: none;
       }
     }
     .stock-and-price {
@@ -179,13 +201,17 @@
     .header{
       display: flex;
       justify-content: space-between;
+      p{
+        font-size: 14px;
+        line-height: 20px;
+      }
     }
   }
   .view-switch{
     display: flex;
-
   }
   .list-view{
+    cursor: pointer;
     height: 16px;
     width: 16px;
     opacity: .35;
@@ -199,6 +225,8 @@
     }
   }
   .card-view{
+    cursor: pointer;
+
     opacity: .35;
     height: 16px;
     width: 16px;
@@ -209,6 +237,19 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 2px;
     row-gap: 2px;
+  }
+  .card-view:hover{
+    opacity: 1;
+    div{
+      background-color: themeColor.$primary;
+    }
+  }
+
+  .list-view:hover{
+    opacity: 1;
+    div{
+      background-color: themeColor.$primary;
+    }
   }
   .view-active{
     div{

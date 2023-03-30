@@ -30,6 +30,12 @@
   transition: all 300ms ease;
   overflow: hidden;
 }
+
+.accordion-header {
+  img {
+    transform: rotate(0deg);
+  }
+}
 .accordion-active {
   .accordion-body {
     margin-top: 15px;
@@ -38,7 +44,7 @@
   }
   .accordion-header {
     img {
-      transform: rotate(-90deg);
+      transform: rotate(180deg);
     }
   }
 }

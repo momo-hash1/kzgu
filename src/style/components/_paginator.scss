@@ -1,26 +1,60 @@
+@use "../utils/themeColor";
+@use "./icons";
+
+@mixin active() {
+  background-color: themeColor.$primary;
+  border-color: themeColor.$primary;
+  color: themeColor.$white;
+}
 .paginator-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: center;  
   margin-top: 40px;
 }
-.paginator{
+.paginator {
+  display: flex;
+  gap: 5px;
+  a {
+    width: 40px;
+    height: 40px;
     display: flex;
-    gap: 5px;
-    div{
-        width: 40px;
-        height: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 2px solid #CAD1EE;
-        p{
-            display: flex;
-            align-items: center;
-            font-weight: 600;
-        }
-        img{
-            width: 15px;
-            height: 15px;
-        }
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border: 2px solid #cad1ee;
+    p {
+      display: flex;
+      align-items: center;
+      font-weight: 600;
     }
+    div {
+      width: 15px;
+      height: 15px;
+    }
+    .left-white{
+      display: none;
+    }
+    .right-white{
+      display: none;
+    }
+  }
+
+  .active {
+    @include active();
+  }
+  a:hover{
+    @include active();
+    .left-gray{
+      display: none;
+    }
+    .right-gray{
+      display: none;
+    }
+    .left-white{
+      display: block;
+    }
+    .right-white{
+      display: block;
+    }
+  }
 }

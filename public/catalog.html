@@ -28,9 +28,9 @@
           </div>
         </div>
         <div class="two-section-header">
-          <h2>Дизельные генераторы</h2>
+          <h1>Дизельные генераторы</h1>
         </div>
-        <main class="generators-header">
+        <div class="main generators-header">
           <div class="quick-power-select">
             <p>Быстрый подбор по мощности:</p>
             <ul>
@@ -38,12 +38,12 @@
               <li><a href="">8,8 кВ</a>а</li>
             </ul>
           </div>
-        </main>
+        </div>
       </div>
     </section>
     <section class="container">
       <div class="content">
-        <main class="generators-list">
+        <div class="main generators-list">
           <div class="filters">
             <h3>Фильтры</h3>
             <div class="accordion">
@@ -51,7 +51,7 @@
                 <div class="accordion-header">
                   <div>
                     <p class="title">Максимальная мощность, кВа</p>
-                    <img src="images/icons/left_arrow.svg" />
+                    <img src="images/icons/gray/arrow_down.svg" />
                   </div>
                 </div>
                 <div class="accordion-body">
@@ -59,12 +59,12 @@
                     <div id="range-slider">
                       <div id="slider"></div>
                     </div>
-                    <div class="range-slider-bottom">
-                      <input type="text" />
+                    <div class="range-slider-bottom" id="slider-bottom">
+                      <input type="text" class="start"/>
                       <div class="line">
                         <div></div>
                       </div>
-                      <input type="text" />
+                      <input type="text" class="end"/>
                     </div>
                   </div>
                 </div>
@@ -73,7 +73,7 @@
                 <div class="accordion-header">
                   <div>
                     <p class="title">Номинальная мощность, кВа</p>
-                    <img src="images/icons/left_arrow.svg" />
+                    <img src="images/icons/gray/arrow_down.svg" />
                   </div>
                 </div>
                 <div class="accordion-body">
@@ -95,19 +95,19 @@
                 <div class="accordion-header">
                   <div>
                     <p class="title">Двигатель/бренд</p>
-                    <img src="images/icons/left_arrow.svg" />
+                    <img src="images/icons/gray/arrow_down.svg" />
                   </div>
                 </div>
                 <div class="accordion-body">
                   <div class="brand-list-checkbox">
                     <ul>
-                      <li>
+                      <li class="checkbox-main">
                         <div class="checkbox"></div>
                         <p class="brand">Doosan</p>
                       </li>
-                      <li>
+                      <li class="checkbox-main">
                         <div class="checkbox"></div>
-                        <p class="brand">Doosan</p>
+                        <p class="brand checkbox-label">Doosan</p>
                       </li>
                     </ul>
                     <div class="show-more"><a href="">Показать все</a></div>
@@ -118,7 +118,7 @@
                 <div class="accordion-header">
                   <div>
                     <p class="title">Количество фаз</p>
-                    <img src="images/icons/left_arrow.svg" />
+                    <img src="images/icons/gray/arrow_down.svg" />
                   </div>
                 </div>
                 <div class="accordion-body"></div>
@@ -127,14 +127,14 @@
                 <div class="accordion-header">
                   <div>
                     <p class="title">Объем бака, л</p>
-                    <img src="images/icons/left_arrow.svg" />
+                    <img src="images/icons/gray/arrow_down.svg" />
                   </div>
                 </div>
                 <div class="accordion-body"></div>
               </div>
             </div>
             <div class="sort-action-btns">
-              <button>Применить</button>
+              <button class="button">Применить</button>
               <div class="clear-filter-wrapper">
                 <div class="clear-filter text-muted">
                   <p>Сбросить фильтр</p>
@@ -192,7 +192,7 @@
               <div class="item">
                 <div class="title-with-image">
                   <div><img src="images/lead_section_img.png" alt="" /></div>
-                  <p>Еuropower EPS 300 DXE DC</p>
+                  <a href="">Еuropower EPS 300 DXE DC</a>
                 </div>
               </div>
               <div class="item">
@@ -207,7 +207,7 @@
               </div>
               <div class="item">
                 <div class="stock-and-price">
-                  <div class="badge stock-order">
+                  <div class="badge stock-available">
                     <p>в наличии</p>
                   </div>
                   <div class="to-price">
@@ -218,16 +218,22 @@
             </div>
             <div class="paginator-wrapper">
               <div class="paginator">
-                <div><img src="images/icons/left_arrow.svg" /></div>
-                <div><p>1</p></div>
-                <div><p>2</p></div>
-                <div><p>3</p></div>
-                <div><p>4</p></div>
-                <div><img src="images/icons/right_arrow.svg" /></div>
+                <a href=""
+                  ><div class="left-arrow-gray left-gray"></div>
+                  <div class="left-arrow-white left-white"></div
+                ></a>
+                <a href="" class="active"><p>1</p></a>
+                <a href=""><p>2</p></a>
+                <a href=""><p>3</p></a>
+                <a href=""><p>4</p></a>
+                <a href=""
+                  ><div class="right-arrow-gray right-gray"></div>
+                  <div class="right-arrow-white right-white"></div
+                ></a>
               </div>
             </div>
           </div>
-        </main>
+        </div>
       </div>
     </section>
 
