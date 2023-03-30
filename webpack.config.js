@@ -18,7 +18,7 @@ module.exports = {
     pages[page] = `./src/${page}.js`;
     return pages;
   }, {}),
-  mode: process.env.WEBPACK_SERVE ? "development" : "production",
+  mode: true ? "development" : "production",
   output: {
     filename: "[name].bundle.js",
     path: resolve(__dirname, "dist"),

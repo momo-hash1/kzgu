@@ -106,10 +106,31 @@
       li {
         padding-top: 25px;
         padding-bottom: 25px;
+        position: relative;
       }
       .active {
-        border-top: 2px solid themeColor.$primary;
         color: themeColor.$primary;
+      }
+      .active::after{
+        width: 100%;
+        height: 2px;
+        background-color: themeColor.$primary;
+        display: block;
+        content: "";
+        top: 0;
+        position: absolute;
+      }
+      li:hover{
+        ::after{
+          width: 100%;
+        height: 2px;
+        background-color: themeColor.$primary;
+        display: block;
+        content: "";
+        top: 0;
+        position: absolute;
+        }
+          color: themeColor.$primary;
       }
     }
   }

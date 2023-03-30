@@ -17,12 +17,15 @@ const initDropdowns = () => {
     cascade: [],
     opened_dropdowns: 0,
     begin_pos: null,
+    parent_initiator: null,
     init() {
       this.initiators.forEach((initiator) => {
         initiator.addEventListener("mouseenter", (e) => {
           if (this.cascade.length !== 0) {
             this.cascade = [];
-            this.handleClose();
+            this.handleClose()
+            this.parent_initiator.classList.remove("dropdown-active")
+            this.parent_initiator = null
           }
           const to = initiator.dataset.to;
           this.cascade.push(to);
@@ -30,10 +33,7 @@ const initDropdowns = () => {
           this.handleOpen();
           this.opened_dropdowns += 1
           initiator.classList.add("dropdown-active");
-        });
-
-        initiator.addEventListener("mouseleave", () => {
-          initiator.classList.remove("dropdown-active");
+          this.parent_initiator = initiator
         });
       });
 
@@ -67,6 +67,8 @@ const initDropdowns = () => {
         if (this.onAnyDropdown()) return;
         this.handleClose();
         this.cascade = [];
+        this.parent_initiator.classList.remove("dropdown-active")
+        this.parent_initiator = null
       });
     },
     handleOpen() {
@@ -80,7 +82,7 @@ const initDropdowns = () => {
         dropdown.element.style.cssText = `
             left: ${this.begin_pos + 390 * index}px;
             display: block; 
-            top: ${header_rect.top + header_rect.height}px
+            top: ${header_rect.top +  window.scrollY + header_rect.height}px
             `;
       });
     },
