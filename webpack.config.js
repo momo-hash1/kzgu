@@ -15,6 +15,7 @@ const getPages = () => {
 
 module.exports = {
   entry: getPages().reduce((pages, page) => {
+    if (!fs.existsSync(join(__dirname, "src", `${page}.js`))) return;
     pages[page] = `./src/${page}.js`;
     return pages;
   }, {}),
@@ -53,7 +54,10 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: [{loader: "style-loader"}, { loader: "css-loader", options: { url: true } }],
+        use: [
+          { loader: "style-loader" },
+          { loader: "css-loader", options: { url: true } },
+        ],
       },
     ],
   },
