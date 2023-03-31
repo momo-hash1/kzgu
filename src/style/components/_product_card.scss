@@ -1,7 +1,7 @@
 @use "../utils/themeColor";
 @use "../components/badge";
 
-.card-product:hover >  {
+.card-product:hover > {
   .button-wrapper {
     visibility: visible;
     opacity: 1;
@@ -12,6 +12,7 @@
   background-color: themeColor.$secondary;
   padding: 10px;
   position: relative;
+  height: 455px;
   .product-image {
     display: flex;
     justify-content: center;
@@ -20,16 +21,19 @@
     padding-left: 30px;
     padding-right: 30px;
     margin-top: 13px;
+    display: flex;
+    // 43px 100% - (высота badge(30px) + padding product_card(10px) + padding image(13px))
+    height: calc(100% - 43px);
+    flex-direction: column;
+    justify-content: space-between;
     .product-title {
       div {
-        margin-top: 35px;
         font-size: 16px;
         font-weight: 600;
       }
     }
     .product-specs {
       margin-top: 10px;
-      margin-bottom: 25px;
       ul {
         li {
           font-size: 14px;
