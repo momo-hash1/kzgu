@@ -15,6 +15,13 @@
 @use "../components/seo_text";
 @use "../components/dropdown";
 
+
+.popular-product-swiper{
+  .swiper-slide{
+
+    padding-bottom: 65px;
+  }
+}
 .container {
   .main {
     margin-top: 0;

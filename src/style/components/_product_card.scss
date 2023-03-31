@@ -1,13 +1,17 @@
 @use "../utils/themeColor";
 @use "../components/badge";
 
-.card-product:hover > button{
-  display: block;
+.card-product:hover >  {
+  .button-wrapper {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 .card-product {
   background-color: themeColor.$secondary;
   padding: 10px;
+  position: relative;
   .product-image {
     display: flex;
     justify-content: center;
@@ -37,9 +41,23 @@
       }
     }
   }
-  button {
-    width: 100%;
-    display: none;
+  .button {
+    width: calc(100% - 20px);
+    margin: 0px 10px 10px 10px;
   }
 
+  .button-wrapper {
+    position: absolute;
+    z-index: 2;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    visibility: hidden;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+    transition-property: visibility, opacity;
+    opacity: 0;
+    background-color: themeColor.$secondary;
+  }
 }
