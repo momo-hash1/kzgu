@@ -1,0 +1,13 @@
+@use "../components/container";
+@use "../utils/themeColor";
+@use "../components/paginator";
+@use "../components/breadcrumb";
+@use "../utils/global";
+@use "../components/project_card";
+
+
+.realized-project-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    gap: 4px;
+}

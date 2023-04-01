@@ -1,6 +1,9 @@
 @use "../utils/themeColor";
+@use "../components/image_overlay";
+@use "../components/button";
 
 .project-card{
+    overflow: hidden;
     height: 400px;
     position: relative;
     .project-card-wrapper{
@@ -18,7 +21,7 @@
                 line-height: 30px;
             }
             div{
-                display: none;
+                display: block;
                 button{
                     margin-top: 30px;
                     padding-left: 60px;
@@ -37,6 +40,7 @@
             }
             .item:last-child{
                 margin-bottom: 30px;
+                display: none;
             }
         }
     }
@@ -50,7 +54,7 @@
             height: 100%;
             width: 100%;
             z-index: -2;
-
+            background: linear-gradient(0deg, rgba(9, 46, 71, 0.3), rgba(9, 46, 71, 0.3));
         }
         img{
             z-index: -3;
@@ -66,6 +70,6 @@
 
 }
 
-.project-card:hover .project-card-content > div{
+.project-card:hover .project-card-content > .item:last-child{
     display: block;
 }
