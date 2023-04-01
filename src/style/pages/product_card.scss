@@ -169,7 +169,7 @@
     .white-button{
         
         background-color: themeColor.$secondary;
-        @include text.textMuted(0.35);
+        color: rgba(9, 46, 71, .35);
     }
 }
 

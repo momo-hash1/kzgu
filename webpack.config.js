@@ -13,12 +13,18 @@ const getPages = () => {
   return pages;
 };
 
+const getPageJs =  () => {
+  const pages = {}
+  getPages().forEach(page => {
+    if (fs.existsSync(join(__dirname, "src", `${page}.js`))){
+      pages[page] = `./src/${page}.js`;
+    };
+  })
+  return pages
+}
+
 module.exports = {
-  entry: getPages().reduce((pages, page) => {
-    if (!fs.existsSync(join(__dirname, "src", `${page}.js`))) return;
-    pages[page] = `./src/${page}.js`;
-    return pages;
-  }, {}),
+  entry: getPageJs(),
   mode: true ? "development" : "production",
   output: {
     filename: "[name].bundle.js",

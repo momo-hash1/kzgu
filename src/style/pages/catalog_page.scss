@@ -1,0 +1,69 @@
+@use "../components/container";
+@use "../components/breadcrumb";
+@use "../utils/global";
+@use "../utils/themeColor";
+@use "../components/badge";
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  gap: 4px;
+  a{
+    text-decoration: none;
+  }
+}
+
+.catalog-card {
+  background-color: themeColor.$secondary;
+  position: relative;
+  height: 365px;
+  .card-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    .catalog-title {
+      font-size: 22px;
+      margin-bottom: 25px;
+      margin-left: 30px;
+    }
+    .badge-wrapper {
+      justify-content: end;
+      margin-top: 10px;
+      margin-right: 10px;
+    }
+  }
+
+  .card-img {
+    display: flex;
+    position: absolute;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+}
+$sizes: 222px, 288px, 232px, 250px;
+@for $i from 1 through length($sizes) {
+  .catalog-card:nth-child(#{$i}) {
+    img {
+      width: nth($list: $sizes, $n: $i);
+    }
+  }
+}
+
+.catalog-card:nth-child(3) {
+  img {
+    transform: translateX(-30px);
+  }
+}
+
+.catalog-card:hover{
+    background-color: #E6ECF3;
+    .catalog-title{
+        color: themeColor.$primary;
+    }
+}

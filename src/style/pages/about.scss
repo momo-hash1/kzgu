@@ -154,7 +154,7 @@
         padding: 30px;
         position: relative;
 
-        height: 100%;
+        height: calc(100% - 60px);
       }
       .zoom-overlay{
         background-color: rgba(15, 100, 218, .65);
