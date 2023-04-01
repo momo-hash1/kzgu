@@ -6,6 +6,7 @@
     overflow: hidden;
     height: 400px;
     position: relative;
+    
     .project-card-wrapper{
         position: relative;
         height: 100%;
@@ -43,6 +44,9 @@
                 display: none;
             }
         }
+    }
+    .project-title{
+        text-decoration: none;
     }
     .project-card-bg{
         z-index: -1;

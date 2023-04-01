@@ -1,0 +1,37 @@
+@use "../components/container";
+@use "../utils/themeColor";
+@use "../components/breadcrumb";
+@use "../utils/global";
+@use "../components/gallery";
+@use "../components/badge";
+@use "../components/list";
+
+
+.gallery-main{
+    position: relative;
+    .badge-wrapper{
+        position: relative;
+        z-index: 1;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+    img{
+        position: absolute;
+        top: 0;
+    }
+}
+
+.description{
+    margin-top: 40px;
+    font-weight: 500;
+    width: 75%;
+}
+
+.dotted-list{
+    li:before{
+        background-color: themeColor.$text-color-contrast;
+    }
+    li{
+        margin-left: 10px;
+    }
+}

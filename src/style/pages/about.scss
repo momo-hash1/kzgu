@@ -11,6 +11,7 @@
 @use "../components/divider";
 @use "../components/two_section_header";
 @use "../components/swiper";
+@use "../components/gallery";
 
 .company-summary-large {
   .watch-video {
@@ -230,33 +231,3 @@
   }
 }
 
-.swiper-slide{
-  padding: 0;
-}
-
-.gallery-main{
-  height: 690px;
-}
-
-.swiper-gallery-thumbs{
-  margin-top: 4px;
-  
-}
-
-.gallery-thumbs{
-  height: 85px;
-  position: relative;
-}
-
-.thumb-overlay{
-  transition: opacity 300ms ease;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(0deg, rgba(15, 100, 218, 0.72), rgba(15, 100, 218, 0.72));  
-  opacity: 0;
-}
-
-.gallery-thumbs:hover .thumb-overlay{
-  opacity: 1;
-}

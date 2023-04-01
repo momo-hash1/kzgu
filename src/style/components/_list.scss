@@ -15,6 +15,9 @@
     }
 }
 .dotted-list{
+    li:first-child{
+        margin-top: 0;
+    }
     li{
         display: flex;
         align-items: center;
