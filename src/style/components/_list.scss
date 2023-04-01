@@ -1,7 +1,7 @@
 @use "../utils/themeColor";
 
 .background-list{
-    li::nth-child(odd){
+    li:nth-child(even){
         background-color: #E5E9EF;
     }
     li{

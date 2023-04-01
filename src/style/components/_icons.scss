@@ -60,15 +60,27 @@
   background-position: center;
 }
 
+.left-arrow-blue{
+  background-image:  url("../images/icons/blue/left_arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .right-arrow-white{
   background-image:  url("../images/icons/white/arrow_right.svg");
   background-repeat: no-repeat;
   background-position: center;
-
 }
 
 .right-arrow-gray{
   background-image:  url("../images/icons/gray/arrow_right.svg");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.right-arrow-blue{
+  background-image:  url("../images/icons/blue/right_arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
 }

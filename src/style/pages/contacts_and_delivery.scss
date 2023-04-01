@@ -1,0 +1,96 @@
+@use "../components/container";
+@use "../utils/themeColor";
+@use "../components/breadcrumb";
+@use "../utils/global";
+@use "../components/gallery";
+@use "../components/badge";
+@use "../components/list";
+@use "../components/two_section_header";
+@use "../components/input";
+@use "../components/button";
+
+.company-info-list {
+  ul {
+    display: flex;
+    width: 78%;
+    justify-content: space-between;
+    margin-left: 10px;
+    li {
+      position: relative;
+      p {
+        font-weight: 500;
+      }
+      a {
+        font-weight: 500;
+        text-decoration: none;
+      }
+    }
+    li:after {
+      content: "";
+      width: 2px;
+      height: 100%;
+      display: block;
+      background-color: themeColor.$primary;
+      position: absolute;
+      top: 0;
+      left: -10px;
+    }
+}
+.map{
+    margin-top: 30px;
+}
+}
+
+.content{
+    .section-description{
+        margin-top: 20px;
+    }
+}
+.background-list{
+    li{
+        display: grid;
+        grid-template-columns: 0.5fr repeat(2, 1fr) 0.5fr;
+    }
+}
+
+.two-section-header{
+    align-items: center;
+}
+.customer-request{
+    background-color:themeColor.$secondary;
+    padding: 40px;
+    textarea{
+        margin-top: 20px;
+        height: 200px;
+    }
+
+    .bottom{
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        button{
+            width: 426px;
+        }
+    }
+    .attach-file{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: themeColor.$primary;
+        cursor: pointer;
+        .icon{
+            width: 13px;
+            height: 17px;
+        }
+    }
+    .attach-file:hover{
+        opacity: .8;
+    }
+}
+
+.customer-contacts{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}

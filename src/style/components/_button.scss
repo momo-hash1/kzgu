@@ -34,10 +34,10 @@ button{
 
 .nav-button:hover{
   background-color: themeColor.$primary;
-  div{
+  .white{
     display: block;
   }
-  img{
+  .blue{
     display: none;
   }
 
@@ -54,13 +54,12 @@ button{
   align-items: center;
   justify-content: center;
   box-shadow: 0px 4px 5px rgba(183, 192, 204, 0.7);
-  img{
-      width: 9px;
-      height: 18px;
-  }
   div{
     width: 9px;
     height: 18px;
+
+  }
+  .white{
     display: none;
   }
 }

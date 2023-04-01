@@ -7,8 +7,9 @@ input {
   padding: 15px 20px 15px 20px;
   font-size: 16px;
   outline: 0;
-  color: themeColor.$text-color-contrast;
-  
+  color: rgba(9, 46, 71, 0.40);
+
+  font-family: "Inter", sans-serif;
 }
 .input-with-border {
   border: 1px solid #c8d3e2;
@@ -16,6 +17,8 @@ input {
 
 input::placeholder {
   @include text.textMuted();
+  font-weight: 500;
+
 }
 
 .input-with-icon {
@@ -34,8 +37,8 @@ input::placeholder {
     padding: 15px 20px 15px 20px;
     justify-content: center;
     align-items: center;
-    
-    img{
+
+    img {
       width: 17px;
     }
   }
@@ -62,9 +65,26 @@ input::placeholder {
   content: "";
 }
 
-.checkbox-active::before { 
+.checkbox-active::before {
   display: block;
 }
 .checkbox-active {
   background-color: themeColor.$primary;
+}
+
+textarea {
+  width: calc(100% - 40px);
+  outline: none;
+  border-radius: 0;
+  background-color: themeColor.$secondary;
+  padding: 15px 20px 15px 20px;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  color: rgba(9, 46, 71, 0.40);
+  display: block;
+}
+
+textarea::placeholder {
+  font-weight: 500;
+  color: rgba(9, 46, 71, 0.40);
 }
