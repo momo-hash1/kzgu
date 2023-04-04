@@ -160,7 +160,6 @@
 }
 
 header {
-  overflow: auto;
 
   @media screen and (max-width: size.$desktop_medium) {
     .divider-top {
@@ -168,21 +167,33 @@ header {
     }
   }
 }
+
+.modal-main-links{
+  margin-top: 20px;
+}
 .modal-menu {
   display: none;
-  height: calc(100vh - 83px);
+  height: calc(100% - 83px);
   width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
   box-sizing: border-box;
+  position: absolute;
+  top: 83px;
+  z-index: 2;
+  background-color: themeColor.$white;
   .input-with-icon {
     width: 100%;
     margin-top: 10px;
   }
-  .modal-content {
-    padding-bottom: 20px;
+  .modal-content-wrapper {
+    overflow: auto;
+    height: calc(100% - 30px);
+    .modal-content{
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
 }
+
 
 .modal-active {
   overflow: hidden;
@@ -203,8 +214,8 @@ header {
       text-decoration: none;
     }
     font-weight: 500;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 
