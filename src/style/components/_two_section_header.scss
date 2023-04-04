@@ -1,7 +1,10 @@
-.two-section-header{
-    display: flex;
-    justify-content: space-between;
-    h2{
-      line-height: 50px;
-    }
-  }
+@use "../utils/size";
+
+.two-section-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+
+

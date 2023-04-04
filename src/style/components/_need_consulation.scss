@@ -1,0 +1,50 @@
+@use "../utils/themeColor";
+@use "../utils/size";
+
+.need-consultation {
+  margin-top: 115px;
+  .header {
+    display: flex;
+    margin: 0;
+    justify-content: space-between;
+    align-items: start;
+  }
+  .input-request {
+    background-color: themeColor.$secondary;
+    display: grid;
+    gap: 20px;
+    margin-top: 40px;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 40px;
+    input{
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+  .accept-personal-info {
+    margin-top: 20px;
+    opacity: 0.35;
+    span {
+      text-decoration: underline;
+    }
+  }
+  .two-section-header {
+    p {
+      font-size: 22px;
+    }
+  }
+
+  @media screen and (max-width: size.$desktop_medium) {
+    .input-request {
+      grid-template-columns: 1fr;
+      padding: 15px;
+      
+    }
+  }
+  @media screen and (max-width: size.$tablet) {
+    .header {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+}

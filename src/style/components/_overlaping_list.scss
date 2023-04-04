@@ -1,7 +1,9 @@
 @use "../utils/themeColor";
+@use "../utils/size";
 
 .overlaping-list {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   overflow: hidden;
 
   
@@ -115,6 +117,39 @@
       .white{
         display: block;
       }
+    }
+  }
+ @media screen and (max-width: size.$desktop) {
+  grid-template-columns: 1fr 1fr;
+  .list-item-wrapper{
+    width: 100%;
+  }
+  .list-item-wrapper:nth-child(even){
+    left: -20px;
+    justify-content: start;
+  }
+  .list-item-wrapper:nth-child(odd){
+    justify-content: end;
+    left: 20px;
+
+  }
+ }
+  @media screen and (max-width: size.$tablet) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    .list-item-wrapper:nth-child(odd){
+      left: 0;
+      justify-content: center;
+    }
+    .list-item-wrapper:nth-child(even){
+      left: 0;
+      justify-content: center;
+    }
+  }
+  @media screen and (max-width: size.$phone) {
+    .overlaping-list-item{
+      width: 280px;
+      height: 280px;
     }
   }
 }

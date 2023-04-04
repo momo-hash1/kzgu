@@ -1,5 +1,17 @@
-@use "../utils/size";
 @use "./two_section_header";
+@use "../utils/size";
+
+@mixin content-width(){
+  .content {
+    width: size.$desktop;
+  }
+  @media only screen and (max-width: size.$desktop) {
+    .content {
+      width: calc(100% - 40px);
+
+    }
+  }
+}
 
 .container {
   width: 100%;
@@ -7,35 +19,32 @@
   justify-content: center;
   z-index: 2;
   position: relative;
-  .content{
-    width: 1400px;
-  } 
-  .main{
+  @include content-width();
+  .main {
     margin-top: 40px;
   }
 }
 
-.section-margin{
+.section-margin {
   margin-top: size.$main_margin;
 }
 
-.container-html-bg{
+.container-html-bg {
   overflow: hidden;
   position: relative;
-  .content-wrapper{
+  .content-wrapper {
     display: flex;
     justify-content: center;
     position: relative;
   }
-  .content{
-    width: 1400px;
-    z-index: 1;
-    position: relative;
-  }
-  .background{
+  @include content-width();
+  .background {
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
+  }
+  @media screen and (max-width: size.$tablet) {
+     padding-bottom: 20px;
   }
 }

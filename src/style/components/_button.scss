@@ -1,5 +1,6 @@
 @use "../utils/themeColor";
 @use "./icons";
+@use "../utils/size";
 
 button{
   border: 0;
@@ -61,5 +62,10 @@ button{
   }
   .white{
     display: none;
+  }
+
+  @media screen and (max-width: size.$tablet) {
+    width: 40px;
+    height: 40px;
   }
 }

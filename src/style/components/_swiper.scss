@@ -1,22 +1,31 @@
 @use "../utils/themeColor";
 
 
-.swiper-header{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 40px;
+.swiper-header {
+  margin-bottom: 40px;
+  @media screen and (max-width: 400px) {
+    h2 {
+      font-size: 25px;
+    }
+    gap: 0;
+  }
 }
 
-
-.swiper-button-next::after{
-    display: none;
+.swiper-button-next::after {
+  display: none;
 }
 
-.swiper-button-prev::after{
-    display: none;
+.swiper-button-prev::after {
+  display: none;
 }
 
-.swiper-nav{
-    display: flex;
-    gap: 20px;
+.swiper-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.swiper-nav-wrapper {
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }

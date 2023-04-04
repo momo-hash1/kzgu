@@ -72,14 +72,4 @@ document.querySelectorAll(".checkbox-main").forEach((checkbox_main) => {
   });
 });
 
-document.querySelectorAll(".accordion-header").forEach((accordion) => {
-  accordion.addEventListener("click", () => {
-    console.log(accordion.style);
-    if (accordion.style.borderBottom === "none") {
-      accordion.style = null;
-    } else {
-      accordion.style.borderBottom = "none";
-    }
-    accordion.parentElement.classList.toggle("accordion-active");
-  });
-});
+initAccordion()

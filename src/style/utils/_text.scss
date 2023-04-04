@@ -1,24 +1,24 @@
 @use "../utils/themeColor";
 
-@mixin textMuted($opacity: 50%){
-    opacity: $opacity;
-    color: themeColor.$text-color-contrast;
+@mixin textMuted($opacity: 50%) {
+  opacity: $opacity;
+  color: themeColor.$text-color-contrast;
 }
 
-.text-muted{
-    @include textMuted();
+.text-muted {
+  @include textMuted();
 }
 
-.white-text{
-    color: #fff
+.white-text {
+  color: #fff;
 }
 
 .description {
-    p {
-      line-height: 25px;
-      margin-bottom: 20px;
-    }
-    p:last-child {
-      margin-bottom: 0;
-    }
+  p {
+    line-height: 25px;
+    margin-bottom: 20px;
   }
+  p:last-child {
+    margin-bottom: 0;
+  }
+}

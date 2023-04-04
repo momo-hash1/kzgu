@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,33 +26,37 @@
               <div class="logo">
                 <a href="/"><img src="images/logo.png" alt="" /></a>
               </div>
-              <div class="header-top-main">
-                <form action="">
-                  <div class="input-with-icon">
-                    <input
-                      type="text"
-                      placeholder="Поиск по продукции и разделам"
-                    />
-                    <div>
-                      <img src="images/icons/gray/ri_search-line.svg" alt="" />
-                    </div>
+              <form action="" class="input-form">
+                <div class="input-with-icon">
+                  <input
+                    type="text"
+                    placeholder="Поиск по продукции и разделам"
+                  />
+                  <div>
+                    <img src="images/icons/gray/ri_search-line.svg" alt="" />
                   </div>
-                </form>
-                <div class="header-top-info">
-                  <div class="address">
-                    <img src="images/icons/address.svg" alt="" />
-                    <p>Казань, ул. Мазита Гафури, д. 50</p>
-                  </div>
-                  <div class="leave-request">
-                    <button class="button">Оставить заявку</button>
-                  </div>
+                </div>
+              </form>
+
+              <div class="address">
+                <img src="images/icons/address.svg" alt="" />
+                <p>Казань, ул. Мазита Гафури, д. 50</p>
+              </div>
+              <div class="leave-request">
+                <button class="button">Оставить заявку</button>
+              </div>
+              <div class="hamburger-menu ">
+                <div class="body">
+                  <div class="item"></div>
+                  <div class="item"></div>
+                  <div class="item"></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="divider"></div>
+      <div class="divider divider-top"></div>
       <div class="container">
         <div class="content header-nav">
           <div class="main">
@@ -99,6 +104,156 @@
         </div>
       </div>
       <div class="divider"></div>
+      <div class="modal-menu">
+        <div class="modal-content">
+          <form action="" class="input-form">
+            <div class="input-with-icon">
+              <input type="text" placeholder="Поиск по продукции и разделам" />
+              <div>
+                <img src="images/icons/gray/ri_search-line.svg" alt="" />
+              </div>
+            </div>
+          </form>
+          <nav class="mobile-links">
+            <ul>
+              <li class="mobile-link">
+                <div class="accordion-item">
+                  <div class="accordion-header">
+                    <div>
+                      <a class="title" href="catalog_page.html"
+                        >Каталог продукции</a
+                      >
+                      <img
+                        src="images/icons/gray/arrow_down.svg"
+                        class="accordion-initiator"
+                      />
+                    </div>
+                  </div>
+                  <div class="accordion-body mobile-links">
+                    <ul>
+                      <li class="mobile-link">
+                        <div class="accordion-item">
+                          <div class="accordion-header">
+                            <div>
+                              <a class="title" href="catalog.html"
+                                >Каталог оборудования</a
+                              >
+                              <img
+                                src="images/icons/gray/arrow_down.svg"
+                                class="accordion-initiator"
+                              />
+                            </div>
+                          </div>
+                          <div class="accordion-body mobile-links">
+                            <ul>
+                              <li class="mobile-link">
+                                <a href="catalog.html">Дизельные генераторы</a>
+                              </li>
+                              <li class="mobile-link">
+                                <div class="accordion-item">
+                                  <div class="accordion-header">
+                                    <div>
+                                      <a class="title" href="catalog.html"
+                                        >Блок-контейнер под оборудование</a
+                                      >
+                                      <img
+                                        src="images/icons/gray/arrow_down.svg"
+                                        class="accordion-initiator"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="accordion-body mobile-links">
+                                    <ul>
+                                      <li class="mobile-link">
+                                        <a href="catalog.html">Блок-контейнер медицинский</a>
+                                      </li>
+                                      <li class="mobile-link">
+                                        <a href="catalog.html"
+                                          >Блок-контейнеры под лаборатории</a
+                                        >
+                                      </li>
+                                      <li class="mobile-link">
+                                        <a href="catalog.html"
+                                          >Блок-контейнеры средств связи</a
+                                        >
+                                      </li>
+                                      <li class="mobile-link">
+                                        <a href="catalog.html"
+                                          >Блок-контейнеры технические</a
+                                        >
+                                      </li>
+                                      <li class="mobile-link">
+                                        <a href="catalog.html"
+                                          >Блок-контейнеры под котельные</a
+                                        >
+                                      </li>
+                                      <li class="mobile-link">
+                                        <a href="catalog.html"
+                                          >Блок-контейнеры под аппаратные</a
+                                        >
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="mobile-link">
+                                <a href="catalog.html"
+                                  >Блок-контейнер под металлоконструкции</a
+                                >
+                              </li>
+                              <li class="mobile-link">
+                                <a href="catalog.html"
+                                  >Дополнительное оборудование</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="mobile-link">
+                        <a href="catalog.html">Каталог запчастей</a>
+                      </li>
+                      <li class="mobile-link"><a href="catalog.html">Аренда оборудования</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="mobile-link">
+                <div class="accordion-item">
+                  <div class="accordion-header">
+                    <div>
+                      <a class="title" href="about.html">О компании</a>
+                      <img
+                        src="images/icons/gray/arrow_down.svg"
+                        class="accordion-initiator"
+                      />
+                    </div>
+                  </div>
+                  <div class="accordion-body">
+                    <ul>
+                      <li>
+                        <a href="about.html">Сертификаты</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="mobile-link">
+                <a href="news_page.html">Новости</a>
+              </li>
+              <li class="mobile-link">
+                <a href="realized_projects.html">Реализованные проекты</a>
+              </li>
+              <li class="mobile-link">
+                <a href="contacts_and_delivery.html">Контакты и доставка</a>
+              </li>
+              <li class="mobile-link">
+                <a href="">У вас тендер?</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </header>
     <section>
       <div class="container-html-bg">
@@ -110,9 +265,8 @@
                   <div class="lead-section">
                     <div class="action">
                       <h1 class="title">
-                        Дизельные генераторы для<br />
-                        организации основного, резервного<br />
-                        и аварийного электроснабжения
+                        Дизельные генераторы для организации основного,
+                        резервного и аварийного электроснабжения
                       </h1>
                       <p class="text">
                         Популярные модели дизель-генераторов всегда в наличии и
@@ -165,9 +319,7 @@
     </section>
     <section class="container for-who">
       <div class="content">
-        <div class="two-section-header">
-          <h2>Для кого</h2>
-        </div>
+        <h2>Для кого</h2>
         <div class="main">
           <ul class="overlaping-list">
             <div class="list-item-wrapper">
@@ -248,11 +400,11 @@
     </section>
     <section>
       <div class="container">
-        <div class="content-wrapper">
-          <div class="content">
-            <div class="popular-product">
-              <div class="swiper-header">
-                <h1>Популярная продукция</h1>
+        <div class="content">
+          <div class="popular-product">
+            <div class="swiper-header two-section-header">
+              <h2>Популярная продукция</h2>
+              <div class="swiper-nav-wrapper">
                 <div class="swiper-nav">
                   <button class="nav-button swiper-header-product-prev">
                     <div class="left-arrow-blue blue"></div>
@@ -264,168 +416,168 @@
                   </button>
                 </div>
               </div>
-              <div class="swiper popular-product-swiper">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                  <!-- Slides -->
-                  <div class="swiper-slide">
-                    <div class="card-product">
-                      <div class="badge-wrapper">
-                        <div class="badge stock-available">
-                          <p>в наличии</p>
-                        </div>
-                      </div>
-                      <div class="product-content">
-                        <div class="product-image">
-                          <img src="images/lead_section_img.png" alt="" />
-                        </div>
-                        <div class="product-text">
-                          <div class="product-title">
-                            <div>
-                              Генератор Еuropower EPS 300 DXE DC дизельный
-                            </div>
-                          </div>
-                          <div class="product-specs">
-                            <ul>
-                              <li>
-                                <p>Макс. мощность: 8,8 кВА</p>
-                              </li>
-                              <li>
-                                <p>Номин. мощность: 8 кВА</p>
-                              </li>
-                              <li>
-                                <p>Кол-во фаз: три</p>
-                              </li>
-                              <li>
-                                <p>Объем бака: 63 литра</p>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="button-wrapper">
-                        <button class="button">Узнать цену</button>
+            </div>
+            <div class="swiper popular-product-swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <div class="card-product">
+                    <div class="badge-wrapper">
+                      <div class="badge stock-available">
+                        <p>в наличии</p>
                       </div>
                     </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card-product">
-                      <div class="badge-wrapper">
-                        <div class="badge stock-available">
-                          <p>в наличии</p>
-                        </div>
+                    <div class="product-content">
+                      <div class="product-image">
+                        <img src="images/lead_section_img.png" alt="" />
                       </div>
-                      <div class="product-content">
-                        <div class="product-image">
-                          <img src="images/fregat.png" alt="" />
-                        </div>
-                        <div class="product-text">
-                          <div class="product-title">
-                            <div>
-                              Генератор Еuropower EPS 300 DXE DC дизельный
-                            </div>
-                          </div>
-                          <div class="product-specs">
-                            <ul>
-                              <li>
-                                <p>Макс. мощность: 8,8 кВА</p>
-                              </li>
-                              <li>
-                                <p>Номин. мощность: 8 кВА</p>
-                              </li>
-                              <li>
-                                <p>Кол-во фаз: три</p>
-                              </li>
-                              <li>
-                                <p>Объем бака: 63 литра</p>
-                              </li>
-                            </ul>
+                      <div class="product-text">
+                        <div class="product-title">
+                          <div>
+                            Генератор Еuropower EPS 300 DXE DC дизельный
                           </div>
                         </div>
-                      </div>
-                      <div class="button-wrapper">
-                        <button class="button">Узнать цену</button>
+                        <div class="product-specs">
+                          <ul>
+                            <li>
+                              <p>Макс. мощность: 8,8 кВА</p>
+                            </li>
+                            <li>
+                              <p>Номин. мощность: 8 кВА</p>
+                            </li>
+                            <li>
+                              <p>Кол-во фаз: три</p>
+                            </li>
+                            <li>
+                              <p>Объем бака: 63 литра</p>
+                            </li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card-product">
-                      <div class="badge-wrapper">
-                        <div class="badge stock-order">
-                          <p>под заказ</p>
-                        </div>
-                      </div>
-                      <div class="product-content">
-                        <div class="product-image">
-                          <img src="images/lead_section_img.png" alt="" />
-                        </div>
-                        <div class="product-text">
-                          <div class="product-title">
-                            <div>
-                              Генератор Еuropower EPS 300 DXE DC дизельный
-                            </div>
-                          </div>
-                          <div class="product-specs">
-                            <ul>
-                              <li>
-                                <p>Макс. мощность: 8,8 кВА</p>
-                              </li>
-                              <li>
-                                <p>Номин. мощность: 8 кВА</p>
-                              </li>
-                              <li>
-                                <p>Кол-во фаз: три</p>
-                              </li>
-                              <li>
-                                <p>Объем бака: 63 литра</p>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="button-wrapper">
-                        <button class="button">Узнать цену</button>
-                      </div>
+                    <div class="button-wrapper">
+                      <button class="button">Узнать цену</button>
                     </div>
                   </div>
-                  <div class="swiper-slide">
-                    <div class="card-product">
-                      <div class="badge-wrapper">
-                        <div class="badge stock-available">
-                          <p>в наличии</p>
-                        </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card-product">
+                    <div class="badge-wrapper">
+                      <div class="badge stock-available">
+                        <p>в наличии</p>
                       </div>
-                      <div class="product-content">
-                        <div class="product-image">
-                          <img src="images/fregat.png" alt="" />
-                        </div>
-                        <div class="product-text">
-                          <div class="product-title">
-                            <div>
-                              Генератор Еuropower EPS 300 DXE DC дизельный
-                            </div>
-                          </div>
-                          <div class="product-specs">
-                            <ul>
-                              <li>
-                                <p>Макс. мощность: 8,8 кВА</p>
-                              </li>
-                              <li>
-                                <p>Номин. мощность: 8 кВА</p>
-                              </li>
-                              <li>
-                                <p>Кол-во фаз: три</p>
-                              </li>
-                              <li>
-                                <p>Объем бака: 63 литра</p>
-                              </li>
-                            </ul>
+                    </div>
+                    <div class="product-content">
+                      <div class="product-image">
+                        <img src="images/fregat.png" alt="" />
+                      </div>
+                      <div class="product-text">
+                        <div class="product-title">
+                          <div>
+                            Генератор Еuropower EPS 300 DXE DC дизельный
                           </div>
                         </div>
+                        <div class="product-specs">
+                          <ul>
+                            <li>
+                              <p>Макс. мощность: 8,8 кВА</p>
+                            </li>
+                            <li>
+                              <p>Номин. мощность: 8 кВА</p>
+                            </li>
+                            <li>
+                              <p>Кол-во фаз: три</p>
+                            </li>
+                            <li>
+                              <p>Объем бака: 63 литра</p>
+                            </li>
+                          </ul>
+                        </div>
                       </div>
-                      <div class="button-wrapper">
-                        <button class="button">Узнать цену</button>
+                    </div>
+                    <div class="button-wrapper">
+                      <button class="button">Узнать цену</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card-product">
+                    <div class="badge-wrapper">
+                      <div class="badge stock-order">
+                        <p>под заказ</p>
                       </div>
+                    </div>
+                    <div class="product-content">
+                      <div class="product-image">
+                        <img src="images/lead_section_img.png" alt="" />
+                      </div>
+                      <div class="product-text">
+                        <div class="product-title">
+                          <div>
+                            Генератор Еuropower EPS 300 DXE DC дизельный
+                          </div>
+                        </div>
+                        <div class="product-specs">
+                          <ul>
+                            <li>
+                              <p>Макс. мощность: 8,8 кВА</p>
+                            </li>
+                            <li>
+                              <p>Номин. мощность: 8 кВА</p>
+                            </li>
+                            <li>
+                              <p>Кол-во фаз: три</p>
+                            </li>
+                            <li>
+                              <p>Объем бака: 63 литра</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="button-wrapper">
+                      <button class="button">Узнать цену</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card-product">
+                    <div class="badge-wrapper">
+                      <div class="badge stock-available">
+                        <p>в наличии</p>
+                      </div>
+                    </div>
+                    <div class="product-content">
+                      <div class="product-image">
+                        <img src="images/fregat.png" alt="" />
+                      </div>
+                      <div class="product-text">
+                        <div class="product-title">
+                          <div>
+                            Генератор Еuropower EPS 300 DXE DC дизельный
+                          </div>
+                        </div>
+                        <div class="product-specs">
+                          <ul>
+                            <li>
+                              <p>Макс. мощность: 8,8 кВА</p>
+                            </li>
+                            <li>
+                              <p>Номин. мощность: 8 кВА</p>
+                            </li>
+                            <li>
+                              <p>Кол-во фаз: три</p>
+                            </li>
+                            <li>
+                              <p>Объем бака: 63 литра</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="button-wrapper">
+                      <button class="button">Узнать цену</button>
                     </div>
                   </div>
                 </div>
@@ -487,10 +639,10 @@
       <div class="content">
         <div class="main">
           <div class="company-summary">
-            <h1>
+            <h2>
               Специалисты КЗГУ проектируют оборудование, объединяющее<br />
               лучшие достижения российских и зарубежных инженеров
-            </h1>
+            </h2>
             <div class="summary-content">
               <div class="summary-image">
                 <div class="image-wrapper">
@@ -526,12 +678,14 @@
                   </p>
                 </div>
                 <div class="company-video">
-                  <div class="play-video">
-                    <div class="play-icon-wrapper">
-                      <img src="images/icons/play_button.svg" alt="" />
-                    </div>
-                    <div class="video-bg">
-                      <img src="images/video_thumbnail.webp" alt="" />
+                  <div class="play-video-wrapper">
+                    <div class="play-video">
+                      <div class="play-icon-wrapper">
+                        <img src="images/icons/play_button.svg" alt="" />
+                      </div>
+                      <div class="video-bg">
+                        <img src="images/video_thumbnail.webp" alt="" />
+                      </div>
                     </div>
                   </div>
                   <p>Посмотрите видео <br />с нашего производства</p>
@@ -549,10 +703,7 @@
             <div class="card-wrapper">
               <div class="card">
                 <div class="header">
-                  <div>
-                    Гарантия<br />
-                    и сервис
-                  </div>
+                  <div>Гарантия и сервис</div>
                   <img src="images/icons/white/star.svg" class="star" alt="" />
                 </div>
                 <div class="description customer-info-description">
@@ -635,10 +786,7 @@
         <div class="main">
           <div class="latest-news">
             <div class="action-header">
-              <h2>
-                Последние <br />
-                новости
-              </h2>
+              <h2>Последние новости</h2>
               <a href="news_page.html"
                 ><button class="button">Смотреть все</button></a
               >
@@ -743,11 +891,11 @@
     </section>
     <section>
       <div class="container">
-        <div class="content-wrapper">
-          <div class="content">
-            <div class="completed-projects">
-              <div class="swiper-header">
-                <h1>Реализованные проекты</h1>
+        <div class="content">
+          <div class="completed-projects">
+            <div class="swiper-header two-section-header">
+              <h2>Реализованные проекты</h2>
+              <div class="swiper-nav-wrapper">
                 <div class="swiper-nav">
                   <button class="nav-button swiper-header-project-prev">
                     <div class="left-arrow-white white"></div>
@@ -759,62 +907,62 @@
                   </button>
                 </div>
               </div>
-              <div class="swiper completed-projects-swiper">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                  <!-- Slides -->
-                  <div class="swiper-slide">
-                    <div class="project-card">
-                      <div class="project-card-wrapper">
-                        <div class="project-card-content">
-                          <div class="item">
-                            Дизельный гинератор <br />
-                            для ООО «Татнефть»
-                          </div>
-                          <div class="item">
-                            <p>
-                              Произвели дизельный генератор для ООО «Татнефть» ,
-                              так же установили блок-контейнер под оборудование.
-                              Произвели дизельный генератор для ООО «Татнефть» ,
-                              так же установили блок-контейнер под оборудование
-                            </p>
-                            <button class="white-button">
-                              Получить консультацию
-                            </button>
-                          </div>
+            </div>
+            <div class="swiper completed-projects-swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <div class="project-card">
+                    <div class="project-card-wrapper">
+                      <div class="project-card-content">
+                        <div class="item">
+                          Дизельный гинератор <br />
+                          для ООО «Татнефть»
                         </div>
-                      </div>
-                      <div class="project-card-bg">
-                        <div></div>
-                        <img src="images/new_1.webp" alt="" />
+                        <div class="item">
+                          <p>
+                            Произвели дизельный генератор для ООО «Татнефть» ,
+                            так же установили блок-контейнер под оборудование.
+                            Произвели дизельный генератор для ООО «Татнефть» ,
+                            так же установили блок-контейнер под оборудование
+                          </p>
+                          <button class="white-button">
+                            Получить консультацию
+                          </button>
+                        </div>
                       </div>
                     </div>
+                    <div class="project-card-bg">
+                      <div></div>
+                      <img src="images/new_1.webp" alt="" />
+                    </div>
                   </div>
-                  <div class="swiper-slide">
-                    <div class="project-card">
-                      <div class="project-card-wrapper">
-                        <div class="project-card-content">
-                          <div class="item">
-                            Дизельный гинератор <br />
-                            для ООО «Татнефть»
-                          </div>
-                          <div class="item">
-                            <p>
-                              Произвели дизельный генератор для ООО «Татнефть» ,
-                              так же установили блок-контейнер под оборудование.
-                              Произвели дизельный генератор для ООО «Татнефть» ,
-                              так же установили блок-контейнер под оборудование
-                            </p>
-                            <button class="white-button">
-                              Получить консультацию
-                            </button>
-                          </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="project-card">
+                    <div class="project-card-wrapper">
+                      <div class="project-card-content">
+                        <div class="item">
+                          Дизельный гинератор <br />
+                          для ООО «Татнефть»
+                        </div>
+                        <div class="item">
+                          <p>
+                            Произвели дизельный генератор для ООО «Татнефть» ,
+                            так же установили блок-контейнер под оборудование.
+                            Произвели дизельный генератор для ООО «Татнефть» ,
+                            так же установили блок-контейнер под оборудование
+                          </p>
+                          <button class="white-button">
+                            Получить консультацию
+                          </button>
                         </div>
                       </div>
-                      <div class="project-card-bg">
-                        <div></div>
-                        <img src="images/new_1.webp" alt="" />
-                      </div>
+                    </div>
+                    <div class="project-card-bg">
+                      <div></div>
+                      <img src="images/new_1.webp" alt="" />
                     </div>
                   </div>
                 </div>
@@ -826,23 +974,20 @@
     </section>
     <section>
       <div class="container">
-        <div class="content-wrapper">
-          <div class="content">
-            <div class="seo-text">
-              <h1>Seo text</h1>
-              <p id="seo-text-paragraph">
-                Даем гарантию до 5 лет и постгарантийное обслуживание. Работаем
-                «под ключ», вам достаточно иметь ТЗ или только идею. Мы сделаем,
-                сделаем лучшее предложение по цене и качество. Не ждете по
-                несколько часов или дней, пока вам вам направят КП. Отвечаем на
-                вашу заявку в течение 10 минут и отправляем детальное КП с
-                расчетом в этот же день. Даем гарантию до 5 лет и
-                постгарантийное обслуживание. Работаем «под ключ», вам
-                достаточно иметь ТЗ или только идею. Мы сделаем, сделаем
-                лучшее...
-              </p>
-              <div class="seo-link" id="expand-seo">Показать еще</div>
-            </div>
+        <div class="content">
+          <div class="seo-text">
+            <h2>Seo text</h2>
+            <p id="seo-text-paragraph">
+              Даем гарантию до 5 лет и постгарантийное обслуживание. Работаем
+              «под ключ», вам достаточно иметь ТЗ или только идею. Мы сделаем,
+              сделаем лучшее предложение по цене и качество. Не ждете по
+              несколько часов или дней, пока вам вам направят КП. Отвечаем на
+              вашу заявку в течение 10 минут и отправляем детальное КП с
+              расчетом в этот же день. Даем гарантию до 5 лет и постгарантийное
+              обслуживание. Работаем «под ключ», вам достаточно иметь ТЗ или
+              только идею. Мы сделаем, сделаем лучшее...
+            </p>
+            <div class="seo-link" id="expand-seo">Показать еще</div>
           </div>
         </div>
       </div>
@@ -850,82 +995,94 @@
     <footer class="container">
       <div class="content">
         <div class="footer-grid">
-          <div class="footer-item logo-item">
-            <a href="/"><img src="images/logo.png" alt="" class="logo" /></a>
-            <div class="messenger">
-              <a href="https://web.whatsapp.com/">
-                <div class="whatsapp"></div>
-              </a>
-              <a href="https://web.telegram.org">
-                <div class="telegram"></div>
-              </a>
-            </div>
-            <div class="logo-bottom-text">
-              <div class="text-muted">
-                <a href="#">Политика конфиденциальности</a>
+          <div class="footer-item-wrapper">
+            <div class="footer-item logo-item">
+              <a href="/"><img src="images/logo.png" alt="" class="logo" /></a>
+              <div class="messenger">
+                <a href="https://web.whatsapp.com/">
+                  <div class="whatsapp"></div>
+                </a>
+                <a href="https://web.telegram.org">
+                  <div class="telegram"></div>
+                </a>
               </div>
-              <div class="text-muted">
-                <p>Разработано в <a href="#">Акцент на результат</a></p>
+              <div class="logo-bottom-text">
+                <div class="text-muted">
+                  <a href="#">Политика конфиденциальности</a>
+                </div>
+                <div class="text-muted">
+                  <p>Разработано в <a href="#">Акцент на результат</a></p>
+                </div>
+                <div class="text-muted"><p>© 2023, ООО «КЗГУ»</p></div>
               </div>
-              <div class="text-muted"><p>© 2023, ООО «КЗГУ»</p></div>
             </div>
           </div>
-          <div class="footer-item">
-            <div class="footer-header footer-text-item">Каталог продукции</div>
-            <div class="text-muted footer-text-item">
-              <a href="">Дизельные генераторы</a>
-            </div>
-            <div class="text-muted footer-text-item">
-              <a href="">Блок-контейнер под оборудование</a>
-            </div>
-            <div class="text-muted footer-text-item">
-              <a href="">Блок-контейнер под металлоконструкции</a>
-            </div>
-            <div class="text-muted footer-text-item">
-              <a href="">Дополнительное оборудование</a>
-            </div>
-          </div>
-          <div class="footer-item">
-            <div class="footer-header footer-text-item">О компании</div>
-            <div class="text-muted footer-text-item">
-              <a href="">Отзывы</a>
-            </div>
-            <div class="text-muted footer-text-item">
-              <a href="">Сертификаты</a>
+          <div class="footer-item-wrapper">
+            <div class="footer-item">
+              <div class="footer-header footer-text-item">
+                Каталог продукции
+              </div>
+              <div class="text-muted footer-text-item">
+                <a href="">Дизельные генераторы</a>
+              </div>
+              <div class="text-muted footer-text-item">
+                <a href="">Блок-контейнер под оборудование</a>
+              </div>
+              <div class="text-muted footer-text-item">
+                <a href="">Блок-контейнер под металлоконструкции</a>
+              </div>
+              <div class="text-muted footer-text-item">
+                <a href="">Дополнительное оборудование</a>
+              </div>
             </div>
           </div>
-          <div class="footer-item">
-            <div class="footer-header footer-text-item">
-              <a href="">Новости</a>
-            </div>
-            <div class="footer-header footer-text-item">
-              <a href="">Блог</a>
-            </div>
-            <div class="footer-header footer-text-item">
-              <a href="">Контакты и доставка</a>
-            </div>
-            <div class="footer-header footer-text-item">
-              <a href="">У вас тендер?</a>
+          <div class="footer-item-wrapper">
+            <div class="footer-item">
+              <div class="footer-header footer-text-item">О компании</div>
+              <div class="text-muted footer-text-item">
+                <a href="">Отзывы</a>
+              </div>
+              <div class="text-muted footer-text-item">
+                <a href="">Сертификаты</a>
+              </div>
             </div>
           </div>
-          <div class="footer-item company-work-info">
-            <p class="phone-number">
-              <a href="tel:8800700426">8 (800) 700 - 42 - 67</a>
-            </p>
-            <div>
-              <p class="text-muted footer-text-item">
-                Казань, ул. Мазита Гафури, д. 50
+          <div class="footer-item-wrapper">
+            <div class="footer-item">
+              <div class="footer-header footer-text-item">
+                <a href="">Новости</a>
+              </div>
+              <div class="footer-header footer-text-item">
+                <a href="">Блог</a>
+              </div>
+              <div class="footer-header footer-text-item">
+                <a href="">Контакты и доставка</a>
+              </div>
+              <div class="footer-header footer-text-item">
+                <a href="">У вас тендер?</a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-item-wrapper">
+            <div class="footer-item company-work-info">
+              <p class="phone-number">
+                <a href="tel:8800700426">8 (800) 700 - 42 - 67</a>
               </p>
-              <p class="text-muted footer-text-item">
-                <a href="mailto:ikuznetsov@kzgu-generacia.ru"
-                  >ikuznetsov@kzgu-generacia.ru</a
-                >
-              </p>
-              <p class="text-muted footer-text-item">
-                Время работы: Будние: 9:00-18:00
-              </p>
+              <div>
+                <p class="text-muted footer-text-item">
+                  Казань, ул. Мазита Гафури, д. 50
+                </p>
+                <p class="text-muted footer-text-item">
+                  <a href="mailto:ikuznetsov@kzgu-generacia.ru"
+                    >ikuznetsov@kzgu-generacia.ru</a
+                  >
+                </p>
+                <p class="text-muted footer-text-item">
+                  Время работы: Будние: 9:00-18:00
+                </p>
+              </div>
+              <button class="button">Перезвоните мне</button>
             </div>
-            <button class="button">Перезвоните мне</button>
           </div>
         </div>
       </div>
@@ -984,6 +1141,8 @@
     </div>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-  <script src="../src/dropdown.js"></script>
+  <script src="../src/ui/dropdown.js"></script>
+  <script src="../src/ui/accordion.js"></script>
+  <script src="../src/ui/modal.js"></script>
   <!-- <script src="../src/index.js"></script> -->
 </html>

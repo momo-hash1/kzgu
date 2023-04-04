@@ -1,10 +1,17 @@
 @use "../utils/themeColor";
+@use "../utils/size";
 
 .phone-number{
     font-size: 22px;
-    line-height: 30px;
     font-weight: 600;
     a{
         text-decoration: none;
+    }
+}
+
+@media screen and (max-width: size.$desktop){
+    .phone-number{
+        font-size: 20px;
+
     }
 }

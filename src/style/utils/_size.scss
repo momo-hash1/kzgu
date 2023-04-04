@@ -1,5 +1,9 @@
-@mixin contentWidthPc(){
-    width: 1400px;
-}
+$main_margin: 150px;
 
-$main_margin: 150px
+$desktop: 1400px;
+$desktop_medium: 1200px;
+$desktop_small: 1024px;
+
+$tablet: 768px;
+
+$phone: 480px;

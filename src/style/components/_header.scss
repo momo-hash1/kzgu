@@ -7,6 +7,8 @@
 @use "./logo";
 @use "./phone_number";
 @use "../components/icons";
+@use "../utils/size";
+@use "../components/accordion";
 
 .header {
   margin-top: 20px;
@@ -14,9 +16,8 @@
 }
 
 .header-top {
-  display: flex;
-  justify-content: space-between;
-
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr;
   .address {
     display: flex;
     align-items: center;
@@ -30,33 +31,99 @@
   }
 
   .leave-request {
-    width: 250px;
-    button {
+    .button {
       width: 100%;
     }
   }
-  .header-top-main{
+  .input-form {
+    display: flex;
+    justify-content: center;
+  }
+  .hamburger-menu {
+    width: 26px;
+    height: 12px;
+
+    cursor: pointer;
+    display: none;
+    .body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .item {
+      width: 100%;
+      transition: all 500ms ease;
+      height: 2px;
+      background-color: themeColor.$primary;
+    }
+  }
+  .hamburger-menu-active {
+    position: relative;
+    .body {
+      position: absolute;
+      display: block;
+      left: 50%;
+      top: 50%;
+      width: 26px;
+      height: 26px;
+    }
+    .item {
+      position: absolute;
+    }
+    .item:nth-child(1) {
+      left: -50%;
+      transform: rotate(45deg);
+    }
+    .item:nth-child(2) {
+      left: -50%;
+      transform: rotate(-45deg);
+    }
+    .item:nth-child(3) {
+      display: none;
+    }
+  }
+  @media screen and (max-width: size.$desktop_medium) {
+    .hamburger-menu {
+      display: flex;
+    }
+    .address {
+      display: none;
+    }
+    .input-form {
+      display: none;
+    }
+    .leave-request {
+      display: none;
+    }
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    margin-left: 80px;
+    align-items: center;
   }
-  .header-top-info{
-    gap: 40px;
-    display: flex;
+  @media screen and (max-width: size.$desktop) {
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+
+    .address {
+      p {
+        font-size: 14px;
+      }
+    }
   }
 }
 
 .header-bottom {
   display: grid;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: 2fr 1fr;
   .links {
+    display: flex;
+    align-items: center;
     ul {
-      display: flex;
-
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 40px;
       li {
         list-style-type: none;
-        margin-right: 40px;
         white-space: nowrap;
         font-weight: 500;
         cursor: pointer;
@@ -66,16 +133,92 @@
           text-decoration: none;
         }
       }
-      li:last-child {
-        margin-right: 0;
-      }
-      li:hover{
-        color: #245BA7;
+      li:hover {
+        color: #245ba7;
       }
     }
   }
   .contacts {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
   }
+  @media screen and (max-width: size.$desktop) {
+    .links {
+      ul {
+        gap: 15px;
+      }
+      li {
+        font-size: 14px;
+      }
+    }
+  }
+
+  @media screen and (max-width: size.$desktop_medium) {
+    display: none;
+  }
+}
+
+header {
+  overflow: auto;
+
+  @media screen and (max-width: size.$desktop_medium) {
+    .divider-top {
+      display: none;
+    }
+  }
+}
+.modal-menu {
+  display: none;
+  height: calc(100vh - 83px);
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  .input-with-icon {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .modal-content {
+    padding-bottom: 20px;
+  }
+}
+
+.modal-active {
+  overflow: hidden;
+  .modal-menu{
+    display: block;
+  }
+}
+
+.mobile-links {
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .mobile-link {
+    a {
+      text-decoration: none;
+    }
+    font-weight: 500;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+.accordion-header {
+  border: none;
+  div {
+    padding: 0;
+    a {
+      font-size: 18px;
+    }
+  }
+}
+.accordion-body {
+  padding-left: 15px;
+  box-sizing: border-box;
+  padding-bottom: 0;
 }

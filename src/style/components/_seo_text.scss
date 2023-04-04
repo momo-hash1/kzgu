@@ -3,9 +3,12 @@
 
 .seo-text {
   margin-top: size.$main_margin;
+
   p {
+    height: 75px;
     margin-top: 40px;
     position: relative;
+    overflow: hidden;
   }
   .seo-link {
     margin-top: 20px;
@@ -23,11 +26,17 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
   }
-  .show::after{
-    
-      display: none;
-    
+  .show::after {
+    display: none;
+  }
+  .show{
+      height: 100%;
+
   }
 }

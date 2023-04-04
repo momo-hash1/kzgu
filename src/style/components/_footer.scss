@@ -4,9 +4,9 @@
 
 footer {
   margin-top: size.$main_margin;
-  .text-muted{
-    a{
-        text-decoration: none;
+  .text-muted {
+    a {
+      text-decoration: none;
     }
   }
 }
@@ -15,61 +15,84 @@ footer {
   background-color: themeColor.$secondary;
 }
 
-.footer-header{
-    font-size: 16px;
-    font-weight: 500;
-    a{
-        text-decoration: none;
-    }
+.footer-header {
+  font-size: 16px;
+  font-weight: 500;
+  a {
+    text-decoration: none;
+  }
 }
-.footer-grid{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 40px;
-    padding-top: 80px;
-    padding-bottom: 80px;
-}
-
-.logo-item{
-    .text-muted{
-        a{
-            text-decoration: underline;
-        }
-    }
-    .messenger{
-        margin-top: 30px;
-    }
-    .logo-bottom-text{
-        margin-top: 30px;
-        *{
-            font-size: 12px;
-            margin-bottom: 10px;
-        }
-        :last-child{
-            margin-bottom: 0;
-        }
-    }
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  @media screen and (max-width: size.$desktop) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media screen and (max-width: size.$tablet) {
+    grid-template-columns: 1fr;
+  }
+  .footer-item-wrapper {
+    display: flex;
+  }
 }
 
-.footer-text-item{
-    margin-bottom: 15px;
-}
-.footer-text-item:last-child{
-    margin-bottom: 0;
-}
-
-.company-work-info{
-    div{
-        margin-top: 25px;
+.logo-item {
+  .text-muted {
+    a {
+      text-decoration: underline;
     }
-    button{
-        margin-top: 30px;
-        width: 100%;
+  }
+  .messenger {
+    margin-top: 30px;
+  }
+  .logo-bottom-text {
+    margin-top: 30px;
+    * {
+      font-size: 12px;
+      margin-bottom: 10px;
     }
-    width: 275px;
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+  @media screen and (max-width: size.$tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    .messenger {
+      margin-top: 0;
+    }
+    .logo-bottom-text {
+      display: none;
+    }
+  }
 }
 
+.footer-text-item {
+  margin-bottom: 15px;
+}
+.footer-text-item:last-child {
+  margin-bottom: 0;
+}
 
-footer{
-    background-color: themeColor.$secondary;
+.company-work-info {
+  div {
+    margin-top: 25px;
+  }
+  button {
+    margin-top: 30px;
+    width: 100%;
+  }
+  width: 275px;
+  @media screen and (max-width: size.$tablet) {
+    width: 100%;
+  }
+}
+
+footer {
+  background-color: themeColor.$secondary;
 }

@@ -8,6 +8,20 @@ const swiper = new Swiper(".popular-product-swiper", {
   slidesPerView: 4,
   simulateTouch: false,
   spaceBetween: 4,
+  breakpoints: {
+    1400: {
+      slidesPerView: 4
+    },
+    1200: {
+      slidesPerView: 3,
+    },
+    768: {
+      slidesPerView: 2
+    },
+    0: {
+      slidesPerView: 1
+    }
+  },
 });
 
 const projectsSwiper = new Swiper(".completed-projects-swiper", {
@@ -15,6 +29,14 @@ const projectsSwiper = new Swiper(".completed-projects-swiper", {
   slidesPerView: 2,
   simulateTouch: false,
   spaceBetween: 4,
+  breakpoints: {
+    1200: {
+      slidesPerView: 2
+    },
+    0:{
+      slidesPerView: 1
+    }
+  }
 });
 
 productNextBtn.addEventListener("click", () => swiper.slideNext());
@@ -25,18 +47,28 @@ projectPrevBtn.addEventListener("click", () => projectsSwiper.slidePrev());
 const dropdowns = initDropdowns();
 dropdowns.init();
 
-
 document.querySelector("#expand-seo").addEventListener("click", (e) => {
-  document.querySelector("#seo-text-paragraph").classList.toggle("show")
+  document.querySelector("#seo-text-paragraph").classList.toggle("show");
   console.log(document.querySelector("#seo-text-paragraph").classList);
-})
+});
 
 const first_section_swiper = new Swiper(".first-section", {
   direction: "horizontal",
   slidesPerView: 1,
   simulateTouch: false,
 });
-const lead_slides = document.querySelectorAll(".lead-slide")
+
+const lead_slides = document.querySelectorAll(".lead-slide");
+
+first_section_swiper.on("slideChange", (e) => {
+  lead_slides.forEach((x, index_x) => {
+    if (e.activeIndex == index_x) {
+      x.classList.add("active");
+    } else {
+      x.classList.remove("active");
+    }
+  });
+})
 
 lead_slides.forEach((lead_slide, index) => {
   lead_slide.addEventListener("click", () => {
@@ -50,3 +82,5 @@ lead_slides.forEach((lead_slide, index) => {
     first_section_swiper.slideTo(index);
   });
 });
+
+initAccordion()
