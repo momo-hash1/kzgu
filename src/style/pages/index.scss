@@ -140,13 +140,16 @@
       }
     }
   }
-
+  
   @media screen and (max-width: size.$tablet) {
     display: flex;
     flex-direction: column-reverse;
     height: 100%;
     .image {
       justify-content: center;
+      .image-wrapper{
+        width: 350px;
+      }
     }
   }
   @media screen and (max-width: size.$phone) {
