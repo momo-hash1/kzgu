@@ -27,6 +27,7 @@
       url("/images/video_thumbnail.webp");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position-x: 50%;
     img {
       width: 40px;
     }
@@ -77,6 +78,22 @@
   .company-about-text{
     p{
       line-height: 25px;
+
+    }
+  }
+  @media screen and (max-width: size.$desktop_small) {
+    .company-summary-bottom {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media screen and (max-width: size.$tablet) {
+    .company-numbers{
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-left: 20px;
+    }
+    .watch-video {
+      height: 300px;
 
     }
   }
@@ -139,14 +156,53 @@
     width: 100%;
     position: relative;
   }
+  @media screen and (max-width: size.$desktop) {
+    .quality-ensures {
+      img{
+        width: 537px - 100px;
+        height: 350px - 100px;
+        top: 70px;
+      }
+    }  
+    .circle-around-image{
+      div{
+        left: calc(50% + 130px);
+        width: 630px - 100px;
+        height: 630px - 100px;
 
+      }
+    }
+  }
+  @media screen and (max-width: size.$desktop_medium){
+    .quality-ensures {
+      img{
+        display: none;
+      }
+    }  
+    .circle-around-image{
+      div{
+        display: none;
+      }
+    }
+
+    .quality-ensures{
+      grid-template-columns: 1fr;
+    }
+
+    .watch-video {
+      height: 300px;
+
+    }
+  }
 }
 
 .certs-list{
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  overflow: auto;
   gap: 4px;
   .cert-item{
+    width: 270px;
     .cert-image{
       background-color: themeColor.$secondary;
       position: relative;
@@ -192,6 +248,10 @@
 
 
 .partner-review{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-top: 30px;  
+  gap: 110px;
   .reviews{
     width: 900px;
   }
@@ -207,14 +267,14 @@
         line-height: 25px;
       }
     }
+    .swiper-nav{
+      justify-content: end;
+    }
   }
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  margin-top: 30px;  
-  gap: 110px;
   .review-main{
-    display: flex;
+    display: grid;
     gap: 20px;
+    grid-template-columns: 1fr 2fr;
   }
   .quotation{
     img{
@@ -222,13 +282,72 @@
     }
   }
   .partner-review-text{
-  width: 900px;
 
     p{
       font-weight: 500;
       font-size: 22px;
       line-height: 30px;
+      width: 100%;
     }
+  }
+  @media screen and (max-width: size.$desktop) {
+    .reviews{
+      width: 600px;
+    }
+  }
+  @media screen and (max-width: size.$desktop_medium) {
+    display: block;
+    .review-main{
+      margin-top: 40px;
+    }
+  }
+  @media screen and (max-width: size.$desktop_small) {
+    .review-main{
+      margin-top: 40px;
+      grid-template-columns: 0.5fr 1fr;
+    }
+    .quotation{
+      img{
+        width: 15px;
+      }
+    }
+    .reviews{
+      width: 650px;
+    }
+  }
+  @media screen and (max-width: size.$tablet) {
+    .review-main{
+      display: block;
+    }
+    .reviews{
+      width: auto;
+      margin-top: 10px;
+    }
+  }
+  .two-section-header{
+    grid-template-columns: 2fr 1fr;
+    .partner{
+      .role{  
+        font-size: 14px;
+      }
+    }
+
   }
 }
 
+@media screen and (max-width: size.$desktop_small) {
+  .gallery-main{
+    height: 100%;
+  }
+
+
+}
+
+@media screen and (max-width: size.$tablet) {
+  .gallery-thumbs{
+    overflow: hidden;
+    img{
+      top: -50%;
+    }
+  }
+}

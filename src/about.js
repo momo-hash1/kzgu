@@ -1,3 +1,7 @@
+import Swiper from 'swiper';
+// import Swiper styles
+import 'swiper/css';
+
 const reviewSwiper = new Swiper(".partner-review-swiper", {
   direction: "horizontal",
   slidesPerView: 1,
@@ -14,6 +18,14 @@ document
 const thumbsSwiper = new Swiper(".swiper-gallery-thumbs", {
   direction: "horizontal",
   slidesPerView: 10,
+  breakpoints: {
+    768: {
+      slidesPerView: 5,
+    },
+    0: {
+      slidesPerView: 3,
+    }
+  },
   spaceBetween: 4,
 });
 

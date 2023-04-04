@@ -326,7 +326,7 @@
         }
       }
       .bottom-outlined {
-        padding-bottom: 25px;
+        padding-bottom: 15px;
       }
     }
   }
@@ -388,6 +388,8 @@
     .header {
       display: flex;
       justify-content: space-between;
+      align-items: center;
+      gap: 10px;
       margin: 0;
       div {
         font-size: 38px;
