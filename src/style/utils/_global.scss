@@ -5,6 +5,7 @@ body {
   margin: 0;
   font-family: "Inter", sans-serif;
   color: themeColor.$text-color-contrast;
+  overflow-x: hidden;
 }
 
 ul {

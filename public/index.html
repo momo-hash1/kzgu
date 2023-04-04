@@ -45,7 +45,7 @@
               <div class="leave-request">
                 <button class="button">Оставить заявку</button>
               </div>
-              <div class="hamburger-menu ">
+              <div class="hamburger-menu">
                 <div class="body">
                   <div class="item"></div>
                   <div class="item"></div>
@@ -60,26 +60,78 @@
       <div class="container">
         <div class="content header-nav">
           <div class="main">
-            <div class="header header-bottom divider-bottom-up">
+            <div class="header-bottom divider-bottom-up">
               <div class="links">
                 <nav>
-                  <ul>
-                    <li class="dropdown-initiator" data-to="catalog">
+                  <ul class="links-list">
+                    <li class="dropdown-first dropdown link-item">
                       <a href="catalog_page.html">Каталог продукции</a>
+                      <ul class="dropdown-main">
+                        <li class="dropdown-item">
+                          <p>Каталог оборудования</p>
+                        </li>
+                        <li class="dropdown-item dropdown-second dropdown">
+                          <p>Каталог запчастей</p>
+                          <ul class="dropdown-main">
+                            <li class="dropdown-item">
+                              <p>Дизельные генераторы</p>
+                            </li>
+                            <li class="dropdown-item dropdown-third dropdown">
+                              <p>Блок-контейнер под оборудование</p>
+                              <ul class="dropdown-main">
+                                <li>
+                                  <p>Блок-контейнер медицинский</p>
+                                </li>
+                                <li>
+                                  <p>Блок-контейнеры под лаборатории</p>
+                                </li>
+                                <li>
+                                  <p>Блок-контейнеры средств связи</p>
+                                </li>
+                                <li>
+                                  <p>Блок-контейнеры технические</p>
+                                </li>
+                                <li>
+                                  <p>Блок-контейнеры под котельные</p>
+                                </li>
+                                <li>
+                                  <p>Блок-контейнеры под аппаратные</p>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="dropdown-item">
+                              <p>Блок-контейнер под металлоконструкции</p>
+                            </li>
+                            <li class="dropdown-item">
+                              <p>Дополнительное оборудование</p>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="dropdown-item">
+                          <p>Аренда оборудования</p>
+                        </li>
+                      </ul>
                     </li>
-                    <li class="dropdown-initiator" data-to="about">
+                    <li class="link-item dropdown-first dropdown">
                       <a href="about.html">О компании</a>
+                      <ul class="dropdown-main">
+                        <li class="dropdown-item">
+                          <p>Сертификаты</p>
+                        </li>
+                      </ul>
                     </li>
-                    <li class=""><a href="news_page.html">Новости</a></li>
-                    <li class="">
+                    <li class="link-item">
+                      <a href="news_page.html">Новости</a>
+                    </li>
+                    <li class="link-item">
                       <a href="realized_projects.html">Реализованные проекты</a>
                     </li>
-                    <li class="">
+                    <li class="link-item">
                       <a href="contacts_and_delivery.html"
                         >Контакты и доставка</a
                       >
                     </li>
-                    <li class=""><a href="">У вас тендер?</a></li>
+                    <li class="link-item"><a href="">У вас тендер?</a></li>
                   </ul>
                 </nav>
               </div>
@@ -109,7 +161,10 @@
           <div class="modal-content">
             <form action="" class="input-form">
               <div class="input-with-icon">
-                <input type="text" placeholder="Поиск по продукции и разделам" />
+                <input
+                  type="text"
+                  placeholder="Поиск по продукции и разделам"
+                />
                 <div>
                   <img src="images/icons/gray/ri_search-line.svg" alt="" />
                 </div>
@@ -148,7 +203,9 @@
                             <div class="accordion-body mobile-links">
                               <ul>
                                 <li class="mobile-link">
-                                  <a href="catalog.html">Дизельные генераторы</a>
+                                  <a href="catalog.html"
+                                    >Дизельные генераторы</a
+                                  >
                                 </li>
                                 <li class="mobile-link">
                                   <div class="accordion-item">
@@ -166,7 +223,9 @@
                                     <div class="accordion-body mobile-links">
                                       <ul>
                                         <li class="mobile-link">
-                                          <a href="catalog.html">Блок-контейнер медицинский</a>
+                                          <a href="catalog.html"
+                                            >Блок-контейнер медицинский</a
+                                          >
                                         </li>
                                         <li class="mobile-link">
                                           <a href="catalog.html"
@@ -214,7 +273,9 @@
                         <li class="mobile-link">
                           <a href="catalog.html">Каталог запчастей</a>
                         </li>
-                        <li class="mobile-link"><a href="catalog.html">Аренда оборудования</a></li>
+                        <li class="mobile-link">
+                          <a href="catalog.html">Аренда оборудования</a>
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -230,9 +291,9 @@
                         />
                       </div>
                     </div>
-                    <div class="accordion-body ">
+                    <div class="accordion-body">
                       <div class="mobile-links">
-                        <ul >
+                        <ul>
                           <li class="mobile-link">
                             <a href="about.html">Сертификаты</a>
                           </li>
@@ -1091,62 +1152,8 @@
         </div>
       </div>
     </footer>
-    <div class="dropdowns-wrapper">
-      <div class="dropdown dropdown-first" data-name="catalog">
-        <ul>
-          <li>
-            <p>Каталог оборудования</p>
-          </li>
-          <li class="dropdown-initiator-cascade" data-to="supply_catalog">
-            <p>Каталог запчастей</p>
-          </li>
-          <li><p>Аренда оборудования</p></li>
-        </ul>
-      </div>
-      <div class="dropdown dropdown-second" data-name="supply_catalog">
-        <ul>
-          <li><p>Дизельные генераторы</p></li>
-          <li class="dropdown-initiator-cascade" data-to="box_for_supply">
-            <p>Блок-контейнер под оборудование</p>
-          </li>
-          <li><p>Блок-контейнер под металлоконструкции</p></li>
-          <li><p>Дополнительное оборудование</p></li>
-        </ul>
-      </div>
-      <div class="dropdown dropdown-third" data-name="box_for_supply">
-        <ul>
-          <li>
-            <p>Блок-контейнер медицинский</p>
-          </li>
-          <li>
-            <p>Блок-контейнеры под лаборатории</p>
-          </li>
-          <li>
-            <p>Блок-контейнеры средств связи</p>
-          </li>
-          <li>
-            <p>Блок-контейнеры технические</p>
-          </li>
-          <li>
-            <p>Блок-контейнеры под котельные</p>
-          </li>
-          <li>
-            <p>Блок-контейнеры под аппаратные</p>
-          </li>
-        </ul>
-      </div>
-      <div class="dropdown-first dropdown" data-name="about">
-        <ul>
-          <li>
-            <p>Сертификаты</p>
-          </li>
-        </ul>
-      </div>
-    </div>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-  <script src="../src/ui/dropdown.js"></script>
-  <script src="../src/ui/accordion.js"></script>
-  <script src="../src/ui/modal.js"></script>
+
   <!-- <script src="../src/index.js"></script> -->
 </html>

@@ -1,3 +1,9 @@
+import initAccordion from "./ui/accordion";
+import menu_init from "./ui/modal";
+import Swiper from 'swiper';
+// import Swiper styles
+import 'swiper/css';
+
 const projectPrevBtn = document.querySelector(".swiper-header-project-prev");
 const projectNextBtn = document.querySelector(".swiper-header-project-next");
 const productPrevBtn = document.querySelector(".swiper-header-product-prev");
@@ -10,17 +16,17 @@ const swiper = new Swiper(".popular-product-swiper", {
   spaceBetween: 4,
   breakpoints: {
     1400: {
-      slidesPerView: 4
+      slidesPerView: 4,
     },
     1200: {
       slidesPerView: 3,
     },
     768: {
-      slidesPerView: 2
+      slidesPerView: 2,
     },
     0: {
-      slidesPerView: 1
-    }
+      slidesPerView: 1,
+    },
   },
 });
 
@@ -31,21 +37,18 @@ const projectsSwiper = new Swiper(".completed-projects-swiper", {
   spaceBetween: 4,
   breakpoints: {
     1200: {
-      slidesPerView: 2
+      slidesPerView: 2,
     },
-    0:{
-      slidesPerView: 1
-    }
-  }
+    0: {
+      slidesPerView: 1,
+    },
+  },
 });
 
 productNextBtn.addEventListener("click", () => swiper.slideNext());
 productPrevBtn.addEventListener("click", () => swiper.slidePrev());
 projectNextBtn.addEventListener("click", () => projectsSwiper.slideNext());
 projectPrevBtn.addEventListener("click", () => projectsSwiper.slidePrev());
-
-const dropdowns = initDropdowns();
-dropdowns.init();
 
 document.querySelector("#expand-seo").addEventListener("click", (e) => {
   document.querySelector("#seo-text-paragraph").classList.toggle("show");
@@ -68,7 +71,7 @@ first_section_swiper.on("slideChange", (e) => {
       x.classList.remove("active");
     }
   });
-})
+});
 
 lead_slides.forEach((lead_slide, index) => {
   lead_slide.addEventListener("click", () => {
@@ -83,4 +86,6 @@ lead_slides.forEach((lead_slide, index) => {
   });
 });
 
-initAccordion()
+initAccordion();
+
+menu_init();

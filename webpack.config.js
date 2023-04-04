@@ -25,7 +25,7 @@ const getPageJs =  () => {
 
 module.exports = {
   entry: getPageJs(),
-  mode: true ? "development" : "production",
+  mode: true  ? "development" : "production",
   output: {
     filename: "[name].bundle.js",
     path: resolve(__dirname, "dist"),
@@ -39,7 +39,7 @@ module.exports = {
         loader: "html-loader",
       },
       {
-        test: /\.(jpg|svg|png)$/i,
+        test: /\.(jpg|svg|png|webp)$/i,
         type: "asset/resource",
         generator: {
           filename: "media/[name][ext]",

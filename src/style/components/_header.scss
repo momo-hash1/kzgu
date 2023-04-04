@@ -118,14 +118,16 @@
   .links {
     display: flex;
     align-items: center;
-    ul {
+    .links-list {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
       gap: 40px;
-      li {
+      .link-item {
         list-style-type: none;
         white-space: nowrap;
         font-weight: 500;
+        padding-top: 20px;
+        padding-bottom: 20px;
         cursor: pointer;
         p,
         a {
@@ -133,7 +135,7 @@
           text-decoration: none;
         }
       }
-      li:hover {
+      a:hover {
         color: #245ba7;
       }
     }
@@ -178,7 +180,7 @@ header {
   box-sizing: border-box;
   position: absolute;
   top: 83px;
-  z-index: 2;
+  z-index: 3;
   background-color: themeColor.$white;
   .input-with-icon {
     width: 100%;

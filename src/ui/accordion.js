@@ -14,3 +14,5 @@ const initAccordion = () => {
     });
   });
 };
+
+export default initAccordion
