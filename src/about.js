@@ -19,6 +19,9 @@ const thumbsSwiper = new Swiper(".swiper-gallery-thumbs", {
   direction: "horizontal",
   slidesPerView: 10,
   breakpoints: {
+    1400: {
+      slidesPerView: 10,
+    },
     768: {
       slidesPerView: 5,
     },

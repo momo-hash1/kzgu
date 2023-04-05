@@ -8,12 +8,20 @@
 }
 .paginator-wrapper {
   display: flex;
-  justify-content: center;  
+  justify-content: center;
   margin-top: 40px;
 }
 .paginator {
   display: flex;
   gap: 5px;
+  justify-content: center;
+  .pages {
+    display: flex;
+    overflow: hidden;
+    min-width: fit-content;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
   a {
     width: 40px;
     height: 40px;
@@ -22,6 +30,7 @@
     align-items: center;
     text-decoration: none;
     border: 2px solid #cad1ee;
+    min-width: fit-content;
     p {
       display: flex;
       align-items: center;
@@ -31,10 +40,10 @@
       width: 15px;
       height: 15px;
     }
-    .left-white{
+    .left-white {
       display: none;
     }
-    .right-white{
+    .right-white {
       display: none;
     }
   }
@@ -42,18 +51,18 @@
   .active {
     @include active();
   }
-  a:hover{
+  a:hover {
     @include active();
-    .left-gray{
+    .left-gray {
       display: none;
     }
-    .right-gray{
+    .right-gray {
       display: none;
     }
-    .left-white{
+    .left-white {
       display: block;
     }
-    .right-white{
+    .right-white {
       display: block;
     }
   }

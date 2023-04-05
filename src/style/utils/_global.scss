@@ -48,6 +48,9 @@ a {
   h2 {
     font-size: 36px;
   }
+  h1{
+    font-size: 36px; 
+  }
 }
 
 @media screen and (max-width: size.$phone) {
@@ -55,4 +58,8 @@ a {
     font-size: 28px;
     line-height: 40px;
   }
+}
+
+.hide-scroll{ 
+  overflow: hidden;
 }

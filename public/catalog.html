@@ -32,105 +32,136 @@
         </div>
         <div class="main generators-header">
           <div class="quick-power-select">
-            <p>Быстрый подбор по мощности:</p>
+            <div class="two-section-header">
+              <p>Быстрый подбор по мощности:</p>
+              <div class="close-btn-wrapper">
+                <div class="hamburger-menu hamburger-menu-active">
+                  <div class="body">
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <ul>
               <li><a href="">9,2 кВа</a></li>
               <li><a href="">8,8 кВ</a>а</li>
             </ul>
           </div>
+          <div class="show-power-select">
+            <button class="white-button">Быстрый подбор по мощности</button>
+          </div>
         </div>
       </div>
     </section>
     <section class="container">
-      <div class="content">
-        <div class="main generators-list">
+      <div class="content generators-list">
+        <div class="main">
           <div class="filters">
-            <h3>Фильтры</h3>
-            <div class="accordion">
-              <div class="accordion-item accordion-active">
-                <div class="accordion-header">
-                  <div>
-                    <p class="title">Максимальная мощность, кВа</p>
-                    <img src="images/icons/gray/arrow_down.svg" />
+            <div class="two-section-header">
+              <h3>Фильтры</h3>
+              <div class="close-btn-wrapper">
+                <div class="hamburger-menu hamburger-menu-active">
+                  <div class="body">
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
                   </div>
                 </div>
-                <div class="accordion-body">
-                  <div class="range-with-inputs">
-                    <div id="range-slider">
-                      <div id="slider"></div>
+              </div>
+            </div>
+            <div class="accordion-wrapper">
+              <div class="accordion">
+                <div class="accordion-item">
+                  <div
+                    class="accordion-header accordion-initiator accordion-header-active"
+                  >
+                    <div>
+                      <p class="title">Максимальная мощность, кВа</p>
+                      <img src="images/icons/gray/arrow_down.svg" />
                     </div>
-                    <div class="range-slider-bottom" id="slider-bottom">
-                      <input type="text" class="start"/>
-                      <div class="line">
-                        <div></div>
+                  </div>
+                  <div class="accordion-body accordion-body-active">
+                    <div class="range-with-inputs">
+                      <div id="range-slider">
+                        <div id="slider"></div>
                       </div>
-                      <input type="text" class="end"/>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <div class="accordion-header">
-                  <div>
-                    <p class="title">Номинальная мощность, кВа</p>
-                    <img src="images/icons/gray/arrow_down.svg" />
-                  </div>
-                </div>
-                <div class="accordion-body">
-                  <div class="range-with-inputs">
-                    <div id="range-slider">
-                      <div id="slider"></div>
-                    </div>
-                    <div class="range-slider-bottom">
-                      <input type="text" />
-                      <div class="line">
-                        <div></div>
+                      <div class="range-slider-bottom" id="slider-bottom">
+                        <input type="text" class="start" />
+                        <div class="line">
+                          <div></div>
+                        </div>
+                        <input type="text" class="end" />
                       </div>
-                      <input type="text" />
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="accordion-item accordion-active">
-                <div class="accordion-header">
-                  <div>
-                    <p class="title">Двигатель/бренд</p>
-                    <img src="images/icons/gray/arrow_down.svg" />
+                <div class="accordion-item">
+                  <div class="accordion-header accordion-initiator">
+                    <div>
+                      <p class="title">Номинальная мощность, кВа</p>
+                      <img src="images/icons/gray/arrow_down.svg" />
+                    </div>
+                  </div>
+                  <div class="accordion-body">
+                    <div class="range-with-inputs">
+                      <div id="range-slider">
+                        <div id="slider"></div>
+                      </div>
+                      <div class="range-slider-bottom">
+                        <input type="text" />
+                        <div class="line">
+                          <div></div>
+                        </div>
+                        <input type="text" />
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="accordion-body">
-                  <div class="brand-list-checkbox">
-                    <ul>
-                      <li class="checkbox-main">
-                        <div class="checkbox"></div>
-                        <p class="brand">Doosan</p>
-                      </li>
-                      <li class="checkbox-main">
-                        <div class="checkbox"></div>
-                        <p class="brand checkbox-label">Doosan</p>
-                      </li>
-                    </ul>
-                    <div class="show-more"><a href="">Показать все</a></div>
+                <div class="accordion-item">
+                  <div
+                    class="accordion-header accordion-initiator accordion-header-active"
+                  >
+                    <div>
+                      <p class="title">Двигатель/бренд</p>
+                      <img src="images/icons/gray/arrow_down.svg" />
+                    </div>
+                  </div>
+                  <div class="accordion-body accordion-body-active">
+                    <div class="brand-list-checkbox">
+                      <ul>
+                        <li class="checkbox-main">
+                          <div class="checkbox"></div>
+                          <p class="brand">Doosan</p>
+                        </li>
+                        <li class="checkbox-main">
+                          <div class="checkbox"></div>
+                          <p class="brand checkbox-label">Doosan</p>
+                        </li>
+                      </ul>
+                      <div class="show-more"><a href="">Показать все</a></div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="accordion-item">
-                <div class="accordion-header">
-                  <div>
-                    <p class="title">Количество фаз</p>
-                    <img src="images/icons/gray/arrow_down.svg" />
+                <div class="accordion-item">
+                  <div class="accordion-header accordion-initiator">
+                    <div>
+                      <p class="title">Количество фаз</p>
+                      <img src="images/icons/gray/arrow_down.svg" />
+                    </div>
                   </div>
+                  <div class="accordion-body"></div>
                 </div>
-                <div class="accordion-body"></div>
-              </div>
-              <div class="accordion-item">
-                <div class="accordion-header">
-                  <div>
-                    <p class="title">Объем бака, л</p>
-                    <img src="images/icons/gray/arrow_down.svg" />
+                <div class="accordion-item">
+                  <div class="accordion-header accordion-initiator">
+                    <div>
+                      <p class="title">Объем бака, л</p>
+                      <img src="images/icons/gray/arrow_down.svg" />
+                    </div>
                   </div>
+                  <div class="accordion-body"></div>
                 </div>
-                <div class="accordion-body"></div>
               </div>
             </div>
             <div class="sort-action-btns">
@@ -141,6 +172,14 @@
                 </div>
               </div>
             </div>
+          </div>
+          <div class="show-catalog">
+            <button class="button">
+              <span>
+                Фильтр
+                <img src="images/icons/white/noun-filter-4547015.svg" />
+              </span>
+            </button>
           </div>
           <div class="list">
             <div class="header">
@@ -191,7 +230,7 @@
             <div class="distribute-items list-items">
               <div class="item">
                 <div class="title-with-image">
-                  <div><img src="images/lead_section_img.png" alt="" /></div>
+                  <div class="image-wrapper"><img src="images/lead_section_img.png" alt="" /></div>
                   <a href="product_card.html">Еuropower EPS 300 DXE DC</a>
                 </div>
               </div>
@@ -216,16 +255,44 @@
                 </div>
               </div>
             </div>
+            <div class="list-items-mobile">
+              <div class="title-with-image">
+                <div class="image-wrapper"><img src="images/lead_section_img.png" alt="" /></div>
+                <div class="badge-wrapper">
+                  <div class="badge stock-available">
+                    <p>в наличии</p>
+                  </div>
+                </div>
+              </div>
+              <ul class="product-specs-mobile">
+                <li><a href="product_card.html">Еuropower EPS 300 DXE DC</a></li>
+                <li><p>Макс. мощность: 8,8 кВА</p></li>
+                <li><p>Номин. мощность: 8 кВА</p></li>
+                <li><p>Кол-во фаз: три</p></li>
+                <li><p>Объем бака: 63 литра</p></li>
+              </ul>
+            </div>
             <div class="paginator-wrapper">
               <div class="paginator">
                 <a href=""
                   ><div class="left-arrow-gray left-gray"></div>
                   <div class="left-arrow-white left-white"></div
                 ></a>
-                <a href="" class="active"><p>1</p></a>
-                <a href=""><p>2</p></a>
-                <a href=""><p>3</p></a>
-                <a href=""><p>4</p></a>
+                <div class="pages-wrapper">
+                  <div class="pages">
+                    <a href="" class="active"><p>1</p></a>
+                    <a href=""><p>2</p></a>
+                    <a href=""><p>3</p></a>
+                    <a href=""><p>4</p></a>
+                    <a href=""><p>4</p></a>
+                    <a href=""><p>4</p></a>
+                    <a href=""><p>4</p></a>
+                    <a href=""><p>4</p></a>
+                    <a href=""><p>4</p></a>
+                    <a href=""><p>4</p></a>
+                    <a href=""><p>4</p></a>
+                  </div>
+                </div>
                 <a href=""
                   ><div class="right-arrow-gray right-gray"></div>
                   <div class="right-arrow-white right-white"></div
@@ -236,7 +303,5 @@
         </div>
       </div>
     </section>
-
-    <script src="../src/catalog.js"></script>
   </body>
 </html>

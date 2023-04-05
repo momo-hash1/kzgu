@@ -1,0 +1,48 @@
+@use "../utils/themeColor";
+
+.hamburger-menu {
+  width: 26px;
+  height: 12px;
+
+  cursor: pointer;
+  display: none;
+  .body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .item {
+    width: 100%;
+    transition: all 500ms ease;
+    height: 2px;
+    background-color: themeColor.$primary;
+  }
+}
+.hamburger-menu-active {
+  position: relative;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+
+  .body {
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: 50%;
+    width: 26px;
+    height: 26px;
+  }
+  .item {
+    position: absolute;
+  }
+  .item:nth-child(1) {
+    left: -50%;
+    transform: rotate(45deg);
+  }
+  .item:nth-child(2) {
+    left: -50%;
+    transform: rotate(-45deg);
+  }
+  .item:nth-child(3) {
+    display: none;
+  }
+}

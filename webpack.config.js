@@ -13,19 +13,19 @@ const getPages = () => {
   return pages;
 };
 
-const getPageJs =  () => {
-  const pages = {}
-  getPages().forEach(page => {
-    if (fs.existsSync(join(__dirname, "src", `${page}.js`))){
+const getPageJs = () => {
+  const pages = {};
+  getPages().forEach((page) => {
+    if (fs.existsSync(join(__dirname, "src", `${page}.js`))) {
       pages[page] = `./src/${page}.js`;
-    };
-  })
-  return pages
-}
+    }
+  });
+  return pages;
+};
 
 module.exports = {
   entry: getPageJs(),
-  mode: true  ? "development" : "production",
+  mode: true ? "development" : "production",
   output: {
     filename: "[name].bundle.js",
     path: resolve(__dirname, "dist"),
@@ -42,12 +42,22 @@ module.exports = {
         test: /\.(jpg|svg|png|webp)$/i,
         type: "asset/resource",
         generator: {
-          filename: "media/[name][ext]",
+          filename: "media/[hash]-[name][ext]",
         },
       },
       {
         test: /\.scss$/i,
-        use: ["sass-loader"],
+        use: [
+          {
+            loader: "resolve-url-loader",
+          },
+          {
+            loader: "sass-loader",
+            options: {
+              sourceMap: true, // <-- !!IMPORTANT!!
+            }
+          },
+        ],
         type: "asset/resource",
         generator: {
           filename: "css/[name].css",

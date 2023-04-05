@@ -9,6 +9,7 @@
 @use "../components/icons";
 @use "../utils/size";
 @use "../components/accordion";
+@use "./hamburger_menu";
 
 .header {
   margin-top: 20px;
@@ -39,50 +40,7 @@
     display: flex;
     justify-content: center;
   }
-  .hamburger-menu {
-    width: 26px;
-    height: 12px;
 
-    cursor: pointer;
-    display: none;
-    .body {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      width: 100%;
-    }
-    .item {
-      width: 100%;
-      transition: all 500ms ease;
-      height: 2px;
-      background-color: themeColor.$primary;
-    }
-  }
-  .hamburger-menu-active {
-    position: relative;
-    .body {
-      position: absolute;
-      display: block;
-      left: 50%;
-      top: 50%;
-      width: 26px;
-      height: 26px;
-    }
-    .item {
-      position: absolute;
-    }
-    .item:nth-child(1) {
-      left: -50%;
-      transform: rotate(45deg);
-    }
-    .item:nth-child(2) {
-      left: -50%;
-      transform: rotate(-45deg);
-    }
-    .item:nth-child(3) {
-      display: none;
-    }
-  }
   @media screen and (max-width: size.$desktop_medium) {
     .hamburger-menu {
       display: flex;
@@ -162,7 +120,21 @@
 }
 
 header {
-
+  .accordion-header {
+    border: none;
+    div {
+      padding: 0;
+      a {
+        font-size: 18px;
+      }
+    }
+  }
+  .accordion-body {
+    padding-left: 15px;
+    box-sizing: border-box;
+    padding-bottom: 0;
+  }
+  
   @media screen and (max-width: size.$desktop_medium) {
     .divider-top {
       display: none;
@@ -221,17 +193,3 @@ header {
   }
 }
 
-.accordion-header {
-  border: none;
-  div {
-    padding: 0;
-    a {
-      font-size: 18px;
-    }
-  }
-}
-.accordion-body {
-  padding-left: 15px;
-  box-sizing: border-box;
-  padding-bottom: 0;
-}

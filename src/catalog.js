@@ -1,6 +1,7 @@
 import noUiSlider from "nouislider";
 import "nouislider/dist/nouislider.css";
-
+import initAccordion from "./ui/accordion";
+import menu_init from "./ui/modal";
 var slider = document.getElementById("slider");
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -24,18 +25,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   start_input.addEventListener("click", () => {
     start_input.value = slider.noUiSlider.get()[0];
-    start_input.select()
+    start_input.select();
   });
 
   end_input.addEventListener("click", () => {
     end_input.value = slider.noUiSlider.get()[1];
-    end_input.select()
+    end_input.select();
   });
 
   document.addEventListener("click", (e) => {
     const target_class = e.target.classList;
-    const contains_essential_classes = target_class.contains("end") || target_class.contains("start")
-    const isInput = e.target.tagName.toLowerCase() === "input"
+    const contains_essential_classes =
+      target_class.contains("end") || target_class.contains("start");
+    const isInput = e.target.tagName.toLowerCase() === "input";
     if (contains_essential_classes && isInput) return;
 
     slider.noUiSlider.set([start_input.value, end_input.value]);
@@ -44,24 +46,24 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   end_input.addEventListener("keydown", (e) => {
-    if(e.key !== "Enter") return 
+    if (e.key !== "Enter") return;
 
     slider.noUiSlider.set([start_input.value, end_input.value]);
     start_input.value = `От ${slider.noUiSlider.get()[0]}`;
     end_input.value = `До ${slider.noUiSlider.get()[1]}`;
 
-    end_input.blur()
-  })
+    end_input.blur();
+  });
 
   start_input.addEventListener("keydown", (e) => {
-    if(e.key !== "Enter") return 
+    if (e.key !== "Enter") return;
 
     slider.noUiSlider.set([start_input.value, end_input.value]);
     start_input.value = `От ${slider.noUiSlider.get()[0]}`;
     end_input.value = `До ${slider.noUiSlider.get()[1]}`;
 
-    start_input.blur()
-  })
+    start_input.blur();
+  });
 });
 
 document.querySelectorAll(".checkbox-main").forEach((checkbox_main) => {
@@ -72,4 +74,19 @@ document.querySelectorAll(".checkbox-main").forEach((checkbox_main) => {
   });
 });
 
-initAccordion()
+initAccordion();
+
+const showModal = (initiator, window_) => {
+  const modal_window = document.querySelector("." + window_)
+  document.querySelector("." + initiator).addEventListener("click", () => {
+    modal_window.classList.toggle("window-active");
+    document.querySelector("body").classList.toggle("hide-scroll");
+  });
+  modal_window.querySelector(".hamburger-menu").addEventListener("click", () => {
+    modal_window.classList.toggle("window-active");
+    document.querySelector("body").classList.toggle("hide-scroll");
+  });
+};
+
+showModal("show-catalog", "filters");
+showModal("show-power-select", "quick-power-select");
