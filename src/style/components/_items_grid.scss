@@ -1,0 +1,19 @@
+@use "../utils/size";
+
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  row-gap: 60px;
+}
+@media screen and (max-width: size.$desktop_small) {
+  .items-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: size.$tablet) {
+    .items-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  

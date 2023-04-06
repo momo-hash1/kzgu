@@ -1,13 +1,26 @@
-.image-overlay{
-    overflow: hidden;
+@use "../utils/size";
+
+.image-overlay {
+  overflow: hidden;
+  position: relative;
+  .body {
+    padding: 10px;
     position: relative;
-    .body{
-        padding: 10px;
-        position: relative;
-    }
-    img{
-        position: absolute;
-        top:0;
-        z-index: -1;
-    }
+  }
+  img {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
+
+  @media screen and (max-width: size.$desktop_small) {
+    .image-wrapper {
+        img {
+          height: 100%;
+          width: auto;
+        }
+      }
+  }
 }
+
+

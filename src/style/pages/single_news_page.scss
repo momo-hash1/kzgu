@@ -3,26 +3,43 @@
 @use "../components/image_overlay";
 @use "../components/paginator";
 @use "../components/breadcrumb";
-@use "../components/news_grid";
+@use "../components/items_grid";
 @use "../utils/global";
 @use "../components/badge";
 @use "../utils/text";
+@use "../utils/size";
 
-.image-overlay{
-    height: 580px;
-    div:last-child{
+.image-overlay {
+  height: 580px;
 
-        img{
-            top: -25%;
-        }
+  .body {
+    padding: 20px;
+  }
+  @media screen and (max-width: size.$desktop_small) {
+    height: 300;
+    .image-wrapper {
+      img {
+        top: 0;
+      }
     }
-    .body{
-        padding: 20px;
+  }
+  @media screen and (max-width: size.$tablet) {
+    .image-wrapper {
+      img {
+        left: -25%;
+      }
     }
+  }
 }
 
-.description{
-    margin-top: 30px;
-    font-weight: 500;
-    width: 75%;
+.description {
+  margin-top: 30px;
+  font-weight: 500;
+  width: 75%;
 }
+
+@media screen and (max-width: size.$tablet) {
+    .description {
+        width: 100%;
+      }
+  }
