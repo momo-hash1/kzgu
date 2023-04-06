@@ -48,7 +48,7 @@ module.exports = async (env) => {
 				{
 					test: /\.(png|jpg|jpeg|ico|svg|webp)/,
 					type: 'asset/resource',
-					generator: { filename: devMode ? 'media/[name]-[hash][ext]' : 'media/[name][ext]' },
+					generator: { filename: 'media/[name]-[hash][ext]' },
 				},
 			],
 		},

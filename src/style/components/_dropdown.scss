@@ -6,38 +6,36 @@
   z-index: 3;
 }
 
-@mixin dropdown-template($active-color: #d9e0eb, $bg-color: #e6ebf2) {
-  position: relative;
 
-  .dropdown-main {
-    position: absolute;
-    max-width: 390px;
-    width: 390px;
-    display: flex;
-    visibility: hidden;
-    flex-direction: column;
-    z-index: 2;
-    top: 100%;
-    background-color: $bg-color;
-    opacity: 0;
-    transition-timing-function: ease-in-out;
-    transition-duration: .3s;
-    transition-property: visibility, opacity;
-  }
-  .dropdown-item {
-    p {
-      background-color: $bg-color;
-      padding: 15px 20px 15px 20px;
-      cursor: pointer;
-    }
-  }
-
+.dropdown-main {
+  position: absolute;
+  max-width: 390px;
+  padding: 8px 4px;
+  width: 390px;
+  display: flex;
+  visibility: hidden;
+  flex-direction: column;
+  z-index: 2;
+  top: 100%;
+  background-color: #E6EBF2;
+  opacity: 0;
+  transition-timing-function: ease-in-out;
+  transition-duration: .3s;
+  transition-property: visibility, opacity;
   li:hover {
-    padding: 8px 4px 8px 4px;
-    p {
-      background-color: $active-color;
+    .dropdown-link {
+      background-color: #D9E0EB;
     }
     visibility: visible;
+  }
+  .dropdown-item {
+    .dropdown-link {
+      background-color:#E6EBF2;
+      padding: 15px 20px 15px 20px;
+      cursor: pointer;
+      display: block;
+      font-size: 16px;
+    }
   }
 }
 
@@ -45,23 +43,23 @@
   visibility: visible;
   opacity: 1;
 }
-.dropdown-first {
-  @include dropdown-template();
-}
-.dropdown-second {
-  @include dropdown-template(#cfd8e7, #d9e1eb);
-  .dropdown-main {
-    left: 100%;
-    top: 0;
-    min-height: 100%;
-  }
-}
-.dropdown-third {
-  @include dropdown-template(#bfcddd, #cfd8e7);
-  .dropdown-main {
-    left: 100%;
-    top: 0;
-    min-height: 100%;
-  }
 
+.dropdown-main > li > ul {
+  background-color: #D9E1EB;
+  .dropdown-link{
+    background-color: #CFD8E7;
+  }
+  left: 100%;
+  top: 0;
+  min-height: 100%;
+}
+
+.dropdown-main > li > ul {
+  background-color: #D9E1EB;
+  .dropdown-link{
+    background-color: #CFD8E7;
+  }
+    left: 100%;
+    top: 0;
+    min-height: 100%;
 }
