@@ -1,7 +1,6 @@
 import initGallery from "./ui/gallery";
 import Swiper from "swiper";
-// import Swiper styles
-import "swiper/css";
+import './style/pages/product_card.scss'
 
 const {thumbs} = initGallery("swiper-gallery")
 

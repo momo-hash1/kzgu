@@ -15,6 +15,7 @@
 @use "../components/badge";
 @use "../components/paginator";
 @use "../components/hamburger_menu";
+@use 'node_modules/nouislider/dist/nouislider.css';
 
 @mixin modal-window() {
   position: absolute;
