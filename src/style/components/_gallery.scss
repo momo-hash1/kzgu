@@ -56,3 +56,10 @@
     }
   }
 }
+
+@media screen and (max-width: size.$phone) {
+  .gallery-thumbs{
+    height: auto;
+
+  }
+}

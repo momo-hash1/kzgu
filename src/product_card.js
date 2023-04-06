@@ -1,27 +1,22 @@
-const thumbsSwiper = new Swiper(".swiper-gallery-thumbs", {
-  direction: "horizontal",
-  slidesPerView: 10,
-  spaceBetween: 4,
-});
+import initGallery from "./ui/gallery";
+import Swiper from "swiper";
+// import Swiper styles
+import "swiper/css";
 
-const mainGallerySwiper = new Swiper(".swiper-gallery-main", {
-  direction: "horizontal",
-  slidesPerView: 1,
-  thumbs: {
-    swiper: thumbsSwiper,
-  },
-});
+const {thumbs} = initGallery("swiper-gallery")
+
 
 document
   .querySelector(".nav-button-next")
-  .addEventListener("click", () => thumbsSwiper.slideNext());
+  .addEventListener("click", () => thumbs.slideNext());
 document
   .querySelector(".nav-button-prev")
-  .addEventListener("click", () => thumbsSwiper.slidePrev());
+  .addEventListener("click", () => thumbs.slidePrev());
 
 const product_description = new Swiper(".product-description", {
   direction: "horizontal",
   slidesPerView: 1,
+  autoHeight: true
 });
 
 const header_items = document.querySelectorAll(

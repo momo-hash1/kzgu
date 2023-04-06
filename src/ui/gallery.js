@@ -3,7 +3,7 @@ import Swiper from "swiper";
 import "swiper/css";
 
 const initGallery = (name) => {
-  const main = new Swiper(`.${name}-thumbs`, {
+  const thumbs = new Swiper(`.${name}-thumbs`, {
     direction: "horizontal",
     slidesPerView: 10,
     breakpoints: {
@@ -20,13 +20,14 @@ const initGallery = (name) => {
     spaceBetween: 4,
   });
 
-  const thumbs = new Swiper(`.${name}-main`, {
+  const main = new Swiper(`.${name}-main`, {
     direction: "horizontal",
     slidesPerView: 1,
     thumbs: {
-      swiper: thumbsSwiper,
+      swiper: thumbs,
     },
   });
+  return {main, thumbs}
 };
 
 export default initGallery

@@ -9,6 +9,7 @@
 @use "../components/badge";
 @use "../components/swiper";
 @use "../components/list";
+@use "../components/gallery";
 
 .swiper {
   --swiper-navigation-size: 0;
@@ -17,6 +18,9 @@
   display: grid;
   grid-template-columns: 60% calc(40% - 80px);
   gap: 80px;
+  @media screen and (max-width: size.$desktop_small) {
+    display: block;
+  }
 }
 
 .nav-button {
@@ -53,11 +57,35 @@
   }
 }
 
+.product-main{
+  .product-name{
+    display: none;
+  }
+  @media screen and (max-width: size.$desktop_small) {
+    .product-name{
+      display: block;
+    }
+    .swiper-gallery-main{
+      margin-top: 20px;
+    }
+  }
+}
+
+.product-side{
+  @media screen and (max-width: size.$desktop_small) {
+    margin-top: 20px;
+    .product-name{
+      display: none;
+    }
+  }
+}
+
 .product-thumbs {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: themeColor.$secondary;
+  overflow: hidden;
   height: 100%;
   img {
     width: 80%;
@@ -72,7 +100,7 @@
   justify-content: center;
   align-items: center;
   img {
-    width: 70%;
+    width: 50%;
   }
 }
 
@@ -189,6 +217,9 @@
   .white-button {
     background-color: themeColor.$secondary;
     color: rgba(9, 46, 71, 0.35);
+  }
+  @media screen and (max-width: size.$phone) {
+    flex-direction: column;
   }
 }
 

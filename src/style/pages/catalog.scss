@@ -330,9 +330,8 @@
     background-color: themeColor.$secondary;
     padding: 25px;
     gap: 20px;
-    .title-with-image{
+    .title-with-image{ 
       flex-direction: column;
-      justify-content: space-between;
       gap: 15px;
       .image-wrapper{
         width: 100px;
