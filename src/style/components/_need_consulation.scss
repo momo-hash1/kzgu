@@ -1,6 +1,14 @@
 @use "../utils/themeColor";
 @use "../utils/size";
 
+.accept-personal-info {
+  margin-top: 20px;
+  opacity: 0.35;
+  span {
+    text-decoration: underline;
+  }
+}
+
 .need-consultation {
   margin-top: 115px;
   .header {
@@ -21,13 +29,7 @@
       box-sizing: border-box;
     }
   }
-  .accept-personal-info {
-    margin-top: 20px;
-    opacity: 0.35;
-    span {
-      text-decoration: underline;
-    }
-  }
+
   .two-section-header {
     p {
       font-size: 22px;

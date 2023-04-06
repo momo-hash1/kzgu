@@ -1,0 +1,75 @@
+@use "../utils/themeColor";
+@use "../utils/size";
+
+.modal-window-wrapper {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(1, 18, 41, 0.45);
+  z-index: 5;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 200ms ease;
+  .hamburger-menu {
+    display: block;
+    height: 15px;
+    width: 15px;
+    .body {
+      height: 15px;
+      width: 15px;
+    }
+    .item {
+      background-color: themeColor.$text-color-contrast;
+      transition: none;
+    }
+  }
+  .modal-window {
+    position: absolute;
+    left: 50%;
+    top: 85px;
+    transform: translateX(-50%);
+    width: 40%;
+    background-color: themeColor.$white;
+  }
+  .close-btn {
+    background-color: themeColor.$secondary;
+    border-radius: 50%;
+    padding: 12px;
+    cursor: pointer;
+  }
+  .close-btn-wrapper {
+    display: flex;
+    justify-content: end;
+    position: absolute;
+    width: 100%;
+    transform: translate(4%, -30%);
+  }
+  .content {
+    position: relative;
+    height: 100%;
+    overflow: auto;
+  }
+  @media screen and (max-width: size.$tablet) {
+    .modal-window {
+        top: 0;
+        transform: none;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+      }
+      .close-btn-wrapper {
+        transform: none;
+        .close-btn{
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+      }
+  }
+
+}
+
+.modal-window-active{
+    visibility: visible;
+    opacity: 1;
+}

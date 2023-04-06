@@ -42,7 +42,7 @@
                 <p>Казань, ул. Мазита Гафури, д. 50</p>
               </div>
               <div class="leave-request">
-                <button class="button">Оставить заявку</button>
+                <button class="button leave-request-initiator">Оставить заявку</button>
               </div>
               <div class="hamburger-menu">
                 <div class="body">
@@ -64,47 +64,71 @@
                 <nav>
                   <ul class="links-list">
                     <li class="dropdown link-item">
-                      <a href="catalog_page.html" class="dropdown-link">Каталог продукции</a>
+                      <a href="catalog_page.html" class="dropdown-link"
+                        >Каталог продукции</a
+                      >
                       <ul class="dropdown-main">
                         <li class="dropdown-item">
-                          <a href="" class="dropdown-link">Каталог оборудования</a>
-                        </li> 
+                          <a href="" class="dropdown-link"
+                            >Каталог оборудования</a
+                          >
+                        </li>
                         <li class="dropdown-item dropdown-second dropdown">
                           <a href="" class="dropdown-link">Каталог запчастей</a>
                           <ul class="dropdown-main">
                             <li class="dropdown-item">
-                              <a href="" class="dropdown-link">Дизельные генераторы</a>
+                              <a href="" class="dropdown-link"
+                                >Дизельные генераторы</a
+                              >
                             </li>
                             <li class="dropdown-item dropdown">
-                              <a href="" class="dropdown-link ">Блок-контейнер под оборудование</a>
+                              <a href="" class="dropdown-link"
+                                >Блок-контейнер под оборудование</a
+                              >
                               <ul class="dropdown-main">
                                 <li>
-                                  <a href="" class="dropdown-link">Блок-контейнеры под лаборатории</a>
+                                  <a href="" class="dropdown-link"
+                                    >Блок-контейнеры под лаборатории</a
+                                  >
                                 </li>
                                 <li>
-                                  <a href="" class="dropdown-link">Блок-контейнеры средств связи</a>
+                                  <a href="" class="dropdown-link"
+                                    >Блок-контейнеры средств связи</a
+                                  >
                                 </li>
                                 <li>
-                                  <a href="" class="dropdown-link">Блок-контейнеры технические</a>
+                                  <a href="" class="dropdown-link"
+                                    >Блок-контейнеры технические</a
+                                  >
                                 </li>
                                 <li>
-                                  <a href="" class="dropdown-link">Блок-контейнеры под котельные</a>
+                                  <a href="" class="dropdown-link"
+                                    >Блок-контейнеры под котельные</a
+                                  >
                                 </li>
                                 <li>
-                                  <a href="" class="dropdown-link">Блок-контейнеры под аппаратные</a>
+                                  <a href="" class="dropdown-link"
+                                    >Блок-контейнеры под аппаратные</a
+                                  >
                                 </li>
                               </ul>
                             </li>
                             <li class="dropdown-item">
-                              <a href="" class="dropdown-link">Блок-контейнер под металлоконструкции</a>
+                              <a href="" class="dropdown-link"
+                                >Блок-контейнер под металлоконструкции</a
+                              >
                             </li>
                             <li class="dropdown-item">
-                              <a href="" class="dropdown-link">Дополнительное оборудование</a>
+                              <a href="" class="dropdown-link"
+                                >Дополнительное оборудование</a
+                              >
                             </li>
                           </ul>
                         </li>
                         <li class="dropdown-item">
-                          <a href="" class="dropdown-link">Аренда оборудования</a>
+                          <a href="" class="dropdown-link"
+                            >Аренда оборудования</a
+                          >
                         </li>
                       </ul>
                     </li>
@@ -163,7 +187,6 @@
                 />
                 <div>
                   <img src="../images/icons/gray/ri_search-line.svg" alt="" />
-
                 </div>
               </div>
             </form>
@@ -313,6 +336,80 @@
                 </li>
               </ul>
             </nav>
+            <div class="menu-bottom">
+              <ul>
+                <li class="phone-number">
+                  <a href="tel:8(800)700-42-67">8 (800) 700 - 42 - 67</a>
+                </li>
+                <li class="address">
+                  <img src="../images/icons/address.svg" alt="" />
+                  <p>Казань, ул. Мазита Гафури, д. 50</p>
+                </li>
+                <li class="messenger">
+                  <a href="https://web.whatsapp.com/">
+                    <div class="whatsapp"></div>
+                  </a>
+                  <a href="https://web.telegram.org">
+                    <div class="telegram"></div>
+                  </a>
+                </li>
+                <li class="leave-request">
+                  <button class="button leave-request-initiator">Оставить заявку</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-window-wrapper leave-request-modal">
+        <div class="modal-window">
+          <div class="content leave-request-window">
+            <div class="close-btn-wrapper">
+              <div class="close-btn leave-request-close">
+                <div class="hamburger-menu hamburger-menu-active">
+                  <div class="body">
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <form class="main">
+              <h2>Обратная связь</h2>
+              <div class="customer-contacts">
+                <input
+                  type="text"
+                  placeholder="Ваше имя"
+                  name="customer-name"
+                  class="input-with-border"
+                />
+                <input
+                  type="text"
+                  placeholder="Ваш  телефон"
+                  name="customer-phone"
+                  class="input-with-border"
+                />
+                <input
+                  type="text"
+                  placeholder="E-mail"
+                  name="customer-email"
+                  class="input-with-border"
+                />
+              </div>
+              <textarea
+                name="customer-request"
+                placeholder="Комментарий"
+                class="input-with-border customer-request"
+              ></textarea>
+              <div class="btn-wrapper">
+                <button class="button">Отправить заявку</button>
+              </div>
+              <p class="accept-personal-info">
+                Нажимая кнопку «Отправить заявку», вы соглашаетесь с обработкой
+                <span><a href="#">Персональных данных</a></span>
+              </p>
+            </form>
           </div>
         </div>
       </div>
@@ -519,7 +616,7 @@
                       </div>
                     </div>
                     <div class="button-wrapper">
-                      <button class="button">Узнать цену</button>
+                      <button class="button leave-request-initiator">Узнать цену</button>
                     </div>
                   </div>
                 </div>
@@ -558,7 +655,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="button-wrapper">
+                    <div class="button-wrapper leave-request-initiator">
                       <button class="button">Узнать цену</button>
                     </div>
                   </div>
@@ -598,7 +695,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="button-wrapper">
+                    <div class="button-wrapper leave-request-initiator">
                       <button class="button">Узнать цену</button>
                     </div>
                   </div>
@@ -638,7 +735,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="button-wrapper">
+                    <div class="button-wrapper leave-request-initiator">
                       <button class="button">Узнать цену</button>
                     </div>
                   </div>
@@ -766,7 +863,11 @@
               <div class="card">
                 <div class="header">
                   <div>Гарантия и сервис</div>
-                  <img src="../images/icons/white/star.svg" class="star" alt="" />
+                  <img
+                    src="../images/icons/white/star.svg"
+                    class="star"
+                    alt=""
+                  />
                 </div>
                 <div class="description customer-info-description">
                   <p>
@@ -853,7 +954,7 @@
                 ><button class="button">Смотреть все</button></a
               >
             </div>
-            <div class="news ">
+            <div class="news">
               <div class="news-card">
                 <a href="single_news_page.html">
                   <div class="image-overlay">
@@ -1059,7 +1160,9 @@
         <div class="footer-grid">
           <div class="footer-item-wrapper">
             <div class="footer-item logo-item">
-              <a href="/public"><img src="../images/logo.png" alt="" class="logo" /></a>
+              <a href="/public"
+                ><img src="../images/logo.png" alt="" class="logo"
+              /></a>
               <div class="messenger">
                 <a href="https://web.whatsapp.com/">
                   <div class="whatsapp"></div>

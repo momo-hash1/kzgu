@@ -10,6 +10,7 @@
 @use "../utils/size";
 @use "../components/accordion";
 @use "./hamburger_menu";
+@use "./modal";
 
 .header {
   margin-top: 20px;
@@ -19,23 +20,8 @@
 .header-top {
   display: grid;
   grid-template-columns: 0.5fr 2fr 1fr 1fr;
-  .address {
-    display: flex;
-    align-items: center;
-    img {
-      width: 13px;
-      margin-right: 10px;
-    }
-    p {
-      font-weight: 500;
-    }
-  }
 
-  .leave-request {
-    .button {
-      width: 100%;
-    }
-  }
+
   .input-form {
     display: flex;
     justify-content: center;
@@ -120,6 +106,23 @@
 }
 
 header {
+  
+  .leave-request {
+    .button {
+      width: 100%;
+    }
+  }
+  .address {
+    display: flex;
+    align-items: center;
+    img {
+      width: 13px;
+      margin-right: 10px;
+    }
+    p {
+      font-weight: 500;
+    }
+  }
   .accordion-header {
     border: none;
     div {
@@ -166,6 +169,14 @@ header {
       padding-right: 20px;
     }
   }
+  .menu-bottom{
+    margin-top: 20px;
+    ul{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
 }
 
 
@@ -193,3 +204,41 @@ header {
   }
 }
 
+.leave-request-window{
+
+ .main{
+  padding: 50px;
+  box-sizing: border-box;
+ }
+ .customer-contacts{
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+ }
+
+ .main{
+  .input-with-border{
+    background-color: themeColor.$white;
+
+  }
+   .customer-request{
+    margin-top: 20px;
+    box-sizing: border-box;
+    width: 100% ;
+    height: 150px;
+  }
+  .btn-wrapper{
+    margin-top: 20px;
+    button{
+      width: 100%;
+    }
+  }
+ }
+ @media screen and (max-width: size.$desktop_small) {
+  .main{
+    padding: 25px;
+  }
+ }
+
+}
