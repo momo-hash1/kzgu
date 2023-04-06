@@ -1,0 +1,1 @@
+import './style/pages/contacts_and_delivery.scss'

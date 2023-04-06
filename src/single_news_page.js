@@ -1,0 +1,1 @@
+import './style/pages/single_news_page.scss'

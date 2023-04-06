@@ -1,7 +1,6 @@
 import Swiper from "swiper";
-// import Swiper styles
-import "swiper/css";
 import initGallery from "./ui/gallery";
+import './style/pages/about.scss'
 
 const reviewSwiper = new Swiper(".partner-review-swiper", {
   direction: "horizontal",

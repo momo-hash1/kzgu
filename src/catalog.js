@@ -1,8 +1,8 @@
 import noUiSlider from "nouislider";
-import "nouislider/dist/nouislider.css";
 import initAccordion from "./ui/accordion";
 import menu_init from "./ui/modal";
 var slider = document.getElementById("slider");
+import './style/pages/catalog.scss'
 
 document.addEventListener("DOMContentLoaded", () => {
   noUiSlider.create(slider, {

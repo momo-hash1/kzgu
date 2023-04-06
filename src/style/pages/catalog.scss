@@ -15,6 +15,7 @@
 @use "../components/badge";
 @use "../components/paginator";
 @use "../components/hamburger_menu";
+@use 'node_modules/nouislider/dist/nouislider.css';
 
 @mixin modal-window() {
   position: absolute;
@@ -170,7 +171,7 @@
         p::after {
           content: "";
           display: block;
-          background-image: url("../images/icons/polygon_51.svg");
+          background-image: url("images/icons/polygon_51.svg");
           background-repeat: no-repeat;
           background-size: contain;
           width: 8px;

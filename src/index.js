@@ -1,8 +1,7 @@
 import initAccordion from "./ui/accordion";
 import menu_init from "./ui/modal";
 import Swiper from "swiper";
-// import Swiper styles
-import "swiper/css";
+import './style/pages/index.scss'
 
 const projectPrevBtn = document.querySelector(".swiper-header-project-prev");
 const projectNextBtn = document.querySelector(".swiper-header-project-next");
