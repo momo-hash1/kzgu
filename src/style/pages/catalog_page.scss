@@ -3,6 +3,7 @@
 @use "../utils/global";
 @use "../utils/themeColor";
 @use "../components/badge";
+@use "../utils/size";
 
 .catalog-grid {
   display: grid;
@@ -10,6 +11,9 @@
   gap: 4px;
   a{
     text-decoration: none;
+  }
+  @media screen and (max-width: size.$tablet){
+    grid-template-columns: 1fr;
   }
 }
 
@@ -51,6 +55,16 @@ $sizes: 222px, 288px, 232px, 250px;
   .catalog-card:nth-child(#{$i}) {
     img {
       width: nth($list: $sizes, $n: $i);
+    }
+  }
+}
+
+@media screen and (max-width: size.$tablet){
+  @for $i from 1 through length($sizes) {
+    .catalog-card:nth-child(#{$i}) {
+      img {
+        width: nth($list: $sizes, $n: $i) - 50px;
+      }
     }
   }
 }
