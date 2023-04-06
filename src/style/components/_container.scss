@@ -27,6 +27,9 @@
 
 .section-margin {
   margin-top: size.$main_margin;
+  @media screen and (max-width: size.$tablet) {
+    margin-top: size.$main_margin - 90px;
+ }
 }
 
 .container-html-bg {

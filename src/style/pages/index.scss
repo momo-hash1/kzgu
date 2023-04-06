@@ -235,25 +235,18 @@
 }
 
 .for-who {
-  margin-top: size.$main_margin;
   .overlaping-list {
     margin-top: 40px;
   }
-}
-
-.popular-product {
-  margin-top: size.$main_margin;
 }
 
 .company-summary-bg {
   background-color: themeColor.$primary;
 }
 .company-info {
-  margin-top: size.$main_margin;
   background-color: themeColor.$primary;
   .company-summary {
     color: themeColor.$white;
-    margin-top: size.$main_margin;
     margin-bottom: size.$main_margin;
 
     .summary-content {
@@ -372,7 +365,6 @@
 .customer-info {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin-top: size.$main_margin;
   margin-bottom: size.$main_margin;
   .card-wrapper:last-child {
     border-right: 1px solid themeColor.$secondary;
@@ -500,7 +492,6 @@
 
 .latest-news {
   display: grid;
-  margin-top: size.$main_margin;
   gap: 140px;
   grid-template-columns: 1fr 3fr;
   .action-header {
@@ -537,8 +528,4 @@
       grid-template-columns: 1fr;
     }
   }
-}
-
-.completed-projects {
-  margin-top: size.$main_margin;
 }
