@@ -4,10 +4,15 @@
 @use "../components/breadcrumb";
 @use "../utils/global";
 @use "../components/project_card";
+@use "../utils/size";
 
 
 .realized-project-grid{
     display: grid;
     grid-template-columns: repeat(2, 50%);
     gap: 4px;
+    @media screen and (max-width: size.$desktop_small) {
+    grid-template-columns: 1fr;
+        
+    }
 }

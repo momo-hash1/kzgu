@@ -5,33 +5,50 @@
 @use "../components/gallery";
 @use "../components/badge";
 @use "../components/list";
+@use "../utils/size";
 
-
-.gallery-main{
+.gallery-main {
+  position: relative;
+  .badge-wrapper {
     position: relative;
-    .badge-wrapper{
-        position: relative;
-        z-index: 1;
-        padding-top: 20px;
-        padding-left: 20px;
+    z-index: 1;
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+  img {
+    position: absolute;
+    top: 0;
+  }
+  @media screen and (max-width: size.$desktop_small) {
+    
+    height: 500px;
+  }
+  @media screen and (max-width: size.$tablet) {
+    img {
+      height: 100%;
+      width: auto;
     }
-    img{
-        position: absolute;
-        top: 0;
-    }
+    height: 500px;
+  }
 }
 
-.description{
-    margin-top: 40px;
-    font-weight: 500;
-    width: 75%;
+.description {
+  margin-top: 40px;
+  font-weight: 500;
+  width: 75%;
 }
 
-.dotted-list{
-    li:before{
-        background-color: themeColor.$text-color-contrast;
-    }
-    li{
-        margin-left: 10px;
-    }
+@media screen and (max-width: size.$tablet) {
+  .description {
+    width: 100%;
+  }
+}
+
+.dotted-list {
+  li:before {
+    background-color: themeColor.$text-color-contrast;
+  }
+  li {
+    margin-left: 10px;
+  }
 }

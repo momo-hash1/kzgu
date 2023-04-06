@@ -19,8 +19,9 @@
         margin-top: 0;
     }
     li{
-        display: flex;
-        align-items: center;
+        display: grid;
+        grid-template-columns: 5px 1fr;
+        gap: 10px;
         margin-top: 10px;
     }
     li::after{
@@ -33,6 +34,9 @@
         border-radius: 50%;
         width: 5px;
         height: 5px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
         background-color: themeColor.$primary;
     }
 }

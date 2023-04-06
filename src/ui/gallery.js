@@ -18,6 +18,7 @@ const initGallery = (name) => {
       },
     },
     spaceBetween: 4,
+    watchSlidesProgress: true
   });
 
   const main = new Swiper(`.${name}-main`, {
