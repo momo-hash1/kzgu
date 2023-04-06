@@ -8,6 +8,7 @@
 @use "../components/two_section_header";
 @use "../components/input";
 @use "../components/button";
+@use "../utils/size";
 
 .company-info-list {
   ul {
@@ -35,62 +36,103 @@
       top: 0;
       left: -10px;
     }
-}
-.map{
+  }
+  .map {
     margin-top: 30px;
-}
+  }
+  @media screen and (max-width: size.$desktop_medium) {
+    ul {
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: size.$desktop_small) {
+    ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
 }
 
-.content{
-    .section-description{
-        margin-top: 20px;
-    }
+.content {
+  .section-description {
+    margin-top: 20px;
+  }
 }
-.background-list{
-    li{
-        display: grid;
-        grid-template-columns: 0.5fr repeat(2, 1fr) 0.5fr;
-    }
+.background-list {
+  li {
+    display: grid;
+    grid-template-columns: 0.5fr repeat(2, 1fr) 0.5fr;
+  }
 }
 
-.two-section-header{
-    align-items: center;
+.two-section-header {
+  align-items: center;
 }
-.customer-request{
-    background-color:themeColor.$secondary;
+.customer-request {
+  .main {
+    background-color: themeColor.$secondary;
     padding: 40px;
-    textarea{
-        margin-top: 20px;
-        height: 200px;
-    }
+  }
 
-    .bottom{
-        margin-top: 20px;
-        display: flex;
-        align-items: center;
-        gap: 40px;
-        button{
-            width: 426px;
-        }
-    }
-    .attach-file{
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        color: themeColor.$primary;
-        cursor: pointer;
-        .icon{
-            width: 13px;
-            height: 17px;
-        }
-    }
-    .attach-file:hover{
-        opacity: .8;
-    }
-}
-
-.customer-contacts{
+  .customer-contacts {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+  }
+
+  textarea {
+    margin-top: 20px;
+    height: 200px;
+  }
+
+  .bottom {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    button {
+      width: 426px;
+      
+    }
+  }
+  .attach-file {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: themeColor.$primary;
+    cursor: pointer;
+    .icon {
+      width: 13px;
+      height: 17px;
+    }
+  }
+  .attach-file:hover {
+    opacity: 0.8;
+  }
+  @media screen and (max-width: size.$desktop_small) {
+    .customer-contacts {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      input {
+        width: 100%;
+        box-sizing: border-box;
+      }
+    }
+  }
+  @media screen and (max-width: size.$phone) {
+    .two-section-header {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    .main {
+      padding: 20px;
+    }
+    .bottom {
+      flex-direction: column;
+      gap: 10px;
+      button{
+        width: 100%;
+      }
+    }
+  }
 }
