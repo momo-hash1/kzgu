@@ -7,19 +7,26 @@
   color: themeColor.$white;
 }
 .paginator-wrapper {
-  display: flex;
-  justify-content: center;
   margin-top: 40px;
+  position: relative;
 }
 .paginator {
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   gap: 5px;
   justify-content: center;
+  width: 100%;
+  position: absolute;
+  .pages-wrapper{
+    width: 50%;
+    overflow: scroll;
+    flex-basis: auto;
+    overflow-y: hidden;
+  }
   .pages {
     display: flex;
-    overflow: hidden;
     min-width: fit-content;
-    flex-wrap: wrap;
     gap: 5px;
   }
   a {
