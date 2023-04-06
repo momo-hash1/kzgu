@@ -1,4 +1,5 @@
 @use "../components/swiper";
+@use "../utils/size";
 
 .swiper-slide {
   padding: 0;
@@ -38,4 +39,20 @@
 
 .swiper-slide-active .thumb-overlay{
   opacity: 1;
+}
+@media screen and (max-width: size.$desktop_small) {
+  .gallery-main{
+    height: 100%;
+  }
+
+
+}
+
+@media screen and (max-width: size.$tablet) {
+  .gallery-thumbs{
+    overflow: hidden;
+    img{
+      top: -50%;
+    }
+  }
 }

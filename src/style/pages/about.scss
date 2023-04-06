@@ -251,7 +251,7 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
   margin-top: 30px;  
-  gap: 110px;
+  gap: 110px; 
   .reviews{
     width: 900px;
   }
@@ -328,26 +328,10 @@
     grid-template-columns: 2fr 1fr;
     .partner{
       .role{  
-        font-size: 14px;
+        font-size: 14px; 
       }
     }
 
   }
 }
 
-@media screen and (max-width: size.$desktop_small) {
-  .gallery-main{
-    height: 100%;
-  }
-
-
-}
-
-@media screen and (max-width: size.$tablet) {
-  .gallery-thumbs{
-    overflow: hidden;
-    img{
-      top: -50%;
-    }
-  }
-}
