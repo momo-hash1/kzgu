@@ -16,4 +16,4 @@ document
   .querySelector(".swiper-header-review-next")
   .addEventListener("click", () => reviewSwiper.slideNext());
 
-initGallery("swiper-gallery");
+initGallery("swiper-gallery")

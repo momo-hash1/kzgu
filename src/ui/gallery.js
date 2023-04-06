@@ -21,13 +21,37 @@ const initGallery = (name) => {
     watchSlidesProgress: true
   });
 
+  
   const main = new Swiper(`.${name}-main`, {
     direction: "horizontal",
     slidesPerView: 1,
-    thumbs: {
-      swiper: thumbs,
-    },
   });
+  main.on("update", (e) => {
+    thumbs.slides[0].classList.add("slide-active")
+  })
+
+  main.on("slideChange", (e) => {
+    thumbs.slides.forEach((slide, index) => {
+      if(e.activeIndex === index){
+        slide.classList.add("slide-active")
+      }else{
+        slide.classList.remove("slide-active")
+      }
+    })
+  })
+
+  thumbs.on("click", (e) => {
+    if(e.clickedIndex > main.slides.length-1) return
+    e.slides.forEach((slide, index) => {
+      if(e.clickedIndex === index){
+        slide.classList.add("slide-active")
+      }else{
+        slide.classList.remove("slide-active")
+      }
+    })
+    main.slideTo(e.clickedIndex)
+  })
+
   return {main, thumbs}
 };
 

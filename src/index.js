@@ -1,8 +1,8 @@
 import initAccordion from "./ui/accordion";
 import menu_init from "./ui/modal";
-import Swiper from 'swiper';
+import Swiper from "swiper";
 // import Swiper styles
-import 'swiper/css';
+import "swiper/css";
 
 const projectPrevBtn = document.querySelector(".swiper-header-project-prev");
 const projectNextBtn = document.querySelector(".swiper-header-project-next");
@@ -63,29 +63,43 @@ const first_section_swiper = new Swiper(".first-section", {
 
 const lead_slides = document.querySelectorAll(".lead-slide");
 
-first_section_swiper.on("slideChange", (e) => {
+const toggleActiveSlides = (index) => {
   lead_slides.forEach((x, index_x) => {
-    if (e.activeIndex == index_x) {
+    if (index == index_x) {
       x.classList.add("active");
     } else {
       x.classList.remove("active");
     }
   });
+};
+
+const scrollToActiveSlide = () => {
+  const parent = document.querySelector(".lead-section-slides");
+  let offset = 0;
+  let activeFound = false;
+  lead_slides.forEach((x, index) => {
+    if (x.classList.contains("active")) {
+      activeFound = true;
+    }
+    if (activeFound) return;
+
+    offset += x.getBoundingClientRect().width + 20 * index;
+  });
+
+  parent.scrollTo(offset, 0);
+};
+
+first_section_swiper.on("slideChange", (e) => {
+  toggleActiveSlides(e.activeIndex);
 });
 
 lead_slides.forEach((lead_slide, index) => {
   lead_slide.addEventListener("click", () => {
-    lead_slides.forEach((x, index_x) => {
-      if (index == index_x) {
-        x.classList.add("active");
-      } else {
-        x.classList.remove("active");
-      }
-    });
+    toggleActiveSlides(index);
+    scrollToActiveSlide();
     first_section_swiper.slideTo(index);
   });
 });
 
 initAccordion();
-
 menu_init();

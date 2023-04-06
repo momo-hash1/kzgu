@@ -177,14 +177,19 @@
   position: relative;
   background-color: themeColor.$secondary;
   .list-wrapper {
+    overflow-x: scroll;
     ul {
       display: flex;
       justify-content: space-between;
       cursor: pointer;
+      min-width: min-content;
       li {
         padding-top: 25px;
         padding-bottom: 25px;
         position: relative;
+        p{
+          white-space: nowrap;
+        }
       }
       .active {
         color: themeColor.$primary;
@@ -212,13 +217,12 @@
       }
     }
   }
-  @media screen and (max-width: size.$desktop_small) {
+  @media screen and (max-width: size.$desktop_medium) {
     .list-wrapper {
-      overflow-x: scroll;
       ul {
         justify-content: start;
         gap: 20px;
-        width: 1400px;
+        
       }
     }
   }
