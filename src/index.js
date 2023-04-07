@@ -1,6 +1,13 @@
 import Swiper from "swiper";
 import './style/pages/index.scss'
 import init_header from "./ui/init_header";
+import { Fancybox } from "@fancyapps/ui";
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
+
+Fancybox.bind("[data-fancybox]", {
+  // Your custom options
+});
+
 
 const projectPrevBtn = document.querySelector(".swiper-header-project-prev");
 const projectNextBtn = document.querySelector(".swiper-header-project-next");

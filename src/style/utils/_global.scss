@@ -68,3 +68,8 @@ a {
 .hide-scroll{ 
   overflow: hidden;
 }
+
+video::-webkit-media-controls-panel {
+  display: flex !important;
+  opacity: 1 !important;
+}

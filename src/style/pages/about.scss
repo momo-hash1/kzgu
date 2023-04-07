@@ -289,12 +289,17 @@
 
 
 .partner-review{
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+  display: flex;
   margin-top: 30px;  
-  gap: 110px; 
+  justify-content: space-between;
+  h2{
+   width: 30%;
+  }
+  .review-main{
+    width: 70%;
+  }
   .reviews{
-    width: 900px;
+    width: 90%;
   }
   .two-section-header{
     margin-top: 60px;
@@ -314,11 +319,12 @@
     }
   }
   .review-main{
-    display: grid;
+    display: flex;
     gap: 20px;
     grid-template-columns: 1fr 2fr;
   }
   .quotation{
+    width: 10%;
     img{
       width: 30px;
     }
@@ -330,11 +336,6 @@
       font-size: 22px;
       line-height: 30px;
       width: 100%;
-    }
-  }
-  @media screen and (max-width: size.$desktop) {
-    .reviews{
-      width: 600px;
     }
   }
   @media screen and (max-width: size.$desktop_medium) {
@@ -353,9 +354,7 @@
         width: 15px;
       }
     }
-    .reviews{
-      width: 650px;
-    }
+
   }
   @media screen and (max-width: size.$tablet) {
     .review-main{
