@@ -2,13 +2,13 @@ import Swiper from "swiper";
 // import Swiper styles
 import "swiper/css";
 
-const initGallery = (name) => {
+const initGallery = (name, amountSlides=10) => {
   const thumbs = new Swiper(`.${name}-thumbs`, {
     direction: "horizontal",
     slidesPerView: 10,
     breakpoints: {
       1399: {
-        slidesPerView: 10,
+        slidesPerView: amountSlides,
       },
       768: {
         slidesPerView: 5,
@@ -18,7 +18,7 @@ const initGallery = (name) => {
       },
     },
     spaceBetween: 4,
-    watchSlidesProgress: true
+    simulateTouch: true
   });
 
   
@@ -39,7 +39,6 @@ const initGallery = (name) => {
       }
     })
   })
-
   thumbs.on("click", (e) => {
     if(e.clickedIndex > main.slides.length-1) return
     e.slides.forEach((slide, index) => {

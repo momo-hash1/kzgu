@@ -2,8 +2,7 @@ import initGallery from "./ui/gallery";
 import Swiper from "swiper";
 import './style/pages/product_card.scss'
 
-const {thumbs} = initGallery("swiper-gallery")
-
+const {thumbs} = initGallery("swiper-gallery", 7)
 
 document
   .querySelector(".nav-button-next")

@@ -41,15 +41,8 @@ document.querySelector(".play-button").addEventListener("click", () => {
   video_window.play();
 });
 
-let its_seeked = false;
 
 video_window.addEventListener("pause", () => {
   if (video_window.seeking) return;
   video_parent.classList.remove("show-video");
 });
-video_window.addEventListener("seeking", () => {
-  its_seeked = true;
-  console.log(video_window.paused);
-});
-
-video_window.addEventListener("seeked", () => {});
