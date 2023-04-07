@@ -21,6 +21,7 @@
     "webpack-dev-server": "^4.13.1"
   },
   "dependencies": {
+    "@fancyapps/ui": "^5.0.15",
     "babel-loader": "^9.1.2",
     "html-loader": "^4.2.0",
     "mini-css-extract-plugin": "^2.7.5",

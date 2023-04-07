@@ -14,20 +14,42 @@
 @use "../components/gallery";
 
 .company-summary-large {
+  .show-video{
+    .video-info{
+      display: none;
+    }
+    .video{
+      display: block;
+    }
+    .thumbnail{
+      display: none;
+    }
+  }
+  .video{
+    display: none;
+    width: 100%;
+    height: 100%;
+    video{
+      width: 100%;
+      height: 100%;
+    }
+  }
   .watch-video {
     height: 580px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(
-        0deg,
-        rgba(9, 46, 71, 0.35),
-        rgba(9, 46, 71, 0.35)
-      ),
-      url("images/video_thumbnail.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: 50%;
+    position: relative;
+    overflow: hidden;
+    .thumbnail{
+      width: 100%;
+      z-index: -1;
+      background-color: rgba(9, 46, 71, 0.35);
+      position: absolute;
+      img{
+        width: 100%;
+      }
+    }
     img {
       width: 40px;
     }
@@ -39,6 +61,7 @@
       justify-content: center;
       align-items: center;
       border: 1px solid themeColor.$white;
+      cursor: pointer;
     }
     .play-button-wrapper {
       height: 120px;
@@ -56,7 +79,7 @@
   .company-summary-bottom {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 90px;
+    gap: 60px;
     margin-top: 40px;
   }
   .company-numbers {
@@ -64,6 +87,11 @@
     grid-template-columns: repeat(3, 1fr);
     p {
       margin-top: 5px;
+    }
+    .item{
+      display: flex;
+      flex-direction: column;
+      align-items: end;
     }
   }
   p {
@@ -257,6 +285,7 @@
   }
   .two-section-header{
     margin-top: 60px;
+    display: flex;
     .partner{
       .name{
         font-weight: 600;

@@ -43,6 +43,10 @@
                 <p>2:36 мин</p>
               </div>
             </div>
+            <div class="thumbnail"><img src="../images/video_thumbnail.webp"  /></div>
+            <div class="video">
+              <video src="../images/video.mp4" controls></video>
+            </div>
           </div>
           <div class="company-summary-bottom">
             <div class="company-about-text">
@@ -91,7 +95,9 @@
               трудятся более 20 человек и каждый из них профессионал своего
               дела.
             </p>
-            <div><img src="../images/about-company-generator.png" alt="" /></div>
+            <div>
+              <img src="../images/about-company-generator.png" alt="" />
+            </div>
           </div>
         </div>
       </div>
@@ -105,7 +111,11 @@
           <h2>Сертификаты</h2>
         </div>
         <div class="certs-list main">
-          <div class="cert-item">
+          <a
+            class="cert-item"
+            data-fancybox
+            data-src="../images/cert_diller_1.webp"
+          >
             <div class="cert-image">
               <div class="image-overlay-wrapper">
                 <div class="image-overlay">
@@ -115,12 +125,16 @@
                 </div>
               </div>
               <div class="zoom-overlay">
-                <img src="../images/icons/search.svg" />
+                <img src="../images/icons/white/ri_search-line.svg" />
               </div>
             </div>
             <div class="cert-title"><p>Сертификат дилера</p></div>
-          </div>
-          <div class="cert-item">
+          </a>
+          <a
+            class="cert-item"
+            data-fancybox
+            data-src="../images/cert_partner_1.webp"
+          >
             <div class="cert-image">
               <div class="image-overlay">
                 <div>
@@ -128,12 +142,16 @@
                 </div>
               </div>
               <div class="zoom-overlay">
-                <img src="../images/icons/search.svg" />
+                <img src="../images/icons/white/ri_search-line.svg" />
               </div>
             </div>
             <div class="cert-title"><p>Сертификат дилера</p></div>
-          </div>
-          <div class="cert-item">
+          </a>
+          <a
+            class="cert-item"
+            data-fancybox
+            data-src="../images/cert_partner_1.webp"
+          >
             <div class="cert-image">
               <div>
                 <div class="image-overlay">
@@ -143,12 +161,16 @@
                 </div>
               </div>
               <div class="zoom-overlay">
-                <img src="../images/icons/search.svg" />
+                <img src="../images/icons/white/ri_search-line.svg" />
               </div>
             </div>
             <div class="cert-title"><p>Сертификат дилера</p></div>
-          </div>
-          <div class="cert-item">
+          </a>
+          <a
+            class="cert-item"
+            data-fancybox
+            data-src="../images/cert_diller_3.webp"
+          >
             <div class="cert-image">
               <div>
                 <div class="image-overlay">
@@ -158,12 +180,16 @@
                 </div>
               </div>
               <div class="zoom-overlay">
-                <img src="../images/icons/search.svg" />
+                <img src="../images/icons/white/ri_search-line.svg" />
               </div>
             </div>
             <div class="cert-title"><p>Сертификат дилера</p></div>
-          </div>
-          <div class="cert-item">
+          </a>
+          <a
+            class="cert-item"
+            data-fancybox
+            data-src="../images/cert_distributor.webp"
+          >
             <div class="cert-image">
               <div>
                 <div class="image-overlay">
@@ -173,11 +199,11 @@
                 </div>
               </div>
               <div class="zoom-overlay">
-                <img src="../images/icons/search.svg" />
+                <img src="../images/icons/white/ri_search-line.svg" />
               </div>
             </div>
             <div class="cert-title"><p>Сертификат дистрибьютора</p></div>
-          </div>
+          </a>
         </div>
       </div>
     </section>
@@ -235,10 +261,26 @@
                 </div>
               </div>
               <div class="two-section-header">
-                <div class="partner">
-                  <p class="name">Петров Георгий Михайлович</p>
-                  <p class="role">Генеральный директор ООО «СтройТехГранд»</p>
+                <div class="swiper partner-info-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="partner">
+                        <p class="name">Петров Георгий Михайлович</p>
+                        <p class="role">
+                          Генеральный директор ООО «СтройТехГранд»
+                        </p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide"><div class="partner">
+                      <p class="name">Иван Иванов Михайлович</p>
+                      <p class="role">
+                        Генеральный директор ООО «СтройТехГранд»
+                      </p>
+                    </div></div>
+                    <div class="swiper-slide">Slide 3</div>
+                  </div>
                 </div>
+
                 <div class="swiper-nav">
                   <button class="nav-button swiper-header-review-prev">
                     <div class="left-arrow-white white"></div>
@@ -341,7 +383,7 @@
 
                   <img src="../images/gallery_9.png" />
                 </div>
-              </div> 
+              </div>
               <div class="swiper-slide">
                 <div class="gallery-thumbs">
                   <div class="thumb-overlay"></div>
