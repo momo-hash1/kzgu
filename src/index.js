@@ -1,8 +1,6 @@
-import initAccordion from "./ui/accordion";
-import menu_init from "./ui/modal";
 import Swiper from "swiper";
 import './style/pages/index.scss'
-import initModalWindow from "./ui/modal_window";
+import init_header from "./ui/init_header";
 
 const projectPrevBtn = document.querySelector(".swiper-header-project-prev");
 const projectNextBtn = document.querySelector(".swiper-header-project-next");
@@ -101,6 +99,4 @@ lead_slides.forEach((lead_slide, index) => {
   });
 });
 
-initAccordion();
-menu_init();
-initModalWindow("leave-request")
+init_header()

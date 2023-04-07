@@ -3,6 +3,9 @@ import initGallery from "./ui/gallery";
 import "./style/pages/about.scss";
 import { Fancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
+import init_header from './ui/init_header'
+
+init_header()
 
 Fancybox.bind("[data-fancybox]", {
   // Your custom options

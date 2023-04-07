@@ -1,6 +1,8 @@
 import noUiSlider from "nouislider";
 import initAccordion from "./ui/accordion";
 import menu_init from "./ui/modal";
+import initModalWindow from "./ui/modal_window";
+
 var slider = document.getElementById("slider");
 import "./style/pages/catalog.scss";
 
@@ -92,3 +94,7 @@ const showModal = (initiator, window_) => {
 
 showModal("show-catalog", "filters");
 showModal("show-power-select", "quick-power-select");
+
+menu_init()
+
+initModalWindow("leave-request")
