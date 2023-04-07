@@ -20,7 +20,7 @@
   position: absolute;
   .pages-wrapper{
     width: 50%;
-    overflow: scroll;
+    overflow: auto;
     flex-basis: auto;
     overflow-y: hidden;
   }

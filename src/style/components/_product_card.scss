@@ -14,7 +14,7 @@
   padding: 10px;
   padding-bottom: 25px;
   position: relative;
-  height: 455px;
+  height: 100%;
   .product-image {
     display: flex;
     justify-content: center;
@@ -69,12 +69,5 @@
     transition-property: visibility, opacity;
     opacity: 0;
     background-color: themeColor.$secondary;
-  }
-  @media screen and (max-width: size.$tablet) {
-    height: 100%;
-    .product-content {
-      box-sizing: border-box;
-      height: 100%;
-    }
   }
 }

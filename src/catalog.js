@@ -2,7 +2,7 @@ import noUiSlider from "nouislider";
 import initAccordion from "./ui/accordion";
 import menu_init from "./ui/modal";
 var slider = document.getElementById("slider");
-import './style/pages/catalog.scss'
+import "./style/pages/catalog.scss";
 
 document.addEventListener("DOMContentLoaded", () => {
   noUiSlider.create(slider, {
@@ -19,17 +19,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   slider.noUiSlider.on("update", () => {
     const range = slider.noUiSlider.get();
-    start_input.value = `От ${range[0]}`;
-    end_input.value = `До ${range[1]}`;
+    start_input.value = `От ${Math.trunc(range[0])}`;
+    end_input.value = `До ${Math.trunc(range[1])}`;
   });
 
   start_input.addEventListener("click", () => {
-    start_input.value = slider.noUiSlider.get()[0];
+    start_input.value = Math.trunc(slider.noUiSlider.get()[0]);
     start_input.select();
   });
 
   end_input.addEventListener("click", () => {
-    end_input.value = slider.noUiSlider.get()[1];
+    end_input.value = Math.trunc(slider.noUiSlider.get()[1]);
     end_input.select();
   });
 
@@ -41,16 +41,16 @@ document.addEventListener("DOMContentLoaded", () => {
     if (contains_essential_classes && isInput) return;
 
     slider.noUiSlider.set([start_input.value, end_input.value]);
-    start_input.value = `От ${slider.noUiSlider.get()[0]}`;
-    end_input.value = `До ${slider.noUiSlider.get()[1]}`;
+    start_input.value = `От ${Math.trunc(slider.noUiSlider.get()[0])}`;
+    end_input.value = `До ${Math.trunc(slider.noUiSlider.get()[1])}`;
   });
 
   end_input.addEventListener("keydown", (e) => {
     if (e.key !== "Enter") return;
 
     slider.noUiSlider.set([start_input.value, end_input.value]);
-    start_input.value = `От ${slider.noUiSlider.get()[0]}`;
-    end_input.value = `До ${slider.noUiSlider.get()[1]}`;
+    start_input.value = `От ${Math.trunc(slider.noUiSlider.get()[0])}`;
+    end_input.value = `До ${Math.trunc(slider.noUiSlider.get()[1])}`;
 
     end_input.blur();
   });
@@ -59,8 +59,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key !== "Enter") return;
 
     slider.noUiSlider.set([start_input.value, end_input.value]);
-    start_input.value = `От ${slider.noUiSlider.get()[0]}`;
-    end_input.value = `До ${slider.noUiSlider.get()[1]}`;
+    start_input.value = `От ${Math.trunc(slider.noUiSlider.get()[0])}`;
+    end_input.value = `До ${Math.trunc(slider.noUiSlider.get()[1])}`;
 
     start_input.blur();
   });
@@ -77,15 +77,17 @@ document.querySelectorAll(".checkbox-main").forEach((checkbox_main) => {
 initAccordion();
 
 const showModal = (initiator, window_) => {
-  const modal_window = document.querySelector("." + window_)
+  const modal_window = document.querySelector("." + window_);
   document.querySelector("." + initiator).addEventListener("click", () => {
     modal_window.classList.toggle("window-active");
     document.querySelector("body").classList.toggle("hide-scroll");
   });
-  modal_window.querySelector(".hamburger-menu").addEventListener("click", () => {
-    modal_window.classList.toggle("window-active");
-    document.querySelector("body").classList.toggle("hide-scroll");
-  });
+  modal_window
+    .querySelector(".hamburger-menu")
+    .addEventListener("click", () => {
+      modal_window.classList.toggle("window-active");
+      document.querySelector("body").classList.toggle("hide-scroll");
+    });
 };
 
 showModal("show-catalog", "filters");
