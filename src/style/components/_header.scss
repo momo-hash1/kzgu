@@ -79,7 +79,7 @@
           text-decoration: none;
         }
       }
-      a:hover {
+      .dropdown-link-parent:hover {
         color: #245ba7;
       }
     }
@@ -91,7 +91,7 @@
   }
   @media screen and (max-width: size.$desktop) {
     .links {
-      ul {
+      .links-list {
         gap: 15px;
       }
       li {
