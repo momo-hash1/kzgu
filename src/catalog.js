@@ -7,12 +7,21 @@ var slider = document.getElementById("slider");
 import "./style/pages/catalog.scss";
 
 document.addEventListener("DOMContentLoaded", () => {
+  let maximum_price = parseInt(slider.dataset.maximum_price);
+  let minimum_price = parseInt(slider.dataset.minimum_price);
+  if (isNaN(maximum_price) ) {
+    maximum_price = 100
+  };
+  if(isNaN(minimum_price)){
+    minimum_price = 0
+  }
+  console.log(minimum_price);
   noUiSlider.create(slider, {
-    start: [20, 80],
+    start: [minimum_price, maximum_price],
     connect: true,
     range: {
-      min: 0,
-      max: 100,
+      min: [minimum_price],
+      max: [maximum_price],
     },
   });
   const slider_bottom = document.querySelector("#slider-bottom");
@@ -95,6 +104,6 @@ const showModal = (initiator, window_) => {
 showModal("show-catalog", "filters");
 showModal("show-power-select", "quick-power-select");
 
-menu_init()
+menu_init();
 
-initModalWindow("leave-request")
+initModalWindow("leave-request");

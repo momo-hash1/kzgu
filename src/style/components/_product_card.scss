@@ -16,6 +16,7 @@
   position: relative;
   height: 100%;
   box-sizing: border-box;
+  text-decoration: none;
   .product-image {
     display: flex;
     justify-content: center;
@@ -36,6 +37,11 @@
     .product-title {
       div {
         font-size: 16px;
+        font-weight: 600;
+      }
+      a {
+        font-size: 16px;
+        text-decoration: none;
         font-weight: 600;
       }
     }
